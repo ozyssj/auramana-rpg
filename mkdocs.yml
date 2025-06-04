@@ -1,0 +1,6 @@
+site_name: Auraman RPG
+theme:
+  name: material
+nav:
+  - Início: index.md
+  - Arcanista: arcanista.md
