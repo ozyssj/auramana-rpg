@@ -3,4 +3,4 @@ theme:
   name: material
 nav:
   - Início: index.md
-  - Arcanista: ficha.md
+  - Ficha: ficha.md
