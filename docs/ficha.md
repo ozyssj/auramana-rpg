@@ -350,7 +350,7 @@
       </div>
       
       <div class="pericia">
-        <label>Atlestimo</label>
+        <label>Atletismo</label>
         <select class="atributo-pericia">
           <option value="for">FOR</option>
           <option value="des">DES</option>
