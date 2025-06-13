@@ -151,53 +151,31 @@
         <option>Pequenino</option>
         <option>Troll</option>
         <option>Feral</option>
-        <option>Morto-Vivo</option>
-        <option>Golem</option>        
         <option>Extraplanar</option>
+
       </select>
     </div>
+    
+   <div class="campo">
+    <label for="classe">Classe</label>
+    <select id="classe" onchange="filtrarArquetipos()">
+      <option value="">-- Selecione a Classe --</option>
+      <option value="Arcanista">Arcanista</option>
+      <option value="Batedor">Batedor</option>
+      <option value="Elementalista">Elementalista</option>
+      <option value="Guerreiro">Guerreiro</option>
+      <option value="Inspirador">Inspirador</option>
+     <option value="Inventor">Inventor</option>
+      <option value="Sacerdote">Sacerdote</option>
+  </select>
+  </div>
 
-    <div class="campo">
-      <label for="classe">Classe</label>
-      <select id="classe">
-        <option value="">-- Selecione a Classe --</option>
-        <option>Arcanista</option>
-        <option>Batedor</option>
-        <option>Guerreiro</option>
-        <option>Elementalista</option>
-        <option>Inspirador</option>
-        <option>Inventor</option>
-        <option>Sacerdote</option>
-      </select>
-    </div>
-
-    <div class="campo">
-      <label for="arquetipo">Arquétipo</label>
-      <select id="arquetipo">
+  <div class="campo">
+    <label for="arquetipo">Arquétipo</label>
+    <select id="arquetipo">
         <option value="">-- Selecione o Arquétipo --</option>
-        <optgroup label="Arcanista">
-          <option>Bruxo</option><option>Feiticeiro</option><option>Mago</option><option>Necromante</option>
-        </optgroup>
-        <optgroup label="Batedor">
-          <option>Bucaneiro</option><option>Caçador</option><option>Duelista</option><option>Investigador</option><option>Ladino</option><option>Ventanista</option>
-        </optgroup>
-        <optgroup label="Elementalista">
-          <option>Druida</option><option>Místico</option><option>Treinador</option>
-        </optgroup>
-        <optgroup label="Guerreiro">
-          <option>Bárbaro</option><option>Cavaleiro</option><option>Lutador</option><option>Samurai</option><option>Soldado</option>
-        </optgroup>
-        <optgroup label="Inspirador">
-          <option>Bardo</option><option>Nobre</option><option>Oráculo</option>
-        </optgroup>
-        <optgroup label="Inventor">
-          <option>Alquimista</option><option>Artilheiro</option><option>Ferreiro</option>
-        </optgroup>
-        <optgroup label="Sacerdote">
-          <option>Clérigo</option><option>Frade</option><option>Paladino</option><option>Santo</option>
-        </optgroup>
-      </select>
-    </div>
+    </select>
+  </div>
 
     <div class="campo">
       <label for="origem">Origem</label>
@@ -1122,6 +1100,34 @@ function limparFicha() {
     });
     document.getElementById('output-json').value = '';
     alert("Todos os dados foram apagados da ficha.");
+  }
+}
+
+
+const arquetiposPorClasse = {
+  Arcanista: ["Bruxo", "Feiticeiro", "Mago", "Necromante"],
+  Batedor: ["Bucaneiro", "Caçador", "Duelista", "Investigador", "Ladino", "Ventanista"],
+  Elementalista: ["Druida", "Místico", "Treinador"],
+  Guerreiro: ["Bárbaro", "Cavaleiro", "Lutador", "Samurai", "Soldado"],
+  Inspirador: ["Bardo", "Nobre", "Oráculo"],
+  Inventor: ["Alquimista", "Artilheiro", "Ferreiro"],
+  Sacerdote: ["Clérigo", "Frade", "Paladino", "Santo"]
+};
+
+function filtrarArquetipos() {
+  const classe = document.getElementById("classe").value;
+  const arquetipoSelect = document.getElementById("arquetipo");
+
+  // Limpa os arquétipos atuais
+  arquetipoSelect.innerHTML = '<option value="">-- Selecione o Arquétipo --</option>';
+
+  if (arquetiposPorClasse[classe]) {
+    arquetiposPorClasse[classe].forEach(arq => {
+      const option = document.createElement("option");
+      option.text = arq;
+      option.value = arq;
+      arquetipoSelect.add(option);
+    });
   }
 }
 
