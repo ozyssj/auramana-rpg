@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Ficha de Personagem - Tormenta20</title>
+  <title>Ficha de Personagem - Auramana T20</title>
   <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
   <style>
     body {
@@ -41,7 +41,7 @@
       margin-bottom: 4px;
     }
 
-    input, select {
+    input, select, textarea {
       width: 100%;
       padding: 10px;
       font-family: 'MedievalSharp', cursive;
@@ -99,7 +99,7 @@
 </head>
 <body>
   <div class="ficha-container">
-    <h1>Ficha de Personagem</h1>
+    <h1>Ficha Auramana T20</h1>
 
     <div class="campo">
       <label for="nome">Nome</label>
@@ -237,328 +237,124 @@
     </div>
 
     <div class="campo">
-      <label for="reflexos">Reflexos</label>
-      <input type="number" id="reflexos">
+      <label for="armadura">Armadura </label>
+      <input type="text" id="armadura" placeholder="RD e Penalidade">
     </div>
 
+    <div class="linha">
+     <div class="campo">
+       <label for="deslocamento">Deslocamento </label>
+       <input type="text" id="deslocamento" placeholder="9 metros">
+     </div>
     <div class="campo">
-      <label for="defesa">Defesa</label>
-      <input type="number" id="defesa" disabled>
+      <label for="classe">Tamanho</label>
+      <select id="classe">
+        <option>Médio</option>
+        <option>Minúsculo</option>
+        <option>Pequeno</option>
+        <option>Grande</option>
+        <option>Minúsculo</option>
+        <option>Colossal</option>
+      </select>
+    </div>
     </div>
 
-    <div class="campo">
-      <label for="poderes">Poderes por Nível</label>
-      <textarea id="poderes" rows="6" style="width:100%; font-family:'MedievalSharp';"></textarea>
-    </div>
-
+    <div class="linha">
+      <div class="campo">
     <div class="pericias">
-      <!-- Campos de perícias virão aqui -->
+      <div class="pericia">
+        <label>Defesa</label>
+        <select class="atributo-pericia">
+          <option value="des" selected>DES</option>
+          <option value="for">FOR</option>
+          <option value="con">CON</option>
+          <option value="int">INT</option>
+          <option value="sab">SAB</option>
+          <option value="car">CAR</option>
+        </select>
+        <select class="treinamento-pericia">
+          <option value="12">Iniciante</option>
+          <option value="14">Veterano (ND7)</option>
+          <option value="16">Mestre (ND13)</option>
+        </select>
+        <input type="number" class="bonus-pericia" placeholder="Bônus de Defesa">
+        <input type="number" class="valor-pericia" readonly>
+      </div>
     </div>
+    </div>
+    </div>
+    <div class="linha">
+    <div class="campo">
+        
+    <h2>Perícias</h2>
+    
+    <div class="pericias">
+      <div class="pericia">
+        <label>Acrobacia</label>
+        <select class="atributo-pericia">
+          <option value="des" selected>DES</option>
+          <option value="for">FOR</option>
+          <option value="con">CON</option>
+          <option value="int">INT</option>
+          <option value="sab">SAB</option>
+          <option value="car">CAR</option>
+        </select>
+        <select class="treinamento-pericia">
+          <option value="0">Destreinado</option>
+          <option value="2">Iniciante</option>
+          <option value="4">Veterano (ND7)</option>
+          <option value="6">Mestre (ND13)</option>
+        </select>
+        <input type="number" class="bonus-pericia" placeholder="Bônus de Perícia">
+        <input type="number" class="valor-pericia" readonly>
+      </div>
+    </div>
+    </div>
+ </div>
 
+
+ 
+<div class="campo">
+  <label for="inventario">Inventário</label>
+  <textarea id="inventario" rows="6">
+ -> Moedas:
+ -> 
+ -> 
+</textarea>
+</div>
+
+
+<div class="campo">
+  <label for="poderes">Poderes</label>
+  <textarea id="poderes" rows="22">
+ -> Raça:
+ -> Origem:
+ -> ND1: 
+ -> ND2:
+ -> ND3:
+</textarea>
+</div>
+
+<div class="campo">
+  <label for="magias">Magias</label>
+  <textarea id="poderes" rows="22">
+ -> 1° Círculo:
+ -
+ -> 2° Círculo:
+ -
+ -> 3° Círculo:
+ -
+</textarea>
+</div>
+
+
+    
     <div class="botoes">
       <button onclick="salvarFicha()">Salvar Ficha</button>
     </div>
   </div>
 
-
-<div class="pericias">
-  <!-- Coluna 1 -->
-  <div class="pericia">
-    <label>Acrobacia</label>
-    <select class="atributo-pericia">
-      <option value="des">DES</option>
-      <option value="for">FOR</option>
-      <option value="con">CON</option>
-      <option value="int">INT</option>
-      <option value="sab">SAB</option>
-      <option value="car">CAR</option>
-    </select>
-    <select class="treinamento-pericia">
-      <option value="0">Destreinado</option>
-      <option value="2">Iniciante</option>
-      <option value="4">Veterano (ND7)</option>
-      <option value="6">Mestre (ND13)</option>
-    </select>
-    <input type="number" class="valor-pericia" readonly>
-  </div>
-
-  <div class="pericia">
-    <label>Atletismo</label>
-    <select class="atributo-pericia">
-      <option value="for">FOR</option>
-      <option value="des">DES</option>
-      <option value="con">CON</option>
-      <option value="int">INT</option>
-      <option value="sab">SAB</option>
-      <option value="car">CAR</option>
-    </select>
-    <select class="treinamento-pericia">
-      <option value="0">Destreinado</option>
-      <option value="2">Iniciante</option>
-      <option value="4">Veterano (ND7)</option>
-      <option value="6">Mestre (ND13)</option>
-    </select>
-    <input type="number" class="valor-pericia" readonly>
-  </div>
-
-  <div class="pericia">
-    <label>Atuação</label>
-    <select class="atributo-pericia">
-      <option value="car">CAR</option>
-      <option value="int">INT</option>
-      <option value="sab">SAB</option>
-      <option value="for">FOR</option>
-      <option value="des">DES</option>
-      <option value="con">CON</option>
-    </select>
-    <select class="treinamento-pericia">
-      <option value="0">Destreinado</option>
-      <option value="2">Iniciante</option>
-      <option value="4">Veterano (ND7)</option>
-      <option value="6">Mestre (ND13)</option>
-    </select>
-    <input type="number" class="valor-pericia" readonly>
-  </div>
-
-  <div class="pericia">
-    <label>Conhecimento</label>
-    <select class="atributo-pericia">
-      <option value="int">INT</option>
-      <option value="sab">SAB</option>
-      <option value="car">CAR</option>
-      <option value="for">FOR</option>
-      <option value="des">DES</option>
-      <option value="con">CON</option>
-    </select>
-    <select class="treinamento-pericia">
-      <option value="0">Destreinado</option>
-      <option value="2">Iniciante</option>
-      <option value="4">Veterano (ND7)</option>
-      <option value="6">Mestre (ND13)</option>
-    </select>
-    <input type="number" class="valor-pericia" readonly>
-  </div>
-
-    <div class="pericia">
-    <label>Cura</label>
-    <select class="atributo-pericia">
-      <option value="int">INT</option>
-      <option value="sab">SAB</option>
-      <option value="car">CAR</option>
-      <option value="for">FOR</option>
-      <option value="des">DES</option>
-      <option value="con">CON</option>
-    </select>
-    <select class="treinamento-pericia">
-      <option value="0">Destreinado</option>
-      <option value="2">Iniciante</option>
-      <option value="4">Veterano (ND7)</option>
-      <option value="6">Mestre (ND13)</option>
-    </select>
-    <input type="number" class="valor-pericia" readonly>
-  </div>
-
-    <div class="pericia">
-    <label>Diplomacia</label>
-    <select class="atributo-pericia">
-      <option value="int">INT</option>
-      <option value="sab">SAB</option>
-      <option value="car">CAR</option>
-      <option value="for">FOR</option>
-      <option value="des">DES</option>
-      <option value="con">CON</option>
-    </select>
-    <select class="treinamento-pericia">
-      <option value="0">Destreinado</option>
-      <option value="2">Iniciante</option>
-      <option value="4">Veterano (ND7)</option>
-      <option value="6">Mestre (ND13)</option>
-    </select>
-    <input type="number" class="valor-pericia" readonly>
-  </div>
-
-
-      <div class="pericia">
-    <label>Enganação</label>
-    <select class="atributo-pericia">
-      <option value="int">INT</option>
-      <option value="sab">SAB</option>
-      <option value="car">CAR</option>
-      <option value="for">FOR</option>
-      <option value="des">DES</option>
-      <option value="con">CON</option>
-    </select>
-    <select class="treinamento-pericia">
-      <option value="0">Destreinado</option>
-      <option value="2">Iniciante</option>
-      <option value="4">Veterano (ND7)</option>
-      <option value="6">Mestre (ND13)</option>
-    </select>
-    <input type="number" class="valor-pericia" readonly>
-  </div>
-
-  <div class="pericia">
-    <label>Furtividade</label>
-    <select class="atributo-pericia">
-      <option value="des">DES</option>
-      <option value="int">INT</option>
-      <option value="car">CAR</option>
-      <option value="for">FOR</option>
-      <option value="sab">SAB</option>
-      <option value="con">CON</option>
-    </select>
-    <select class="treinamento-pericia">
-      <option value="0">Destreinado</option>
-      <option value="2">Iniciante</option>
-      <option value="4">Veterano (ND7)</option>
-      <option value="6">Mestre (ND13)</option>
-    </select>
-    <input type="number" class="valor-pericia" readonly>
-  </div>
-
-  <!-- Coluna 2 -->
-  <div class="pericia">
-    <label>Intimidação</label>
-    <select class="atributo-pericia">
-      <option value="car">CAR</option>
-      <option value="for">FOR</option>
-      <option value="des">DES</option>
-      <option value="int">INT</option>
-      <option value="sab">SAB</option>
-      <option value="con">CON</option>
-    </select>
-    <select class="treinamento-pericia">
-      <option value="0">Destreinado</option>
-      <option value="2">Iniciante</option>
-      <option value="4">Veterano (ND7)</option>
-      <option value="6">Mestre (ND13)</option>
-    </select>
-    <input type="number" class="valor-pericia" readonly>
-  </div>
-
-  <div class="pericia">
-    <label>Investigação</label>
-    <select class="atributo-pericia">
-      <option value="int">INT</option>
-      <option value="sab">SAB</option>
-      <option value="car">CAR</option>
-      <option value="for">FOR</option>
-      <option value="des">DES</option>
-      <option value="con">CON</option>
-    </select>
-    <select class="treinamento-pericia">
-      <option value="0">Destreinado</option>
-      <option value="2">Iniciante</option>
-      <option value="4">Veterano (ND7)</option>
-      <option value="6">Mestre (ND13)</option>
-    </select>
-    <input type="number" class="valor-pericia" readonly>
-  </div>
-
-  <div class="pericia">
-    <label>Intuição</label>
-    <select class="atributo-pericia">
-      <option value="int">INT</option>
-      <option value="sab">SAB</option>
-      <option value="car">CAR</option>
-      <option value="for">FOR</option>
-      <option value="des">DES</option>
-      <option value="con">CON</option>
-    </select>
-    <select class="treinamento-pericia">
-      <option value="0">Destreinado</option>
-      <option value="2">Iniciante</option>
-      <option value="4">Veterano (ND7)</option>
-      <option value="6">Mestre (ND13)</option>
-    </select>
-    <input type="number" class="valor-pericia" readonly>
-  </div>
-
-
-  <div class="pericia">
-    <label>Ofício</label>
-    <select class="atributo-pericia">
-      <option value="int">INT</option>
-      <option value="car">CAR</option>
-      <option value="sab">SAB</option>
-      <option value="for">FOR</option>
-      <option value="des">DES</option>
-      <option value="con">CON</option>
-    </select>
-    <select class="treinamento-pericia">
-      <option value="0">Destreinado</option>
-      <option value="2">Iniciante</option>
-      <option value="4">Veterano (ND7)</option>
-      <option value="6">Mestre (ND13)</option>
-    </select>
-    <input type="number" class="valor-pericia" readonly>
-  </div>
-
-  <div class="pericia">
-    <label>Percepção</label>
-    <select class="atributo-pericia">
-      <option value="sab">SAB</option>
-      <option value="int">INT</option>
-      <option value="car">CAR</option>
-      <option value="for">FOR</option>
-      <option value="des">DES</option>
-      <option value="con">CON</option>
-    </select>
-    <select class="treinamento-pericia">
-      <option value="0">Destreinado</option>
-      <option value="2">Iniciante</option>
-      <option value="4">Veterano (ND7)</option>
-      <option value="6">Mestre (ND13)</option>
-    </select>
-    <input type="number" class="valor-pericia" readonly>
-  </div>
-
-  <div class="pericia">
-    <label>Pilotagem</label>
-    <select class="atributo-pericia">
-      <option value="des">DES</option>
-      <option value="int">INT</option>
-      <option value="car">CAR</option>
-      <option value="for">FOR</option>
-      <option value="sab">SAB</option>
-      <option value="con">CON</option>
-    </select>
-    <select class="treinamento-pericia">
-      <option value="0">Destreinado</option>
-      <option value="2">Iniciante</option>
-      <option value="4">Veterano (ND7)</option>
-      <option value="6">Mestre (ND13)</option>
-    </select>
-    <input type="number" class="valor-pericia" readonly>
-  </div>
-
-  <div class="pericia">
-    <label>Vontade</label>
-    <select class="atributo-pericia">
-      <option value="des">DES</option>
-      <option value="int">INT</option>
-      <option value="car">CAR</option>
-      <option value="for">FOR</option>
-      <option value="sab">SAB</option>
-      <option value="con">CON</option>
-    </select>
-    <select class="treinamento-pericia">
-      <option value="0">Destreinado</option>
-      <option value="2">Iniciante</option>
-      <option value="4">Veterano (ND7)</option>
-      <option value="6">Mestre (ND13)</option>
-    </select>
-    <input type="number" class="valor-pericia" readonly>
-  </div>
-</div>
-
-
-
-
-</div>
-
-
-  <script>
+<script>
 function atualizarPericias() {
   const nivel = parseInt(document.getElementById('nivel').value) || 0;
   const atributos = {
@@ -567,13 +363,14 @@ function atualizarPericias() {
     con: parseInt(document.getElementById('con').value) || 0,
     int: parseInt(document.getElementById('int').value) || 0,
     sab: parseInt(document.getElementById('sab').value) || 0,
-    car: parseInt(document.getElementById('car').value) || 0,
+    car: parseInt(document.getElementById('car').value) || 0
   };
 
   document.querySelectorAll('.pericia').forEach(div => {
     const atributo = div.querySelector('.atributo-pericia').value;
     const treinamento = parseInt(div.querySelector('.treinamento-pericia').value);
-    const valor = Math.floor(nivel / 2) + atributos[atributo] + treinamento;
+    const bonusAdicional = parseInt(div.querySelector('.bonus-pericia').value) || 0;
+    const valor = Math.floor(nivel / 2) + atributos[atributo] + treinamento + bonusAdicional;
     div.querySelector('.valor-pericia').value = valor;
   });
 }
@@ -583,36 +380,26 @@ function atualizarPericias() {
 });
 
 document.addEventListener('change', e => {
-  if (e.target.classList.contains('atributo-pericia') || e.target.classList.contains('treinamento-pericia')) {
+  if (e.target.classList.contains('atributo-pericia') || e.target.classList.contains('treinamento-pericia') || e.target.classList.contains('bonus-pericia')) {
     atualizarPericias();
   }
 });
 
+function salvarFicha() {
+  const campos = document.querySelectorAll('input, select, textarea');
+  campos.forEach(el => localStorage.setItem('ficha-' + el.id, el.value));
+  alert("Ficha salva nas memórias do grimório!");
+}
+
 window.onload = () => {
-  const ids = ['nivel', 'for', 'des', 'con', 'int', 'sab', 'car'];
-  ids.forEach(id => {
-    const el = document.getElementById(id);
-    if(el) el.value = localStorage.getItem(id) || 0;
+  const campos = document.querySelectorAll('input, select, textarea');
+  campos.forEach(el => {
+    const val = localStorage.getItem('ficha-' + el.id);
+    if (val) el.value = val;
   });
   atualizarPericias();
 };
 
-function salvarFicha() {
-      const ids = document.querySelectorAll('input, select, textarea');
-      ids.forEach(el => localStorage.setItem('ficha-' + el.id, el.value));
-      alert("Ficha salva nas memórias do grimório!");
-    }
-
-    window.onload = () => {
-      const ids = document.querySelectorAll('input, select, textarea');
-      ids.forEach(el => {
-        const val = localStorage.getItem('ficha-' + el.id);
-        if (val) el.value = val;
-      });
-
-      const reflexos = parseInt(document.getElementById('reflexos').value || 0);
-      document.getElementById('defesa').value = 10 + reflexos;
-    };
-  </script>
+</script>
 </body>
 </html>
