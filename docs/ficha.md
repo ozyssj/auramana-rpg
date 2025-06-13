@@ -151,8 +151,9 @@
         <option>Pequenino</option>
         <option>Troll</option>
         <option>Feral</option>
+        <option>Morto-Vivo</option>
+        <option>Golem</option>        
         <option>Extraplanar</option>
-
       </select>
     </div>
 
