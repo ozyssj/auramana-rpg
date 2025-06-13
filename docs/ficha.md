@@ -273,7 +273,7 @@
     <div class="linha">
      <div class="campo">
        <label for="deslocamento">Deslocamento </label>
-       <input type="text" id="deslocamento" placeholder="9 metros">
+       <input type="number" id="deslocamento" min="0" max="60" placeholder=9>
      </div>
     <div class="campo">
       <label for="classe">Tamanho</label>
@@ -1060,7 +1060,7 @@ function baixarFicha() {
 
   const a = document.createElement('a');
   a.href = url;
-  a.download = document.getElementById(nome) + '_ficha_t20.json';
+  a.download = document.getElementById('nome') + '_ficha_t20.json';
   a.click();
 
   URL.revokeObjectURL(url);
