@@ -92,7 +92,7 @@
 
     .pericias {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
     
@@ -809,6 +809,26 @@
         <input type="number" class="valor-pericia" readonly>
       </div>            
       
+       <div class="pericia">
+        <label>Ofício</label>
+        <select class="atributo-pericia">
+          <option value="int">INT</option>
+          <option value="for">FOR</option>
+          <option value="des">DES</option>
+          <option value="con">CON</option>
+          <option value="sab">SAB</option>
+          <option value="car">CAR</option>
+        </select>
+        <select class="treinamento-pericia">
+          <option value="0">Destreinado</option>
+          <option value="2">Iniciante</option>
+          <option value="4">Veterano (ND7)</option>
+          <option value="6">Mestre (ND13)</option>
+        </select>
+        <input type="number" class="bonus-pericia" placeholder="Bônus de Perícia">
+        <input type="number" class="valor-pericia" readonly>
+      </div>            
+            
       <div class="pericia">
         <label>Percepção</label>
         <select class="atributo-pericia">
