@@ -263,7 +263,6 @@
         <option>Minúsculo</option>
         <option>Pequeno</option>
         <option>Grande</option>
-        <option>Minúsculo</option>
         <option>Colossal</option>
       </select>
     </div>
