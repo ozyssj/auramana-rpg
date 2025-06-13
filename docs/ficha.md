@@ -273,7 +273,7 @@
     <div class="linha">
      <div class="campo">
        <label for="deslocamento">Deslocamento </label>
-       <input type="text" id="deslocamento" placeholder="9 metros">
+       <input type="number" id="deslocamento" min="0" max="60" placeholder=9>
      </div>
     <div class="campo">
       <label for="classe">Tamanho</label>
@@ -323,8 +323,8 @@
       <div class="pericia">
         <label>Acrobacia</label>
         <select class="atributo-pericia">
+          <option value="des">DES</option>
           <option value="for">FOR</option>
-          <option value="des" selected>DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
           <option value="sab">SAB</option>
@@ -343,12 +343,12 @@
       <div class="pericia">
         <label>Adestramento</label>
         <select class="atributo-pericia">
+          <option value="car">CAR</option>
           <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
           <option value="sab">SAB</option>
-          <option value="car" selected>CAR</option>
         </select>
         <select class="treinamento-pericia">
           <option value="0">Destreinado</option>
@@ -363,7 +363,7 @@
       <div class="pericia">
         <label>Atlestimo</label>
         <select class="atributo-pericia">
-          <option value="for" selected>FOR</option>
+          <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
@@ -383,12 +383,12 @@
        <div class="pericia">
         <label>Atuação</label>
         <select class="atributo-pericia">
+          <option value="car">CAR</option>
           <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
           <option value="sab">SAB</option>
-          <option value="car" selected>CAR</option>
         </select>
         <select class="treinamento-pericia">
           <option value="0">Destreinado</option>
@@ -403,8 +403,8 @@
       <div class="pericia">
         <label>Cavalgar</label>
         <select class="atributo-pericia">
+          <option value="des">DES</option>
           <option value="for">FOR</option>
-          <option value="des" selected>DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
           <option value="sab">SAB</option>
@@ -423,10 +423,10 @@
        <div class="pericia">
         <label>Conhecimento</label>
         <select class="atributo-pericia">
+          <option value="int">INT</option>
           <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
-          <option value="int" selected>INT</option>
           <option value="sab">SAB</option>
           <option value="car">CAR</option>
         </select>
@@ -443,11 +443,11 @@
        <div class="pericia">
         <label>Cura</label>
         <select class="atributo-pericia">
+          <option value="sab">SAB</option>
           <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
-          <option value="sab" selected>SAB</option>
           <option value="car">CAR</option>
         </select>
         <select class="treinamento-pericia">
@@ -463,12 +463,12 @@
        <div class="pericia">
         <label>Diplomacia</label>
         <select class="atributo-pericia">
+          <option value="car">CAR</option>
           <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
           <option value="sab">SAB</option>
-          <option value="car" selected>CAR</option>
         </select>
         <select class="treinamento-pericia">
           <option value="0">Destreinado</option>
@@ -483,12 +483,12 @@
        <div class="pericia">
         <label>Enganação</label>
         <select class="atributo-pericia">
+          <option value="car">CAR</option>
           <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
           <option value="sab">SAB</option>
-          <option value="car" selected>CAR</option>
         </select>
         <select class="treinamento-pericia">
           <option value="0">Destreinado</option>
@@ -503,9 +503,9 @@
       <div class="pericia">
         <label>Fortitude</label>
         <select class="atributo-pericia">
+          <option value="con">CON</option>
           <option value="for">FOR</option>
           <option value="des">DES</option>
-          <option value="con" selected>CON</option>
           <option value="int">INT</option>
           <option value="sab">SAB</option>
           <option value="car">CAR</option>
@@ -523,8 +523,8 @@
       <div class="pericia">
         <label>Furtividade</label>
         <select class="atributo-pericia">
+          <option value="des">DES</option>
           <option value="for">FOR</option>
-          <option value="des" selected>DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
           <option value="sab">SAB</option>
@@ -543,10 +543,10 @@
        <div class="pericia">
         <label>Guerra</label>
         <select class="atributo-pericia">
+          <option value="int">INT</option>
           <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
-          <option value="int" selected>INT</option>
           <option value="sab">SAB</option>
           <option value="car">CAR</option>
         </select>
@@ -563,8 +563,8 @@
       <div class="pericia">
         <label>Iniciativa</label>
         <select class="atributo-pericia">
+          <option value="des">DES</option>
           <option value="for">FOR</option>
-          <option value="des" selected>DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
           <option value="sab">SAB</option>
@@ -583,12 +583,12 @@
        <div class="pericia">
         <label>Intimidação</label>
         <select class="atributo-pericia">
+          <option value="car">CAR</option>
           <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
           <option value="sab">SAB</option>
-          <option value="car" selected>CAR</option>
         </select>
         <select class="treinamento-pericia">
           <option value="0">Destreinado</option>
@@ -603,11 +603,11 @@
        <div class="pericia">
         <label>Intuição</label>
         <select class="atributo-pericia">
+          <option value="sab">SAB</option>
           <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
-          <option value="sab" selected>SAB</option>
           <option value="car">CAR</option>
         </select>
         <select class="treinamento-pericia">
@@ -623,10 +623,10 @@
        <div class="pericia">
         <label>Investigação</label>
         <select class="atributo-pericia">
+          <option value="int">INT</option>
           <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
-          <option value="int" selected>INT</option>
           <option value="sab">SAB</option>
           <option value="car">CAR</option>
         </select>
@@ -643,12 +643,12 @@
        <div class="pericia">
         <label>Jogatina</label>
         <select class="atributo-pericia">
+          <option value="car">CAR</option>
           <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
           <option value="sab">SAB</option>
-          <option value="car" selected>CAR</option>
         </select>
         <select class="treinamento-pericia">
           <option value="0">Destreinado</option>
@@ -663,8 +663,8 @@
       <div class="pericia">
         <label>Ladinagem</label>
         <select class="atributo-pericia">
+          <option value="des">DES</option>
           <option value="for">FOR</option>
-          <option value="des" selected>DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
           <option value="sab">SAB</option>
@@ -683,7 +683,7 @@
       <div class="pericia">
         <label>Luta</label>
         <select class="atributo-pericia">
-          <option value="for" selected>FOR</option>
+          <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
@@ -703,10 +703,10 @@
        <div class="pericia">
         <label>Misticismo</label>
         <select class="atributo-pericia">
+          <option value="int">INT</option>
           <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
-          <option value="int" selected>INT</option>
           <option value="sab">SAB</option>
           <option value="car">CAR</option>
         </select>
@@ -723,10 +723,10 @@
        <div class="pericia">
         <label>Nobreza</label>
         <select class="atributo-pericia">
+          <option value="int">INT</option>
           <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
-          <option value="int" selected>INT</option>
           <option value="sab">SAB</option>
           <option value="car">CAR</option>
         </select>
@@ -743,10 +743,10 @@
        <div class="pericia">
         <label>Ofício Alquimia</label>
         <select class="atributo-pericia">
+          <option value="int">INT</option>
           <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
-          <option value="int" selected>INT</option>
           <option value="sab">SAB</option>
           <option value="car">CAR</option>
         </select>
@@ -763,10 +763,10 @@
        <div class="pericia">
         <label>Ofício Artilheiro</label>
         <select class="atributo-pericia">
+          <option value="int">INT</option>
           <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
-          <option value="int" selected>INT</option>
           <option value="sab">SAB</option>
           <option value="car">CAR</option>
         </select>
@@ -783,10 +783,10 @@
        <div class="pericia">
         <label>Ofício Engenhoqueiro</label>
         <select class="atributo-pericia">
+          <option value="int">INT</option>
           <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
-          <option value="int" selected>INT</option>
           <option value="sab">SAB</option>
           <option value="car">CAR</option>
         </select>
@@ -803,10 +803,10 @@
        <div class="pericia">
         <label>Ofício Ferreiro</label>
         <select class="atributo-pericia">
+          <option value="int">INT</option>
           <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
-          <option value="int" selected>INT</option>
           <option value="sab">SAB</option>
           <option value="car">CAR</option>
         </select>
@@ -823,11 +823,11 @@
       <div class="pericia">
         <label>Percepção</label>
         <select class="atributo-pericia">
+          <option value="sab">SAB</option>
           <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
-          <option value="sab" selected>SAB</option>
           <option value="car">CAR</option>
         </select>
         <select class="treinamento-pericia">
@@ -843,8 +843,8 @@
       <div class="pericia">
         <label>Pilotagem</label>
         <select class="atributo-pericia">
+          <option value="des">DES</option>
           <option value="for">FOR</option>
-          <option value="des" selected>DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
           <option value="sab">SAB</option>
@@ -863,8 +863,8 @@
       <div class="pericia">
         <label>Pontaria</label>
         <select class="atributo-pericia">
+          <option value="des">DES</option>
           <option value="for">FOR</option>
-          <option value="des" selected>DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
           <option value="sab">SAB</option>
@@ -883,8 +883,8 @@
       <div class="pericia">
         <label>Reflexos</label>
         <select class="atributo-pericia">
+          <option value="des">DES</option>
           <option value="for">FOR</option>
-          <option value="des" selected>DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
           <option value="sab">SAB</option>
@@ -903,11 +903,11 @@
        <div class="pericia">
         <label>Religião</label>
         <select class="atributo-pericia">
+          <option value="sab">SAB</option>
           <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
-          <option value="sab" selected>SAB</option>
           <option value="car">CAR</option>
         </select>
         <select class="treinamento-pericia">
@@ -923,11 +923,11 @@
        <div class="pericia">
         <label>Sobrevivência</label>
         <select class="atributo-pericia">
+          <option value="sab">SAB</option>
           <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
-          <option value="sab" selected>SAB</option>
           <option value="car">CAR</option>
         </select>
         <select class="treinamento-pericia">
@@ -943,11 +943,11 @@
        <div class="pericia">
         <label>Vontade</label>
         <select class="atributo-pericia">
+          <option value="sab">SAB</option>
           <option value="for">FOR</option>
           <option value="des">DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
-          <option value="sab" selected>SAB</option>
           <option value="car">CAR</option>
         </select>
         <select class="treinamento-pericia">
@@ -1060,7 +1060,8 @@ function baixarFicha() {
 
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'ficha_t20.json';
+  const nome = document.getElementById('nome'));
+  a.download = nome  + '_ficha_t20.json';
   a.click();
 
   URL.revokeObjectURL(url);
