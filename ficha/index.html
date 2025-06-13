@@ -1270,6 +1270,8 @@
   <button onclick="baixarFicha()">Exportar Ficha</button>
   <input type="file" id="uploadFicha" accept=".json" onchange="carregarFicha()" style="display:none">
   <button onclick="document.getElementById('uploadFicha').click()">Importar Ficha</button>
+    <button onclick="limparFicha()">Limpar Ficha</button>
+
 </div>
 
   </div>
@@ -1355,6 +1357,25 @@ function carregarFicha() {
   };
   reader.readAsText(file);
 }
+
+function limparFicha() {
+  if (confirm("Tem certeza que deseja apagar todos os dados da ficha?")) {
+    const campos = document.querySelectorAll('input, select, textarea');
+    campos.forEach(el => {
+      localStorage.removeItem('ficha-' + el.id);
+      if (el.type === 'checkbox') {
+        el.checked = false;
+      } else if (el.tagName === 'SELECT') {
+        el.selectedIndex = 0;
+      } else {
+        el.value = '';
+      }
+    });
+    document.getElementById('output-json').value = '';
+    alert("Todos os dados foram apagados da ficha.");
+  }
+}
+
 
 window.onload = () => {
   const campos = document.querySelectorAll('input, select, textarea');
