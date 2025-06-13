@@ -1062,7 +1062,8 @@ function baixarFicha() {
 
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'ficha_t20.json';
+  const nome = document.getElementById('nome');
+  a.download = nome + 'ficha_t20.json';
   a.click();
 
   URL.revokeObjectURL(url);
