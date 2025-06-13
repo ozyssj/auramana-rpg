@@ -202,7 +202,12 @@
       <label for="origem">Origem</label>
       <input type="text" id="origem" placeholder="Ex: Eremita">
     </div>
-
+    
+    <div class="campo">
+      <label for="origem">Divindade</label>
+      <input type="text" id="origem" placeholder="Ex: São Nikolai">
+    </div>
+    
     <div class="atributos">
       <div class="campo">
         <label for="for">FOR</label>
@@ -1055,7 +1060,7 @@ function baixarFicha() {
 
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'ficha_t20.json';
+  a.download = document.getElementById(nome) + '_ficha_t20.json';
   a.click();
 
   URL.revokeObjectURL(url);
