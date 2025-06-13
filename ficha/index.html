@@ -268,7 +268,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Ficha de Personagem</title>
+  <title>Ficha de Personagem - Tormenta20</title>
   <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
   <style>
     body {
@@ -325,6 +325,11 @@
       margin-top: 20px;
     }
 
+    .linha {
+      display: flex;
+      gap: 20px;
+    }
+
     .botoes {
       text-align: center;
       margin-top: 30px;
@@ -351,25 +356,10 @@
       box-shadow: 0 2px #3a2c1d;
     }
 
-    .barra3colunas {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-    }
-
     .pericias {
-      margin-top: 30px;
-    }
-
-    .pericia-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-      gap: 10px;
-    }
-
-    .pericia-item select {
-      width: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
     }
   </style>
 </head>
@@ -382,18 +372,71 @@
       <input type="text" id="nome" placeholder="Ex: Lendor, o Errante">
     </div>
 
+    <div class="linha">
+      <div class="campo">
+        <label for="nivel">Nível</label>
+        <input type="number" id="nivel" min="0" max="60">
+      </div>
+      <div class="campo">
+        <label for="xp">XP</label>
+        <input type="number" id="xp">
+      </div>
+    </div>
+
     <div class="campo">
       <label for="raca">Raça</label>
       <select id="raca">
         <option value="">-- Selecione a Raça --</option>
-        <option value="Humano">Humano</option>
-        <option value="Elfo">Elfo</option>
-        <option value="Anão">Anão</option>
-        <option value="Orc">Goblinoide</option>
-        <option value="Goblin">Troll</option>
-        <option value="Meio-Elfo">Feral</option>
-        <option value="Tiefling">Extraplanar</option>
-        <option value="Draconato">Gigante</option>
+        <option>Humano</option>
+        <option>Elfo</option>
+        <option>Anão</option>
+        <option>Goblinoide</option>
+        <option>Troll</option>
+        <option>Feral</option>
+        <option>Extraplanar</option>
+        <option>Gigante</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="classe">Classe</label>
+      <select id="classe">
+        <option value="">-- Selecione a Classe --</option>
+        <option>Arcanista</option>
+        <option>Batedor</option>
+        <option>Guerreiro</option>
+        <option>Elementalista</option>
+        <option>Inspirador</option>
+        <option>Inventor</option>
+        <option>Sacerdote</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="arquetipo">Arquétipo</label>
+      <select id="arquetipo">
+        <option value="">-- Selecione o Arquétipo --</option>
+        <optgroup label="Arcanista">
+          <option>Bruxo</option><option>Feiticeiro</option><option>Mago</option><option>Necromante</option>
+        </optgroup>
+        <optgroup label="Batedor">
+          <option>Bucaneiro</option><option>Caçador</option><option>Duelista</option><option>Investigador</option><option>Ladino</option><option>Ventanista</option>
+        </optgroup>
+        <optgroup label="Elementalista">
+          <option>Druida</option><option>Místico</option><option>Treinador</option>
+        </optgroup>
+        <optgroup label="Guerreiro">
+          <option>Bárbaro</option><option>Cavaleiro</option><option>Lutador</option><option>Samurai</option><option>Soldado</option>
+        </optgroup>
+        <optgroup label="Inspirador">
+          <option>Bardo</option><option>Nobre</option><option>Oráculo</option>
+        </optgroup>
+        <optgroup label="Inventor">
+          <option>Alquimista</option><option>Artilheiro</option><option>Ferreiro</option>
+        </optgroup>
+        <optgroup label="Sacerdote">
+          <option>Clérigo</option><option>Frade</option><option>Paladino</option><option>Santo</option>
+        </optgroup>
       </select>
     </div>
 
@@ -420,8 +463,8 @@
         <input type="number" id="int" min="-10" max="10">
       </div>
       <div class="campo">
-        <label for="sen">SEN</label>
-        <input type="number" id="sen" min="-10" max="10">
+        <label for="sab">SAB</label>
+        <input type="number" id="sab" min="-10" max="10">
       </div>
       <div class="campo">
         <label for="car">CAR</label>
@@ -429,7 +472,7 @@
       </div>
     </div>
 
-    <div class="barra3colunas">
+    <div class="linha">
       <div class="campo">
         <label for="pvMax">PV Máx</label>
         <input type="number" id="pvMax">
@@ -444,7 +487,7 @@
       </div>
     </div>
 
-    <div class="barra3colunas">
+    <div class="linha">
       <div class="campo">
         <label for="pmMax">PM Máx</label>
         <input type="number" id="pmMax">
@@ -460,13 +503,22 @@
     </div>
 
     <div class="campo">
-      <label for="nivel">Nível</label>
-      <input type="number" id="nivel" min="1" max="20">
+      <label for="reflexos">Reflexos</label>
+      <input type="number" id="reflexos">
+    </div>
+
+    <div class="campo">
+      <label for="defesa">Defesa</label>
+      <input type="number" id="defesa" disabled>
+    </div>
+
+    <div class="campo">
+      <label for="poderes">Poderes por Nível</label>
+      <textarea id="poderes" rows="6" style="width:100%; font-family:'MedievalSharp';"></textarea>
     </div>
 
     <div class="pericias">
-      <h2>Perícias</h2>
-      <div id="lista-pericias"></div>
+      <!-- Campos de perícias virão aqui -->
     </div>
 
     <div class="botoes">
@@ -475,93 +527,21 @@
   </div>
 
   <script>
-    const pericias = [
-      { nome: "Acrobacia", atributo: "des" },
-      { nome: "Adestramento", atributo: "car" },
-      { nome: "Arcanismo", atributo: "int" },
-      { nome: "Atletismo", atributo: "for" },
-      { nome: "Atuação", atributo: "car" },
-      { nome: "Cavalgar", atributo: "des" },
-      { nome: "Conhecimento", atributo: "int" },
-      { nome: "Cura", atributo: "int" },
-      { nome: "Diplomacia", atributo: "car" },
-      { nome: "Enganação", atributo: "car" },
-      { nome: "Fortitude", atributo: "con" },
-      { nome: "Furtividade", atributo: "des" },
-      { nome: "Guerra", atributo: "int" },
-      { nome: "Intimidação", atributo: "car" },
-      { nome: "Intuição", atributo: "sen" },
-      { nome: "Investigação", atributo: "int" },
-      { nome: "Jogatina", atributo: "car" },
-      { nome: "Ladinagem", atributo: "des" },
-      { nome: "Luta", atributo: "for" },
-      { nome: "Misticismo", atributo: "int" },
-      { nome: "Nobreza", atributo: "int" },
-      { nome: "Ofício", atributo: "int" },
-      { nome: "Percepção", atributo: "sen" },
-      { nome: "Pilotagem", atributo: "des" },
-      { nome: "Reflexos", atributo: "des" },
-      { nome: "Religião", atributo: "sen" },
-      { nome: "Sobrevivência", atributo: "sen" },
-      { nome: "Vontade", atributo: "sen" }
-    ];
-
-    function criarListaPericias() {
-      const container = document.getElementById("lista-pericias");
-      container.innerHTML = "";
-      pericias.forEach((p, i) => {
-        const div = document.createElement("div");
-        div.className = "pericia-item";
-        div.innerHTML = `
-          <label>${p.nome}</label>
-          <select id="treinamento-${i}">
-            <option value="0">Destreinado</option>
-            <option value="2">Treinado</option>
-            <option value="4">Veterano</option>
-            <option value="6">Mestre</option>
-          </select>
-          <span id="valor-pericia-${i}">0</span>
-        `;
-        container.appendChild(div);
-      });
-    }
-
-    function atualizarPericias() {
-      const nivel = parseInt(document.getElementById("nivel").value || "0");
-      pericias.forEach((p, i) => {
-        const atr = parseInt(document.getElementById(p.atributo).value || "0");
-        const grau = parseInt(document.getElementById(`treinamento-${i}`).value || "0");
-        const valor = Math.floor(nivel / 2) + atr + grau;
-        document.getElementById(`valor-pericia-${i}`).textContent = valor;
-      });
-    }
-
     function salvarFicha() {
-      const campos = ['nome', 'raca', 'origem', 'nivel', 'for', 'des', 'con', 'int', 'sen', 'car', 'pvMax', 'pvTemp', 'pvAtual', 'pmMax', 'pmTemp', 'pmAtual'];
-      campos.forEach(id => {
-        const valor = document.getElementById(id).value;
-        localStorage.setItem('ficha-' + id, valor);
-      });
-      pericias.forEach((p, i) => {
-        const val = document.getElementById(`treinamento-${i}`).value;
-        localStorage.setItem(`ficha-pericia-${i}`, val);
-      });
+      const ids = document.querySelectorAll('input, select, textarea');
+      ids.forEach(el => localStorage.setItem('ficha-' + el.id, el.value));
       alert("Ficha salva nas memórias do grimório!");
     }
 
     window.onload = () => {
-      const campos = ['nome', 'raca', 'origem', 'nivel', 'for', 'des', 'con', 'int', 'sen', 'car', 'pvMax', 'pvTemp', 'pvAtual', 'pmMax', 'pmTemp', 'pmAtual'];
-      campos.forEach(id => {
-        const valor = localStorage.getItem('ficha-' + id);
-        if (valor) document.getElementById(id).value = valor;
+      const ids = document.querySelectorAll('input, select, textarea');
+      ids.forEach(el => {
+        const val = localStorage.getItem('ficha-' + el.id);
+        if (val) el.value = val;
       });
-      criarListaPericias();
-      pericias.forEach((p, i) => {
-        const val = localStorage.getItem(`ficha-pericia-${i}`);
-        if (val) document.getElementById(`treinamento-${i}`).value = val;
-      });
-      document.querySelectorAll('input, select').forEach(el => el.addEventListener('input', atualizarPericias));
-      atualizarPericias();
+
+      const reflexos = parseInt(document.getElementById('reflexos').value || 0);
+      document.getElementById('defesa').value = 10 + reflexos;
     };
   </script>
 </body>
