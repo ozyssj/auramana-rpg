@@ -226,7 +226,7 @@
         <input type="number" id="pvMax">
       </div>
       <div class="campo">
-        <label for="pvTemp">PV Temporário</label>
+        <label for="pvTemp">PV Temp</label>
         <input type="number" id="pvTemp">
       </div>
     </div>
@@ -241,7 +241,7 @@
         <input type="number" id="pmMax">          
       </div>
       <div class="campo">
-        <label for="pmTemp">PM Temporário</label>
+        <label for="pmTemp">PM Temp</label>
         <input type="number" id="pmTemp">          
       </div>
     </div>
