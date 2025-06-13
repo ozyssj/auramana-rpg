@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Ficha de Personagem - Tormenta20</title>
+  <title>Ficha de Personagem</title>
   <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
   <style>
     body {
@@ -41,7 +41,7 @@
       margin-bottom: 4px;
     }
 
-    input, select, textarea {
+    input, select {
       width: 100%;
       padding: 10px;
       font-family: 'MedievalSharp', cursive;
@@ -84,10 +84,30 @@
       transform: translateY(2px);
       box-shadow: 0 2px #3a2c1d;
     }
+
+    .barra3colunas {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .pericias {
+      margin-top: 30px;
+    }
+
+    .pericia-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 10px;
+    }
+
+    .pericia-item select {
+      width: auto;
+    }
   </style>
 </head>
 <body>
-
   <div class="ficha-container">
     <h1>Ficha de Personagem</h1>
 
@@ -116,40 +136,10 @@
       <input type="text" id="origem" placeholder="Ex: Eremita">
     </div>
 
-    <div class="campo">
-      <label for="classe">Classe</label>
-      <input type="text" id="classe" placeholder="Ex: Guerreiro">
-    </div>
-
-    <div class="campo">
-      <label for="nivel">Nível</label>
-      <input type="number" id="nivel" min="1" max="20">
-    </div>
-
-    <div class="campo">
-      <label for="pv">Pontos de Vida (PV)</label>
-      <input type="number" id="pv" min="0">
-    </div>
-
-    <div class="campo">
-      <label for="pm">Pontos de Mana (PM)</label>
-      <input type="number" id="pm" min="0">
-    </div>
-
-    <div class="campo">
-      <label for="defesa">Defesa</label>
-      <input type="number" id="defesa" min="0">
-    </div>
-
-    <div class="campo">
-      <label for="deslocamento">Deslocamento</label>
-      <input type="text" id="deslocamento" placeholder="Ex: 9m">
-    </div>
-
     <div class="atributos">
       <div class="campo">
         <label for="for">FOR</label>
-        <input type="number" id="for"  min="-10" max="10">
+        <input type="number" id="for" min="-10" max="10">
       </div>
       <div class="campo">
         <label for="des">DES</label>
@@ -169,18 +159,48 @@
       </div>
       <div class="campo">
         <label for="car">CAR</label>
-        <input type="number" id="car"  min="-10" max="10">
+        <input type="number" id="car" min="-10" max="10">
+      </div>
+    </div>
+
+    <div class="barra3colunas">
+      <div class="campo">
+        <label for="pvMax">PV Máx</label>
+        <input type="number" id="pvMax">
+      </div>
+      <div class="campo">
+        <label for="pvTemp">PV Temporário</label>
+        <input type="number" id="pvTemp">
+      </div>
+      <div class="campo">
+        <label for="pvAtual">PV Atual</label>
+        <input type="number" id="pvAtual">
+      </div>
+    </div>
+
+    <div class="barra3colunas">
+      <div class="campo">
+        <label for="pmMax">PM Máx</label>
+        <input type="number" id="pmMax">
+      </div>
+      <div class="campo">
+        <label for="pmTemp">PM Temporário</label>
+        <input type="number" id="pmTemp">
+      </div>
+      <div class="campo">
+        <label for="pmAtual">PM Atual</label>
+        <input type="number" id="pmAtual">
       </div>
     </div>
 
     <div class="campo">
-      <label for="poderes">Poderes</label>
-      <textarea id="poderes" rows="4" placeholder="Descreva aqui os poderes especiais e habilidades."></textarea>
+      <label for="nivel">Nível</label>
+      <input type="number" id="nivel" min="1" max="20">
     </div>
 
-    <div class="campo">
-      <label for="equipamentos">Equipamentos</label>
-      <textarea id="equipamentos" rows="4" placeholder="Liste os itens e armas que carrega."></textarea>
+    <div class="pericias">
+      <h2>Perícias</h2>
+      <div id="lista-pericias"></div>
     </div>
 
     <div class="botoes">
@@ -189,25 +209,94 @@
   </div>
 
   <script>
+    const pericias = [
+      { nome: "Acrobacia", atributo: "des" },
+      { nome: "Adestramento", atributo: "car" },
+      { nome: "Arcanismo", atributo: "int" },
+      { nome: "Atletismo", atributo: "for" },
+      { nome: "Atuação", atributo: "car" },
+      { nome: "Cavalgar", atributo: "des" },
+      { nome: "Conhecimento", atributo: "int" },
+      { nome: "Cura", atributo: "int" },
+      { nome: "Diplomacia", atributo: "car" },
+      { nome: "Enganação", atributo: "car" },
+      { nome: "Fortitude", atributo: "con" },
+      { nome: "Furtividade", atributo: "des" },
+      { nome: "Guerra", atributo: "int" },
+      { nome: "Intimidação", atributo: "car" },
+      { nome: "Intuição", atributo: "sen" },
+      { nome: "Investigação", atributo: "int" },
+      { nome: "Jogatina", atributo: "car" },
+      { nome: "Ladinagem", atributo: "des" },
+      { nome: "Luta", atributo: "for" },
+      { nome: "Misticismo", atributo: "int" },
+      { nome: "Nobreza", atributo: "int" },
+      { nome: "Ofício", atributo: "int" },
+      { nome: "Percepção", atributo: "sen" },
+      { nome: "Pilotagem", atributo: "des" },
+      { nome: "Reflexos", atributo: "des" },
+      { nome: "Religião", atributo: "sen" },
+      { nome: "Sobrevivência", atributo: "sen" },
+      { nome: "Vontade", atributo: "sen" }
+    ];
+
+    function criarListaPericias() {
+      const container = document.getElementById("lista-pericias");
+      container.innerHTML = "";
+      pericias.forEach((p, i) => {
+        const div = document.createElement("div");
+        div.className = "pericia-item";
+        div.innerHTML = `
+          <label>${p.nome}</label>
+          <select id="treinamento-${i}">
+            <option value="0">Destreinado</option>
+            <option value="2">Treinado</option>
+            <option value="4">Veterano</option>
+            <option value="6">Mestre</option>
+          </select>
+          <span id="valor-pericia-${i}">0</span>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function atualizarPericias() {
+      const nivel = parseInt(document.getElementById("nivel").value || "0");
+      pericias.forEach((p, i) => {
+        const atr = parseInt(document.getElementById(p.atributo).value || "0");
+        const grau = parseInt(document.getElementById(`treinamento-${i}`).value || "0");
+        const valor = Math.floor(nivel / 2) + atr + grau;
+        document.getElementById(`valor-pericia-${i}`).textContent = valor;
+      });
+    }
+
     function salvarFicha() {
-      const campos = ['nome', 'raca', 'origem', 'classe', 'nivel', 'pv', 'pm', 'defesa', 'deslocamento', 'for', 'des', 'con', 'int', 'sen', 'car', 'poderes', 'equipamentos'];
+      const campos = ['nome', 'raca', 'origem', 'nivel', 'for', 'des', 'con', 'int', 'sen', 'car', 'pvMax', 'pvTemp', 'pvAtual', 'pmMax', 'pmTemp', 'pmAtual'];
       campos.forEach(id => {
         const valor = document.getElementById(id).value;
         localStorage.setItem('ficha-' + id, valor);
       });
-      alert("Ficha salva nas memórias do grimório (localStorage)!");
+      pericias.forEach((p, i) => {
+        const val = document.getElementById(`treinamento-${i}`).value;
+        localStorage.setItem(`ficha-pericia-${i}`, val);
+      });
+      alert("Ficha salva nas memórias do grimório!");
     }
 
     window.onload = () => {
-      const campos = ['nome', 'raca', 'origem', 'classe', 'nivel', 'pv', 'pm', 'defesa', 'deslocamento', 'for', 'des', 'con', 'int', 'sen', 'car', 'poderes', 'equipamentos'];
+      const campos = ['nome', 'raca', 'origem', 'nivel', 'for', 'des', 'con', 'int', 'sen', 'car', 'pvMax', 'pvTemp', 'pvAtual', 'pmMax', 'pmTemp', 'pmAtual'];
       campos.forEach(id => {
         const valor = localStorage.getItem('ficha-' + id);
-        if (valor) {
-          document.getElementById(id).value = valor;
-        }
+        if (valor) document.getElementById(id).value = valor;
       });
-    }
+      criarListaPericias();
+      pericias.forEach((p, i) => {
+        const val = localStorage.getItem(`ficha-pericia-${i}`);
+        if (val) document.getElementById(`treinamento-${i}`).value = val;
+      });
+      document.querySelectorAll('input, select').forEach(el => el.addEventListener('input', atualizarPericias));
+      atualizarPericias();
+    };
   </script>
-
 </body>
 </html>
