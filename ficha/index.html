@@ -391,10 +391,12 @@
         <option>Elfo</option>
         <option>Anão</option>
         <option>Goblinoide</option>
+        <option>Gigante</option>
+        <option>Pequenino</option>
         <option>Troll</option>
         <option>Feral</option>
         <option>Extraplanar</option>
-        <option>Gigante</option>
+
       </select>
     </div>
 
@@ -539,6 +541,7 @@
           <option value="car">CAR</option>
         </select>
         <select class="treinamento-pericia">
+          <option value="10">Destreinado em Reflexos</option>
           <option value="12">Iniciante</option>
           <option value="14">Veterano (ND7)</option>
           <option value="16">Mestre (ND13)</option>
@@ -555,11 +558,13 @@
     <h2>Perícias</h2>
 
     <div class="pericias">
+
+
       <div class="pericia">
         <label>Acrobacia</label>
         <select class="atributo-pericia">
-          <option value="des" selected>DES</option>
           <option value="for">FOR</option>
+          <option value="des" selected>DES</option>
           <option value="con">CON</option>
           <option value="int">INT</option>
           <option value="sab">SAB</option>
@@ -574,6 +579,48 @@
         <input type="number" class="bonus-pericia" placeholder="Bônus de Perícia">
         <input type="number" class="valor-pericia" readonly>
       </div>
+
+      <div class="pericia">
+        <label>Adestramento</label>
+        <select class="atributo-pericia">
+          <option value="for">FOR</option>
+          <option value="des">DES</option>
+          <option value="con">CON</option>
+          <option value="int">INT</option>
+          <option value="sab">SAB</option>
+          <option value="car" selected>CAR</option>
+        </select>
+        <select class="treinamento-pericia">
+          <option value="0">Destreinado</option>
+          <option value="2">Iniciante</option>
+          <option value="4">Veterano (ND7)</option>
+          <option value="6">Mestre (ND13)</option>
+        </select>
+        <input type="number" class="bonus-pericia" placeholder="Bônus de Perícia">
+        <input type="number" class="valor-pericia" readonly>
+      </div>
+
+      <div class="pericia">
+        <label>Atuação</label>
+        <select class="atributo-pericia">
+          <option value="for">FOR</option>
+          <option value="des">DES</option>
+          <option value="con">CON</option>
+          <option value="int">INT</option>
+          <option value="sab">SAB</option>
+          <option value="car" selected>CAR</option>
+        </select>
+        <select class="treinamento-pericia">
+          <option value="0">Destreinado</option>
+          <option value="2">Iniciante</option>
+          <option value="4">Veterano (ND7)</option>
+          <option value="6">Mestre (ND13)</option>
+        </select>
+        <input type="number" class="bonus-pericia" placeholder="Bônus de Perícia">
+        <input type="number" class="valor-pericia" readonly>
+      </div>
+
+
     </div>
     </div>
  </div>
