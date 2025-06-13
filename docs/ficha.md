@@ -95,6 +95,24 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
+    
+    .pericia {
+        font-size: 0.8em;
+        margin-bottom: 8px;
+    }
+    
+    .pericia label {
+        font-size: 0.9em;
+        margin-bottom: 2px;
+    }
+    
+    .pericia input,
+    .pericia select {
+        padding: 6px;
+        font-size: 0.9em;
+    }
+
+    
   </style>
 </head>
 <body>
@@ -263,8 +281,6 @@
 
     <div class="linha">
       <div class="campo">
-    <div class="pericias">
-      <div class="pericia">
         <label>Defesa</label>
         <select class="atributo-pericia">
           <option value="des" selected>DES</option>
@@ -283,8 +299,6 @@
         <input type="number" class="bonus-pericia" placeholder="Bônus de Defesa">
         <input type="number" class="valor-pericia" readonly>
       </div>
-    </div>
-    </div>
     </div>
     <div class="linha">
     <div class="campo">
@@ -972,11 +986,17 @@
 </div>
 
 
-    
-    <div class="botoes">
-      <button onclick="salvarFicha()">Salvar Ficha</button>
-    </div>
+<div class="botoes">
+  <button onclick="salvarFicha()">Salvar no Navegador</button>
+  <button onclick="baixarFicha()">Exportar Ficha</button>
+  <input type="file" id="uploadFicha" accept=".json" onchange="carregarFicha()" style="display:none">
+  <button onclick="document.getElementById('uploadFicha').click()">Importar Ficha</button>
+</div>
+
   </div>
+
+
+
 
 <script>
 function atualizarPericias() {
@@ -1013,6 +1033,48 @@ function salvarFicha() {
   const campos = document.querySelectorAll('input, select, textarea');
   campos.forEach(el => localStorage.setItem('ficha-' + el.id, el.value));
   alert("Ficha salva nas memórias do grimório!");
+}
+
+function baixarFicha() {
+  const campos = document.querySelectorAll('input, select, textarea');
+  const ficha = {};
+  campos.forEach(el => {
+    ficha[el.id] = (el.type === 'checkbox') ? el.checked : el.value;
+  });
+
+  const blob = new Blob([JSON.stringify(ficha, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'ficha_t20.json';
+  a.click();
+
+  URL.revokeObjectURL(url);
+}
+
+function carregarFicha() {
+  const input = document.getElementById('uploadFicha');
+  const file = input.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function (e) {
+    const data = JSON.parse(e.target.result);
+    Object.keys(data).forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        if (el.type === 'checkbox') {
+          el.checked = data[id];
+        } else {
+          el.value = data[id];
+        }
+        localStorage.setItem('ficha-' + id, data[id]);
+      }
+    });
+    alert("Ficha carregada com sucesso!");
+  };
+  reader.readAsText(file);
 }
 
 window.onload = () => {
