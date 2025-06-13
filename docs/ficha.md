@@ -319,7 +319,7 @@
 <div class="campo">
   <label for="ataques">Ataques</label>
   <textarea id="ataques" rows="6">
- -> Espada Longa:
+ -> Espada Longa: 
  - d20+8+2
  - 1d8+4+3
 </textarea>
@@ -977,7 +977,7 @@
 <div class="campo">
   <label for="inventario">Inventário</label>
   <textarea id="inventario" rows="6">
- -> Moedas:
+ -> Moedas: 
  -> 
  -> 
 </textarea>
@@ -987,23 +987,27 @@
 <div class="campo">
   <label for="poderes">Poderes</label>
   <textarea id="poderes" rows="22">
- -> Raça:
- -> Origem:
+ -> Raça: 
+ -> Origem: 
  -> ND1: 
- -> ND2:
- -> ND3:
+ -> ND2: 
+ -> ND3: 
+ -> ND4: 
+ -> ND5: 
 </textarea>
 </div>
 
 <div class="campo">
   <label for="magias">Magias</label>
   <textarea id="magias" rows="20">
- -> 1° Círculo:
+ -> 1° Círculo: 
+ - 
  -
- -> 2° Círculo:
- -
- -> 3° Círculo:
- -
+ -> 2° Círculo: 
+ - 
+ - 
+ -> 3° Círculo: 
+ - 
 </textarea>
 </div>
 
