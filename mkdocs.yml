@@ -1,7 +1,20 @@
 site_name: Auramana RPG
 theme:
   name: material
+  features:
+    - navigation.tabs
+    - navigation.indexes
+  palette:
+    primary: 'brown'
+    accent: 'deep orange'
+
 nav:
-  - Início: index.md
-  - Ficha Auramana: ficha.md
-  - Ficha T20: ficha-t20.md
+  - Início: indice.md
+  - Sistema:
+    - Raças: racas.md
+    - Classes: classes.md
+    - Origens: origens.md
+  - Fichas:
+    - Ficha Auramana: ficha.md
+    - Ficha T20: ficha-t20.md
+  - Regras: regras.md
