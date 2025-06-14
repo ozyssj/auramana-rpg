@@ -103,17 +103,6 @@ As sete classes fundamentais que moldam os destinos de Auramana:
     <a href="classes/arcanista.md" class="btn">Ver Detalhes</a>
   </div>
 
-  <!-- Arcanista -->
-  <div class="classe-card">
-    <div class="classe-header">
-      <h2>Arcanista</h2>
-    </div>
-    <p>Mestres da magia erudita que dominam os segredos arcanos através de estudo e disciplina.</p>
-    <p><strong>Atributo-Chave:</strong> Inteligência Carisma ou Sabedoria</p>
-    <a href="arcanista.md" class="btn">Ver Detalhes</a>
-  </div>
-
-
   <!-- Batedor -->
   <div class="classe-card">
     <div class="classe-header">

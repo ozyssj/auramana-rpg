@@ -9,12 +9,16 @@ theme:
     accent: 'deep orange'
 
 nav:
-  - Início: indice.md
+  - Início: index.md
   - Sistema:
     - Raças: racas.md
-    - Classes: classes.md
+    - Classes:
+      - Visão Geral: classes.md
+      - Arcanista: classes/arcanista.md
+      - Batedor: classes/batedor.md
+      - Elementalista: classes/elementalista.md
+      - Guerreiro: classes/guerreiro.md
+      - Inspirador: classes/inspirador.md
+      - Inventor: classes/inventor.md
+      - Sacerdote: classes/sacerdote.md
     - Origens: origens.md
-  - Fichas:
-    - Ficha Auramana: ficha.md
-    - Ficha T20: ficha-t20.md
-  - Regras: regras.md
