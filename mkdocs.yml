@@ -3,4 +3,5 @@ theme:
   name: material
 nav:
   - Início: index.md
-  - Ficha: ficha.md
+  - Ficha Auramana: ficha.md
+  - Ficha T20: ficha-t20.md
