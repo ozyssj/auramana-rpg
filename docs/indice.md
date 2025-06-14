@@ -1,32 +1,117 @@
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cor-primaria: #5b4636;
+    --cor-secundaria: #3a2c1d;
+    --cor-fundo: #fdfaf3;
+    --cor-texto: #3a2c1d;
+    --cor-destaque: #bba88c;
+  }
+  
+  body {
+    font-family: 'MedievalSharp', cursive;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1, h2, h3 {
+    color: var(--cor-primaria);
+    text-shadow: 1px 1px var(--cor-destaque);
+    border-bottom: 2px solid var(--cor-primaria);
+    padding-bottom: 5px;
+  }
+  
+  a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    color: var(--cor-secundaria);
+    text-decoration: underline;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+  
+  li:before {
+    content: "•";
+    color: var(--cor-primaria);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  
+  .banner {
+    width: 100%;
+    border: 3px solid var(--cor-primaria);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  
+  .destaque {
+    background-color: rgba(187, 168, 140, 0.2);
+    padding: 15px;
+    border-left: 4px solid var(--cor-primaria);
+    border-radius: 0 5px 5px 0;
+    margin: 20px 0;
+  }
+</style>
 
-# Auramana RPG
+<div align="center">
+  <img src="img/banner.jpg" alt="Banner Auramana" class="banner">
+</div>
 
-![Banner Auramana](img/banner.jpg)
+<h1 style="text-align: center;">Auramana RPG</h1>
 
-Bem-vindo ao universo de Auramana, um RPG de fantasia medieval com elementos únicos de magia e tecnologia.
+<div class="destaque">
+  <p>Bem-vindo ao universo de Auramana, um RPG de fantasia medieval com elementos únicos de magia e tecnologia.</p>
+</div>
 
-## Comece Aqui
+<h2>Comece Aqui</h2>
 
-- [Criar Personagem](#criar-personagem)
-- [Sistema de Jogo](#sistema-de-jogo)
-- [Downloads](#downloads)
+<ul>
+  <li><a href="#criar-personagem">Criar Personagem</a></li>
+  <li><a href="#sistema-de-jogo">Sistema de Jogo</a></li>
+  <li><a href="#downloads">Downloads</a></li>
+</ul>
 
-## Criar Personagem
+<h2 id="criar-personagem">Criar Personagem</h2>
 
-1. Escolha uma [Raça](racas.md)
-2. Selecione uma [Classe e Arquétipo](classes.md)
-3. Defina uma [Origem](origens.md)
-4. Preencha sua [Ficha Auramana](ficha.md)
+<ol>
+  <li>Escolha uma <a href="racas.md">Raça</a></li>
+  <li>Selecione uma <a href="classes.md">Classe e Arquétipo</a></li>
+  <li>Defina uma <a href="origens.md">Origem</a></li>
+  <li>Preencha sua <a href="ficha.md">Ficha Auramana</a></li>
+</ol>
 
-## Sistema de Jogo
+<h2 id="sistema-de-jogo">Sistema de Jogo</h2>
 
-Auramana utiliza um sistema baseado em:
+<p>Auramana utiliza um sistema baseado em:</p>
 
-- D20 para testes de perícia e atributo
-- Pontos de Vida e Mana
-- Perícias especializadas
+<ul>
+  <li>D20 para testes de perícia e atributo</li>
+  <li>Pontos de Vida e Mana</li>
+  <li>Perícias especializadas</li>
+  <li>Sistema único de magia elemental</li>
+  <li>7 classes com 4 arquétipos cada</li>
+</ul>
 
-## Downloads
+<h2 id="downloads">Downloads</h2>
 
-- [Livro Básico PDF](#)
-- [Ficha de Personagem Editável](#)
+<ul>
+  <li><a href="#">Livro Básico PDF</a></li>
+  <li><a href="#">Ficha de Personagem Editável</a></li>
+  <li><a href="#">Guia de Referência Rápida</a></li>
+</ul>
+
+<div class="destaque">
+  <p>"A magia de Auramana não é apenas feitiçaria - é a essência da criação moldada pela vontade."</p>
+</div>
