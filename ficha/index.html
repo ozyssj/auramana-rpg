@@ -271,118 +271,152 @@
   <title>Ficha de Personagem - Auramana T20</title>
   <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --cor-primaria: #5b4636;
+      --cor-secundaria: #3a2c1d;
+      --cor-fundo: #fdfaf3;
+      --cor-texto: #3a2c1d;
+      --cor-destaque: #bba88c;
+    }
+
     body {
       background-color: #e8dbc3;
       font-family: 'MedievalSharp', cursive;
-      padding: 30px;
+      padding: 20px;
       margin: 0;
+      color: var(--cor-texto);
     }
 
     .ficha-container {
-      background-color: #fdfaf3;
-      border: 8px solid #5b4636;
+      background-color: var(--cor-fundo);
+      border: 8px solid var(--cor-primaria);
       border-radius: 12px;
       max-width: 900px;
       margin: auto;
-      padding: 30px;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     }
 
-    h1 {
+    h1, h2 {
       text-align: center;
-      font-size: 2.5em;
-      margin-bottom: 30px;
-      color: #3a2c1d;
-      text-shadow: 1px 1px #bba88c;
+      color: var(--cor-texto);
+      text-shadow: 1px 1px var(--cor-destaque);
     }
+
+    h1 { font-size: 2.2em; margin-bottom: 20px; }
+    h2 { font-size: 1.5em; margin: 15px 0; }
 
     .campo {
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
 
     label {
       font-weight: bold;
       display: block;
-      font-size: 1.2em;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
+    }
+
+    input, select, textarea, button {
+      font-family: 'MedievalSharp', cursive;
+      border: 2px solid var(--cor-primaria);
+      border-radius: 5px;
+      background-color: #fffaf0;
     }
 
     input, select, textarea {
       width: 100%;
-      padding: 10px;
-      font-family: 'MedievalSharp', cursive;
-      font-size: 1em;
-      border: 2px solid #5b4636;
-      border-radius: 5px;
-      background-color: #fffaf0;
+      padding: 8px;
+      font-size: 0.95em;
       box-shadow: inset 1px 1px 3px #ccc;
+    }
+
+    textarea {
+      min-height: 80px;
+      resize: vertical;
     }
 
     .atributos {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      gap: 15px;
-      margin-top: 20px;
+      gap: 12px;
+      margin: 15px 0;
     }
 
     .linha {
       display: flex;
-      gap: 20px;
+      gap: 15px;
+    }
+
+    .linha > * {
+      flex: 1;
     }
 
     .botoes {
-      text-align: center;
-      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin-top: 20px;
     }
 
     button {
-      font-family: 'MedievalSharp', cursive;
-      font-size: 1.2em;
-      background-color: #5b4636;
+      font-size: 1em;
+      background-color: var(--cor-primaria);
       color: #fff9e6;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 8px;
+      padding: 8px 15px;
       cursor: pointer;
-      box-shadow: 0 4px #3a2c1d;
+      box-shadow: 0 3px var(--cor-secundaria);
+      transition: all 0.2s;
     }
 
     button:hover {
-      background-color: #3a2c1d;
+      background-color: var(--cor-secundaria);
     }
 
     button:active {
       transform: translateY(2px);
-      box-shadow: 0 2px #3a2c1d;
+      box-shadow: 0 1px var(--cor-secundaria);
     }
 
     .pericias {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 12px;
     }
 
     .pericia {
-        font-size: 0.8em;
-        margin-bottom: 8px;
+      font-size: 0.85em;
+      margin-bottom: 6px;
     }
 
     .pericia label {
-        font-size: 0.9em;
-        margin-bottom: 2px;
+      font-size: 0.9em;
     }
 
     .pericia input,
     .pericia select {
-        padding: 6px;
-        font-size: 0.9em;
+      padding: 5px;
+      font-size: 0.85em;
     }
 
     .defesa {
-        font-size: 1.5em;
-        margin-bottom: 8px;
-    }        
+      font-size: 1.3em;
+      margin: 10px 0;
+    }
 
+    #uploadFicha {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .atributos, .pericias {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .linha {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -405,23 +439,10 @@
       </div>
     </div>
 
-    <div class="campo">
-      <label for="raca">Raça</label>
-      <select id="raca">
-        <option value="">-- Selecione a Raça --</option>
-        <option>Humano</option>
-        <option>Elfo</option>
-        <option>Anão</option>
-        <option>Goblinoide</option>
-        <option>Gigante</option>
-        <option>Pequenino</option>
-        <option>Troll</option>
-        <option>Morto-Vivo</option>        
-        <option>Golem</option>
-        <option>Feral</option>
-        <option>Extraplanar</option>
 
-      </select>
+    <div class="campo">
+          <label for="raca">Raça</label>
+          <select id="raca"></select>
     </div>
 
    <div class="campo">
@@ -484,12 +505,12 @@
 
     <div class="linha">
       <div class="campo">
-        <label for="pvAtual">PV Atual</label>
-        <input type="number" id="pvAtual">
-      </div>
+       <label for="pvAtual">PV Atual</label>
+       <input type="number" id="pvAtual">
+     </div>
       <div class="campo">
         <label for="pvMax">PV Máx</label>
-        <input type="number" id="pvMax">
+        <input type="number" id="pvMax" readonly>
       </div>
       <div class="campo">
         <label for="pvTemp">PV Temp</label>
@@ -504,13 +525,25 @@
       </div>
       <div class="campo">
         <label for="pmMax">PM Máx</label>
-        <input type="number" id="pmMax">          
+        <input type="number" id="pmMax" readonly>          
       </div>
       <div class="campo">
         <label for="pmTemp">PM Temp</label>
         <input type="number" id="pmTemp">          
       </div>
     </div>
+
+ <div class="linha">
+   <div class="campo">
+    <label for="pvExtra">PV Extra</label>
+    <input type="number" id="pvExtra" min="0" value="0">
+  </div>
+
+   <div class="campo">
+    <label for="pmExtra">PM Extra</label>
+    <input type="number" id="pmExtra" min="0" value="0">
+  </div>
+ </div>
 
     <div class="campo">
       <label for="armadura">Armadura </label>
@@ -817,6 +850,19 @@ const arquetiposPorClasse = {
   Sacerdote: ["Clérigo", "Frade", "Paladino", "Santo"]
 };
 
+  const racas = [
+    "Humano", "Elfo", "Anão", "Goblinoide", "Gigante", 
+    "Pequenino", "Troll", "Morto-Vivo", "Golem", "Feral", "Extraplanar"
+  ];
+
+  const selectRaca = document.getElementById('raca');
+
+  selectRaca.innerHTML = '<option value="">-- Selecione a Raça --</option>';
+
+  racas.forEach(raca => {
+    selectRaca.innerHTML += `<option>${raca}</option>`;
+  });
+
 function filtrarArquetipos() {
   const classe = document.getElementById("classe").value;
   const arquetipoSelect = document.getElementById("arquetipo");
@@ -834,6 +880,89 @@ function filtrarArquetipos() {
   }
 }
 
+// Constantes com os valores base por classe
+const BASES_PV = {
+  'Arcanista': 3,
+  'Batedor': 4,
+  'Elementalista': 4,
+  'Guerreiro': 5,
+  'Inspirador': 4,
+  'Inventor': 4,
+  'Sacerdote': 4
+};
+
+const BASES_PM = {
+  'Arcanista': 6,
+  'Batedor': 4,
+  'Elementalista': 4,
+  'Guerreiro': 4,
+  'Inspirador': 4,
+  'Inventor': 4,
+  'Sacerdote': 5
+};
+
+// Função unificada para cálculos
+function calcularAtributos() {
+  const constituicao = parseInt(document.getElementById('con').value) || 0;
+  const nivel = parseInt(document.getElementById('nivel').value) || 1;
+  const classe = document.getElementById('classe').value;
+  const pvExtra = parseInt(document.getElementById('pvExtra').value) || 0;
+  const pmExtra = parseInt(document.getElementById('pmExtra').value) || 0;
+
+  // Cálculo de PV
+  const basePV = BASES_PV[classe] || 4;
+  const pvMax = (basePV + constituicao) * nivel + pvExtra;
+  document.getElementById('pvMax').value = pvMax;
+
+  // Cálculo de PM
+  const basePM = BASES_PM[classe] || 4;
+  const pmMax = basePM * nivel + pmExtra;
+  document.getElementById('pmMax').value = pmMax;
+
+  // Ajustar valores atuais
+  ajustarValorAtual('pvAtual', pvMax);
+  ajustarValorAtual('pmAtual', pmMax);
+}
+
+// Função auxiliar para ajustar valores atuais
+function ajustarValorAtual(idElemento, valorMax) {
+  const elemento = document.getElementById(idElemento);
+  if (!elemento.value || parseInt(elemento.value) > valorMax) {
+    elemento.value = valorMax;
+  }
+}
+
+// Configuração de eventos unificada
+function configurarEventos() {
+  // Eventos que disparam o cálculo
+  ['con', 'nivel', 'classe', 'pvExtra', 'pmExtra'].forEach(id => {
+    document.getElementById(id).addEventListener('input', calcularAtributos);
+  });
+
+  // Validar valores atuais
+  document.getElementById('pvAtual').addEventListener('change', function() {
+    ajustarValorAtual('pvAtual', document.getElementById('pvMax').value);
+  });
+
+  document.getElementById('pmAtual').addEventListener('change', function() {
+    ajustarValorAtual('pmAtual', document.getElementById('pmMax').value);
+  });
+}
+
+// Inicialização completa
+window.addEventListener('DOMContentLoaded', () => {
+  // Carregar valores salvos
+  if (localStorage.getItem('ficha-pvExtra')) {
+    document.getElementById('pvExtra').value = localStorage.getItem('ficha-pvExtra');
+  }
+  if (localStorage.getItem('ficha-pmExtra')) {
+    document.getElementById('pmExtra').value = localStorage.getItem('ficha-pmExtra');
+  }
+
+  // Configurar eventos e calcular valores iniciais
+  configurarEventos();
+  calcularAtributos();
+});
 
 window.onload = () => {
   const campos = document.querySelectorAll('input, select, textarea');
