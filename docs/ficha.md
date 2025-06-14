@@ -114,9 +114,22 @@
     .pericias {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 12px;
+      gap: 15px;
+      width: 100%;      
     }
     
+    @media (max-width: 900px) {
+      .pericias {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+    }  
+
+    @media (max-width: 600px) {
+      .pericias {
+        grid-template-columns: 1fr;
+      }
+    }    
+
     .pericia {
       font-size: 0.85em;
       margin-bottom: 6px;
