@@ -1,24 +1,33 @@
-<!-- docs/classes/arcanista.md -->
-<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --cor-primaria: #5b4636;
-    --cor-secundaria: #3a2c1d;
-    --cor-fundo: #fdfaf3;
-    --cor-texto: #3a2c1d;
-    --cor-destaque: #bba88c;
-  }
-  
-  body {
-    font-family: 'MedievalSharp', cursive;
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    line-height: 1.6;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-  }
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <title>Arcanista</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cor-primaria: #5b4636;
+            --cor-secundaria: #3a2c1d;
+            --cor-fundo: #fdfaf3;
+            --cor-texto: #3a2c1d;
+            --cor-destaque: #bba88c;
+        }
+
+        body {
+            background-color: #e8dbc3;
+            font-family: 'MedievalSharp', cursive;
+            padding: 20px;
+            margin: 0;
+            color: var(--cor-texto);
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            color: var(--cor-texto);
+            text-shadow: 1px 1px var(--cor-destaque);
+        }
   .classe-header {
     display: flex;
     align-items: center;
@@ -365,14 +374,66 @@
 </div>
 
 
+<div class="archetype-card">
+  <h3>Necromante</h3>
+  <p><em>Mestres das artes sombrias que manipulam as energias da morte e dos mortos</em></p>
 
+  <div class="archetype-ability">
+    <h4>1º Nível: Necrologia</h4>
+    <p>Você lança magias através de sua conexão com a morte:</p>
+    <ul>
+      <li>Todas as magias que você aprende devem ser de necromancia, arcanas ou divinas</li>
+      <li>Recebe <strong>+1 em Cura, Fortitude</strong> e na <strong>CD de magias de Necromancia</strong></li>
+      <li>Este bônus aumenta em níveis superiores</li>
+    </ul>
+    <p><strong>Atributo de Conjuração:</strong> Inteligência (usa Int para Vontade e Cura no lugar de Sab)</p>
+  </div>
 
+  <div class="archetype-ability">
+    <h4>3º Nível: Distorção Necrótica</h4>
+    <ul>
+      <li>A cada nível ímpar a partir do 3º, pode aprender uma magia de outra escola como se fosse de necromancia</li>
+      <li>Magias do poder Conhecimento Mágico também podem ser distorcidas</li>
+      <li>Efeitos visuais mudam para temas necróticos (ex: armadura de ossos, chamas verdes, asas cadavéricas)</li>
+    </ul>
+    <h5>Especialista em Necromancia</h5>
+    <p>A CD para resistir a suas magias de necromancia aumenta em <strong>+2</strong></p>
+  </div>
 
+  <div class="archetype-ability">
+    <h4>7º Nível: Animar Cadáver</h4>
+    <p>Controle sobre os mortos:</p>
+    <ul>
+      <li><strong>Ação padrão</strong> e <strong>3 PM</strong> para animar cadáver de criatura Pequena, Média ou Grande em alcance curto</li>
+      <li>Torna-se parceiro iniciante (não conta no limite de parceiros)</li>
+      <li>Pode sacrificar o parceiro para reduzir dano recebido à metade</li>
+      <li>Limite: 1 parceiro cadáver por vez</li>
+    </ul>
+    <p><strong>Necrologia:</strong> Bônus aumenta para <strong>+2</strong></p>
+  </div>
 
+  <div class="archetype-ability">
+    <h4>11º Nível: Mestre Necromante</h4>
+    <p>Maior eficiência em magias da morte:</p>
+    <ul>
+      <li>Custo para lançar magias de necromancia diminui em <strong>-1 PM</strong></li>
+      <li>Cumulativo com outras reduções de custo</li>
+    </ul>
+  </div>
 
-
-
-
+  <div class="archetype-ability">
+    <h4>15º Nível: Domínio Sobre a Morte</h4>
+    <p>Controle absoluto sobre cadáveres:</p>
+    <ul>
+      <li><strong>Animar Cadáver</strong> melhora:</li>
+      <li>Ação livre (antes: padrão)</li>
+      <li>Alcance médio (antes: curto)</li>
+      <li>Alvo até Colossal (antes: Grande)</li>
+      <li>Parceiro veterano (antes: iniciante)</li>
+    </ul>
+    <p><strong>Necrologia:</strong> Bônus aumenta para <strong>+3</strong></p>
+  </div>
+</div>
 
 
 <style>
