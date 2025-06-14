@@ -24,9 +24,9 @@
 
         h1,
         h2 {
-            color: #5b4636;
-            border-bottom: 2px solid #5b4636;
-            padding-bottom: 5px;
+            text-align: center;
+            color: var(--cor-texto);
+            text-shadow: 1px 1px var(--cor-destaque);
         }
 
         .raca {

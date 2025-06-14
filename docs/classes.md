@@ -1,23 +1,34 @@
-<!-- docs/classes.md -->
-<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --cor-primaria: #5b4636;
-    --cor-secundaria: #3a2c1d;
-    --cor-fundo: #fdfaf3;
-    --cor-texto: #3a2c1d;
-    --cor-destaque: #bba88c;
-  }
-  
-  body {
-    font-family: 'MedievalSharp', cursive;
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    line-height: 1.6;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-  }
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Classes - Auramana T20</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cor-primaria: #5b4636;
+            --cor-secundaria: #3a2c1d;
+            --cor-fundo: #fdfaf3;
+            --cor-texto: #3a2c1d;
+            --cor-destaque: #bba88c;
+        }
+
+        body {
+            background-color: #e8dbc3;
+            font-family: 'MedievalSharp', cursive;
+            padding: 20px;
+            margin: 0;
+            color: var(--cor-texto);
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            color: var(--cor-texto);
+            text-shadow: 1px 1px var(--cor-destaque);
+        }
+
 
   .classe-grid {
     display: grid;
