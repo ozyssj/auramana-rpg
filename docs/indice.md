@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Ficha de Personagem - Auramana T20</title>
+    <title>Indice</title>
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -90,10 +90,10 @@
     <h2 id="criar-personagem">Criar Personagem</h2>
 
     <ol>
-        <li>Escolha uma <a href="racas.md">Raça</a></li>
-        <li>Selecione uma <a href="classes.md">Classe e Arquétipo</a></li>
-        <li>Defina uma <a href="origens.md">Origem</a></li>
-        <li>Preencha sua <a href="ficha.md">Ficha Auramana</a></li>
+        <li>Escolha uma <a href=https://ozyssj.github.io/auramana-rpg/racas/>Raça</a></li>
+        <li>Selecione uma <a href=https://ozyssj.github.io/auramana-rpg/classes/>Classe e Arquétipo</a></li>
+        <li>Defina uma <a href=https://ozyssj.github.io/auramana-rpg/origens/>Origem</a></li>
+        <li>Preencha sua <a href=https://ozyssj.github.io/auramana-rpg/ficha/>Ficha Auramana</a></li>
     </ol>
 
     <h2 id="sistema-de-jogo">Sistema de Jogo</h2>
@@ -101,24 +101,18 @@
     <p>Auramana utiliza um sistema baseado em:</p>
 
     <ul>
+        <li>Tormenta20 Edição Jogo do Ano</li>
         <li>D20 para testes de perícia e atributo</li>
         <li>Pontos de Vida e Mana</li>
         <li>Perícias especializadas</li>
-        <li>Sistema único de magia elemental</li>
-        <li>7 classes com 4 arquétipos cada</li>
+        <li>7 classes com vários arquétipos cada</li>
     </ul>
 
     <h2 id="downloads">Downloads</h2>
 
     <ul>
-        <li><a href="#">Livro Básico PDF</a></li>
-        <li><a href="#">Ficha de Personagem Editável</a></li>
-        <li><a href="#">Guia de Referência Rápida</a></li>
+        <li><a href=https://jamboeditora.com.br/produto/tormenta20-edicao-jogo-do-ano/>Livro Básico T20</a></li>
     </ul>
-
-    <div class="destaque">
-        <p>"A magia de Auramana não é apenas feitiçaria - é a essência da criação moldada pela vontade."</p>
-    </div>
 
     </body>
 

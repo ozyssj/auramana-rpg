@@ -100,7 +100,7 @@ As sete classes fundamentais que moldam os destinos de Auramana:
     </div>
     <p>Mestres da magia erudita que dominam os segredos arcanos através de estudo e disciplina.</p>
     <p><strong>Atributo-Chave:</strong> Inteligência Carisma ou Sabedoria</p>
-    <a href="classes/arcanista.md" class="btn">Ver Detalhes</a>
+    <a href=https://ozyssj.github.io/auramana-rpg/classes/arcanista/ class="btn">Ver Detalhes</a>
   </div>
 
   <!-- Batedor -->
@@ -110,7 +110,7 @@ As sete classes fundamentais que moldam os destinos de Auramana:
     </div>
     <p>Especialistas em combate tático, movimentos precisos e ataques furtivos.</p>
     <p><strong>Atributo-Chave:</strong> Destreza</p>
-    <a href="classes/batedor.md" class="btn">Ver Detalhes</a>
+    <a href=https://ozyssj.github.io/auramana-rpg/classes/batedor/ class="btn">Ver Detalhes</a>
   </div>
 
   <!-- Elementalista -->
@@ -120,7 +120,7 @@ As sete classes fundamentais que moldam os destinos de Auramana:
     </div>
     <p>Manipuladores das forças primordiais da natureza e dos elementos.</p>
     <p><strong>Atributo-Chave:</strong> Sabedoria, Carisma ou Inteligência</p>
-    <a href="classes/elementalista.md" class="btn">Ver Detalhes</a>
+    <a href=https://ozyssj.github.io/auramana-rpg/classes/elementalista/ class="btn">Ver Detalhes</a>
   </div>
 
   <!-- Guerreiro -->
@@ -130,7 +130,7 @@ As sete classes fundamentais que moldam os destinos de Auramana:
     </div>
     <p>Combatentes versáteis e resilientes, mestres de todas as formas de armas.</p>
     <p><strong>Atributo-Chave:</strong> Força, Destreza ou Constituição</p>
-    <a href="classes/guerreiro.md" class="btn">Ver Detalhes</a>
+    <a href=https://ozyssj.github.io/auramana-rpg/classes/guerreiro/ class="btn">Ver Detalhes</a>
   </div>
 
   <!-- Inspirador -->
@@ -140,7 +140,7 @@ As sete classes fundamentais que moldam os destinos de Auramana:
     </div>
     <p>Líderes carismáticos que motivam aliados e influenciam situações.</p>
     <p><strong>Atributo-Chave:</strong> Carisma</p>
-    <a href="classes/inspirador.md" class="btn">Ver Detalhes</a>
+    <a href=https://ozyssj.github.io/auramana-rpg/classes/inspirador/ class="btn">Ver Detalhes</a>
   </div>
 
   <!-- Inventor -->
@@ -150,7 +150,7 @@ As sete classes fundamentais que moldam os destinos de Auramana:
     </div>
     <p>Criadores de engenhocas e dispositivos que desafiam as leis da natureza.</p>
     <p><strong>Atributo-Chave:</strong> Inteligência</p>
-    <a href="classes/inventor.md" class="btn">Ver Detalhes</a>
+    <a href=https://ozyssj.github.io/auramana-rpg/classes/inventor/ class="btn">Ver Detalhes</a>
   </div>
 
   <!-- Sacerdote -->
@@ -160,13 +160,13 @@ As sete classes fundamentais que moldam os destinos de Auramana:
     </div>
     <p>Canalizadores do poder divino, seja para cura, proteção ou destruição.</p>
     <p><strong>Atributo-Chave:</strong> Sabedoria, Inteligência ou Carisma</p>
-    <a href="classes/sacerdote.md" class="btn">Ver Detalhes</a>
+    <a href=https://ozyssj.github.io/auramana-rpg/classes/sacerdote/ class="btn">Ver Detalhes</a>
   </div>
 
 </div>
 
 <div style="text-align: center; margin-top: 40px;">
-  <a href="ficha.md" class="btn" style="padding: 12px 24px; font-size: 1.1em;">
+  <a href=https://ozyssj.github.io/auramana-rpg/ficha/ class="btn" style="padding: 12px 24px; font-size: 1.1em;">
     Criar Ficha de Personagem
   </a>
 </div>

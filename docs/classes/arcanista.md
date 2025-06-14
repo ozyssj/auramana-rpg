@@ -90,9 +90,9 @@
   <h1>Arcanista</h1>
 </div>
 
-<p><em>Mestres da magia que dominam os segredos arcanos através de estudo, tradição ou poder inato.</em></p>
+<p>Mestres da magia que dominam os segredos arcanos através de estudo, tradição ou poder inato></p>
 
-<p><em>Os arquétipos de arcanista são Bruxo, Feiticeiro, Mago e Necromente</em></p>
+<p>Os arquétipos de arcanista são Bruxo, Feiticeiro, Mago e Necromente</p>
 
 
 <div class="classe-info">
@@ -112,28 +112,10 @@
   <p>Nenhuma.</p>
 </div>
 
-<h2>Habilidades de Classe</h2>
-
-<div class="habilidade">
-  <h3>Magias</h3>
-  <p>Você pode lançar magias arcanas de 1º círculo. A cada quatro níveis, pode lançar magias de um círculo maior (2º círculo no 5º nível, 3º círculo no 9º nível e assim por diante).</p>
-  <p>Você começa com três magias de 1º círculo. A cada nível, aprende uma magia de qualquer círculo que possa lançar.</p>
-  <p>Seu atributo-chave para lançar magias é definido pelo seu Arquétipo Arcano e você soma o bônus do atributo-chave no seu total de PM.</p>
-</div>
-
-<div class="habilidade">
-  <h3>Raio Arcano</h3>
-  <p>Escolha um tipo de dano entre fogo, ácido, relâmpago, frio, mental e essência. Uma vez feita a escolha, ela não pode ser alterada.</p>
-  <p>Você pode gastar uma ação padrão para causar 1d8 pontos do dano escolhido num alvo em alcance curto. Esse dano aumenta em +1d8 para cada círculo de magia acima do 1º que você puder lançar.</p>
-  <p>O alvo pode fazer um teste de Reflexos (CD atributo-chave) para reduzir o dano à metade. O Raio Arcano conta como uma magia para efeitos de habilidades e itens que beneficiem suas magias.</p>
-  <p>Por fim, assim como magias com alvo único, você pode substituir o teste resistência do seu raio por um teste de ataque utilizando Misticismo (crítico x2).</p>
-</div>
-
-<!-- Continue com as outras habilidades seguindo o mesmo padrão -->
 
 <h2>Tabela de Progressão</h2>
 
-<table>
+<table class="progressao-arcanista">
   <thead>
     <tr>
       <th>Nível</th>
@@ -161,7 +143,62 @@
       <td>5</td>
       <td>Magias (2º Círculo), Raio Arcano (2d8), Fortalecimento Arcano</td>
     </tr>
-    <!-- Continue com todas as linhas da tabela -->
+    <tr>
+      <td>6</td>
+      <td>Poder de Arcanista</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Arquétipo Arcano</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Aumento de Atributo</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Magias (3º Círculo), Raio Poderoso, Raio Arcano (3d12)</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Poder de Arcanista</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Arquétipo Arcano</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Aumento de Atributo</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Magias (4º Círculo), Raio Arcano (4d12), Fluxo de Mana</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Poder de Arcanista</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Arquétipo Arcano</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Aumento de Atributo</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Magias (5º Círculo), Raio Arcano (5d12), Magia Ilimitada</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>Poder de Arcanista</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>Aumento de Atributo</td>
+    </tr>
     <tr>
       <td>20</td>
       <td>Alta Arcana, Poder de Arcanista</td>
@@ -170,11 +207,69 @@
 </table>
 
 
+<h2>Habilidades de Classe</h2>
+
+
+<div class="habilidade">
+  <h3>Magias</h3>
+  <p>Você pode lançar magias arcanas de 1º círculo. A cada quatro níveis, pode lançar magias de um círculo maior (2º círculo no 5º nível, 3º círculo no 9º nível e assim por diante).</p>
+  <p>Você começa com três magias de 1º círculo. A cada nível, aprende uma magia de qualquer círculo que possa lançar.</p>
+  <p>Seu atributo-chave para lançar magias é definido pelo seu Arquétipo Arcano e você soma o bônus do atributo-chave no seu total de PM.</p>
+</div>
+
+<div class="habilidade">
+  <h3>Raio Arcano</h3>
+  <p>Escolha um tipo de dano entre fogo, ácido, relâmpago, frio, mental e essência. Uma vez feita a escolha, ela não pode ser alterada.</p>
+  <p>Você pode gastar uma ação padrão para causar 1d8 pontos do dano escolhido num alvo em alcance curto. Esse dano aumenta em +1d8 para cada círculo de magia acima do 1º que você puder lançar.</p>
+  <p>O alvo pode fazer um teste de Reflexos (CD atributo-chave) para reduzir o dano à metade. O Raio Arcano conta como uma magia para efeitos de habilidades e itens que beneficiem suas magias.</p>
+  <p>Por fim, assim como magias com alvo único, você pode substituir o teste resistência do seu raio por um teste de ataque utilizando Misticismo (crítico x2).</p>
+</div>
+
+<div class="habilidade">
+  <h3>Fortalecimento Arcano</h3>
+  <p>A CD para resistir a suas magias aumenta em +1. Se você puder lançar magias de 4º círculo, em vez disso ela aumenta em +2.</p>
+</div>
+
+<div class="habilidade">
+  <h3>Raio Poderoso</h3>
+  <p>Os dados de dano do seu Raio Arcano aumentam para d12 e o alcance dele aumenta para médio. Pré-requisito: Raio Arcano.</p>
+</div>
+
+<div class="habilidade">
+  <h3>Fluxo de Mana</h3>
+  <p>Você pode manter dois efeitos sustentados ativos simultaneamente com apenas uma ação livre, pagando o custo de cada efeito separadamente.</p>
+</div>
+
+<div class="habilidade">
+  <h3>Magia Ilimitada</h3>
+  <p>Você soma seu atributo-chave no limite de PM que pode gastar numa magia. Por exemplo, um arcanista de 17º nível com Int 6 e este poder pode gastar até 23 PM em cada magia. Utilização deste poder causar áreas de Corrupção e o Tabu da Magia.</p>
+</div>
+
+<div class="habilidade">
+  <h3>Alta Arcana</h3>
+  <p>No 20º nível, você deixa de ser afetado pelo Tabu da Magia. Além disso, o custo básico de suas magias cai para 2 PM (2º círculo), 3 PM (3º círculo), 4 PM (4º círculo) e 5 PM (5º círculo).</p>
+</div>
+
+<div class="habilidade">
+  <h3>Aumento de Atributo</h3>
+  <p>Você recebe +1 em um atributo, porém não pode escolher o mesmo atributo duas vezes seguidas. Você pode substituir este aumento de atributo por um poder geral.</p>
+</div>
+
+<div class="habilidade">
+  <h3>Arquétipo Arcano</h3>
+  <p>Escolha um dos arquétipos arcanos entre Bruxo, Feiticeiro e Mago. Você recebe as habilidades relacionadas a estes arquétipos em determinados níveis.</p>
+</div>
+
+<div class="habilidade">
+  <h3>Poder de Arcanista</h3>
+  <p>Você recebe um poder de arcanista.</p>
+</div>
+
 <h2 id="arquétipos">Arquétipos Arcanos</h2>
 
 <div class="archetype-card">
   <h3>Bruxo</h3>
-  <p><em>Feiticeiros que fazem pactos com entidades misteriosas para obter poder arcano</em></p>
+  <p><em>Arcanistas que retiram seus poderes de itens, maldições e poções.</em></p>
 
   <div class="archetype-ability">
     <h4>1º Nível: Foco Arcano</h4>
@@ -450,6 +545,51 @@
       -moz-columns: 1;
     }
   }
+</style>
+
+
+<style>
+.progressao-arcanista {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: 'MedievalSharp', cursive;
+  background-color: rgba(187, 168, 140, 0.1);
+  border: 2px solid #5b4636;
+}
+
+.progressao-arcanista th {
+  background-color: #5b4636;
+  color: #fff9e6;
+  padding: 12px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.progressao-arcanista td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #bba88c;
+  vertical-align: middle;
+}
+
+.progressao-arcanista tr:nth-child(even) {
+  background-color: rgba(187, 168, 140, 0.05);
+}
+
+.progressao-arcanista tr:hover {
+  background-color: rgba(187, 168, 140, 0.2);
+}
+
+.progressao-arcanista td:first-child {
+  font-weight: bold;
+  text-align: center;
+  width: 60px;
+  color: #5b4636;
+}
+
+.progressao-arcanista td:nth-child(2) {
+  text-align: left;
+}
 </style>
 
 
