@@ -354,7 +354,7 @@
     <li><strong>Velocidade:</strong> 9 metros.</li>
     <li><strong>Idiomas:</strong> Você pode falar, ler e escrever três idiomas, sendo um deles preferencialmente um idioma antigo (latim, sumério, azteca, etc).</li>
     <li><strong>Visão no Escuro:</strong> 18 metros.</li>
-    <li><strong>Asas:</strong> Com uma ação bônus, você pode fazer um par de asas brotar ou sumir de suas costas. Você recebe deslocamento de vôo, em metros, igual a 3 vezes seu bônus de proficiência.</li>
+    <li><strong>Forma Angelical/Demoníaca:</strong> Com uma ação bônus, você pode mudar para uma forma demônica ou angelical. Você adquire uma série de características estéticas (cascos, cauda, chifres, múltiplos olhos, etc) um par de asas brotam de suas costas. Você recebe deslocamento de vôo, em metros, igual a 3 vezes seu bônus de proficiência.</li>
     <li><strong>Resistência Elemental:</strong> Você recebe resistência a dano ígneo. Além disto, escolha entre dano radiante ou necrótico. Você recebe resistência ao dano escolhido e vulnerabilidade ao outro.</li>
   </ul>
 </section>
@@ -367,18 +367,16 @@
     <li><strong>Tamanho:</strong> Médio (na forma humana).</li>
     <li><strong>Velocidade:</strong> 9 metros (na forma humana).</li>
     <li><strong>Idiomas:</strong> Você pode falar, ler e escrever dois idiomas, sendo um deles relacionados à sua origem primordial ou feérica (irlandês, coreano, grego, chinês, iorubá, árabe, etc).</li>
-    <li><strong>Visão no Escuro:</strong> 18 metros.</li>
-    
-    <li><strong>Forma Primordial/Feéria:</strong> Você possui uma aparência humana e uma aparência feérica ou de monstra. Escolha uma das formas abaixo. Uma vez feita a escolha, ela não pode ser alterada. Você pode usar uma ação bônus para se transformar e receber características de sua forma não humana. Seu equipamento mundano some enquanto transformado.</li>
+    <li><strong>Visão no Escuro:</strong> 18 metros.</li>    
+    <li><strong>Forma Primordial/Feérica:</strong> Você possui uma aparência humana e uma aparência feérica ou de monstra. Escolha uma das formas abaixo. Uma vez feita a escolha, ela não pode ser alterada. Você pode usar uma ação bônus para se transformar e receber características de sua forma não humana. Seu equipamento mundano some enquanto transformado.</li>
   </ul>
   
-  <h4>Formas Feéricas</h4>
-  <p>Escolha uma das aparências  feéricas e os benefícios que ela concede enquanto estiver transformado.</p>
-  <p>A aparência feérica geralmente consiste em orelhas pontudas, mudança na tonalidade de pele e cabelo, porém algumas aparências possuem aspectos animais, como orelhas, cascos e caudas.</p>
+  <h4>Formas Feéricas/Primordiais</h4>
   <p>Escolha uma das formas abaixo:</p>
   <ul>
-    <li><strong>Anão/Duende/Goblin:</strong> Seu tamanho muda para pequeno, você deslocamento de Escalada (9m) ou de Escavação (4,5m) e acesso a um poder de origem (uma vez feita estas escolhas, ela não pode ser alterada).</li>
-    <li><strong>Elfo:</strong> Escolha duas perícias entre Acrobacia, Arcanismo, Atuação, Furtividade, Percepção, Persuasão e Sobrevivência. Você rola com vantagem os testes das perícias escolhidas enquanto estiver na forma feérica. </li>
+    <li><strong>Anão/Gnomo:</strong> Seu tamanho muda para pequeno e você recebe deslocamento de Escavação (3m) e acesso a um poder de origem entre Crafter, Tough e Tavern Brawler (uma vez feita esta escolha, ela não pode ser alterada).</li>
+    <li><strong>Duende/Goblin:</strong> Seu tamanho muda para pequeno e você recebe deslocamento de Escalada (6m) e acesso a um poder de origem (uma vez feita esta escolha, ela não pode ser alterada).</li>    
+    <li><strong>Elfo:</strong> Escolha duas perícias entre Acrobacia, Arcanismo, Atuação, Furtividade, Percepção, Persuasão e Sobrevivência. Você rola com vantagem os testes de atributo relacionados às perícias escolhidas. </li>
     <li><strong>Fada:</strong> Seu tamanho muda para pequeno e um par de asas brotam de suas costas. Você recebe -2 em Força e deslocamento de Voo de 9m.</li>
     <li><strong>Jin:</strong> Você recebe resistência a dano ígneo e caso receba novamente esta resistência, ela se torna imunidade. Além disto, você pode gastar sua ação bônus ou reação para fazer com que um aliado em alcance de 9m role seu próximo teste com vantagem. O aliado precisa gastar uma ação bônus ou reação pedindo seu auxílio. Você só pode usar esta habilidade três vezes e recupera os usos após um descanso longo.</li>
     <li><strong>Dragão:</strong> Escolha um truque de Evocação que funciona como seu sopro e um tamanho de pequeno a grande (uma vez feita estas escolhas, não podem ser alteradas). Seu atributo de conjuração para o sopro é Constituição (caso possua um atributo mental com valor superior, pode utilizá-lo para conjuração). Você também recebe deslocamento de vôo, em metros, igual a 3 vezes seu bônus de proficiência, resistência a um dano elemental e vulnerabilidade a um dano elemental.</li>
