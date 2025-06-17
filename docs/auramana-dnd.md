@@ -128,7 +128,7 @@
         <tr><td>Livro dos Monstros</td><td>Integral</td></tr>
         <tr><td>Modern Handbook 5E</td><td>Integral (one-shots e campanhas modernas)</td></tr>
         <tr><td>Livro do Mestre</td><td>Clérigo (Morte), Paladino (Quebrador de Juramento)</td></tr>
-        <tr><td>Livro do Jogador (2014)</td><td>Clérigo (Conhecimento, Morte, Natureza, Tempestade), Mago (Convocador, Encantador, Necromante, Transmutador)</td></tr>
+        <tr><td>Livro do Jogador (2014)</td><td>Clérigo (Conhecimento, Natureza, Tempestade), Mago (Convocador, Encantador, Necromante, Transmutador)</td></tr>
         <tr><td>Guia do Aventureiro da Costa da Espada</td><td>Magias, Bárbaro (Besta), Bruxo (Imortal), Clérigo (Arcana), Guerreiro (Porta-Estandarte), Paladino (Coroa)</td></tr>
         <tr><td>Tesouro dos Dragões de Fizban</td><td>Magias, Guardião (Drakewarden), Monge (Dragão Ascendido)</td></tr>
         <tr><td>Caldeirão da Tasha Para Tudo</td><td>Magias, Artífice (Alquimista, Armeiro, Artilheiro, Ferreiro de Batalha), Bardo (Criação, Eloquência), Bárbaro (Magia Selvagem), Bruxo (Gênio, Insondável), Clérigo (Forja, Ordem, Paz), Druida (Esporos, Fogo Selvagem), Guardião (Guardião do Enxame), Ladino (Inquisitivo), Mago (Ordem dos Escribas), Monge (Projeção Astral)</td></tr>
@@ -378,21 +378,23 @@
     <li><strong>Velocidade:</strong> 9 metros (na forma humana).</li>
     <li><strong>Idiomas:</strong> Você pode falar, ler e escrever dois idiomas, sendo um deles relacionados à sua origem primordial ou feérica (irlandês, coreano, grego, chinês, iorubá, árabe, etc).</li>
     <li><strong>Visão no Escuro:</strong> 18 metros.</li>    
-    <li><strong>Forma Fabulae:</strong> Você possui uma aparência humana e uma aparência feérica ou de monstro. Escolha uma das formas abaixo. Uma vez feita a escolha, ela não pode ser alterada. Você pode usar uma ação bônus para se transformar e receber características de sua forma não humana. Seu equipamento mundano some enquanto transformado.</li>
+    <li><strong>Forma Fabulae:</strong> Você possui uma aparência humana e uma aparência feérica ou de monstro. Escolha uma das formas abaixo. Uma vez feita a escolha, ela não pode ser alterada. Você pode usar uma ação bônus para se transformar e receber características de sua forma não humana. Formas não humanoides, o equipamento mundano some enquanto transformado.</li>
   </ul>
   <h4>Forma Fabulae</h4>
   <ul>
-    <li><strong>Anão/Gnomo:</strong> Seu tamanho muda para pequeno e você recebe deslocamento de Escavação (3m) e acesso a um poder de origem entre Crafter, Tough e Tavern Brawler (uma vez feita esta escolha, ela não pode ser alterada).</li>
-    <li><strong>Capuz Vermelho:</strong> Seu tamanho muda para pequeno e você rola com vantagem dtestes de Destreza (Furtividade e Ladinagem).</li>    
-    <li><strong>Duende/Goblin:</strong> Seu tamanho muda para pequeno e você recebe deslocamento de Escalada (6m) e acesso a um poder de origem (uma vez feita esta escolha, ela não pode ser alterada).</li>    
-    <li><strong>Elfo:</strong> Escolha duas perícias entre Acrobacia, Arcanismo, Atuação, Furtividade, Percepção, Persuasão e Sobrevivência. Você rola com vantagem os testes de atributo relacionados às perícias escolhidas. </li>
-    <li><strong>Fada:</strong> Seu tamanho muda para pequeno e um par de asas brotam de suas costas. Você recebe -2 em Força e deslocamento de Voo de 9m.</li>
-    <li><strong>Jinn:</strong> Você recebe resistência a dano ígneo e caso receba novamente esta resistência, ela se torna imunidade. Além disto, você pode gastar sua ação bônus ou reação para fazer com que um aliado em alcance de 9m role seu próximo teste com vantagem. O aliado precisa gastar uma ação bônus ou reação pedindo seu auxílio. Você só pode usar esta habilidade três vezes e recupera os usos após um descanso longo.</li>
-    <li><strong>Dragão:</strong> Escolha um tamanho de pequeno a grande, você muda para este tamanho e recebe deslocamento de vôo, em metros, igual a 3 vezes seu bônus de proficiência. Escolha também um truque que funciona como seu sopro entre Acid Splash, Fire Bolt, Frostbite, Infestation, Lightning Lure, Mind Sliver, Poison Spray, Ray of Frost, Sacred Flame e Toll the Dead. Seu atributo de conjuração para o sopro é Constituição (caso possua um atributo mental com valor superior, pode utilizá-lo para conjuração). Você também resistência ao dano elemental do truque escolhido e vulnerabilidade a outro dano elemental. Caso receba a resistência elemental novamente, ele se torna imunidade. Uma vez feitas estas escolhas, não podem ser alteradas)</li> 
-    <li><strong>Golem:</strong> Como construto, magias como Curar Ferimentos não afetam você. Você é imune a dano de veneno, ser envenenado, doenças e à exaustão. Você não precisa comer ou respirar enquanto transformado. Em vez de dormir, você entra em um estado inativo por 6 horas por dia. Você não sonha neste estado; você está totalmente ciente de seus arredores e percebe inimigos se aproximando e outros eventos normalmente. A magia Reparar o estabiliza como  truque e pode ser conjurada em você como a magia Curar Ferimentos gastando os recursos necessários por círculo de magia.</li>
-    <li><strong>Górgona:</strong> Com uma ação, você pode fazer com que um alvo em alcance de 9 metros faça uma salvaguarda de Constituição (DC igual  8 + bônus de proficiência + seu modificador de Constituição). Em um teste de resistência falho, a criatura começa a se transformar em pedra e fica **restringida**. A criatura restringida deve repetir o teste de resistência no final de seu próximo turno, ficando **petrificada** em caso de falha ou encerrando o efeito em caso de sucesso. A petrificação dura 1 minuto ou até que a criatura seja libertada pela magia Restauração Maior ou outra magia similar. A menos que seja surpreendida, uma criatura pode desviar o olhar para evitar o teste de resistência no início de seu turno. Se a criatura fizer isso, ela não poderá vê-lo até o início do próximo turno, quando poderá desviar o olhar novamente. Se a criatura olhar para você nesse meio tempo, ela deve fazer o teste imediatamente. Você pode usar esta habilidade apenas uma vez no mesmo alvo a cada dia.</li>
-    <li><strong>Ogro/Gigante:</strong> Seu tamanho muda para grande, você recebe +2 em Força, -2 em Destreza e uma quantidade de PV extras iguais ao dobro de seu nível (mínimo 10 PV extras)</li>
-    <li><strong>Tritão/Undine:</strong> Você pode respirar de baixo d'água e recebe deslocamento de natação de 12 metros, qual aumenta aumenta +1,5m sempre que seu bônus de proficiência aumenta.</li>    
+    <li><strong>Anão/Gnomo:</strong> Seu tamanho muda para pequeno e você recebe deslocamento de Escavação (3m) e acesso a um poder de origem entre Crafter, Tough e Tavern Brawler (uma vez feita esta escolha, ela não pode ser alterada). Humanoide, Feérico.</li>
+    <li><strong>Capuz Vermelho:</strong> Seu tamanho muda para pequeno e você rola com vantagem dtestes de Destreza (Furtividade e Ladinagem). Humanoide, Feérico.</li>    
+    <li><strong>Duende/Goblin:</strong> Seu tamanho muda para pequeno e você recebe deslocamento de Escalada (6m) e acesso a um poder de origem (uma vez feita esta escolha, ela não pode ser alterada). Humanoide, Feérico.</li>    
+    <li><strong>Elfo:</strong> Escolha duas perícias entre Acrobacia, Arcanismo, Atuação, Furtividade, Conhecimento Histórico, Percepção, Persuasão e Sobrevivência. Você rola com vantagem os testes de atributo relacionados às perícias escolhidas. Humanoide, Feérico.</li>
+    <li><strong>Fada:</strong> Seu tamanho muda para pequeno e um par de asas brotam de suas costas. Você recebe -2 em Força e deslocamento de Voo de 9m. Feérico</li>
+    <li><strong>Jinn:</strong> Você recebe resistência a um dano elemental e caso receba novamente esta resistência, ela se torna imunidade. Além disto, você pode gastar sua ação bônus ou reação para fazer com que um aliado em alcance de 9m role seu próximo teste com vantagem. O aliado precisa gastar uma ação bônus ou reação pedindo seu auxílio. Você só pode usar esta habilidade três vezes e recupera os usos após um descanso longo. Elemental, feérico.</li>
+    <li><strong>Dragão:</strong> Escolha um tamanho de pequeno a grande, você muda para este tamanho e recebe deslocamento de vôo, em metros, igual a 3 vezes seu bônus de proficiência. Escolha também um truque que funciona como seu sopro entre Acid Splash, Fire Bolt, Frostbite, Infestation, Lightning Lure, Mind Sliver, Poison Spray, Ray of Frost, Sacred Flame e Toll the Dead. Seu atributo de conjuração para o sopro é Constituição (caso possua um atributo mental com valor superior, pode utilizá-lo para conjuração). Você também resistência ao dano elemental do truque escolhido e vulnerabilidade a outro dano elemental. Caso receba a resistência elemental novamente, ele se torna imunidade. Uma vez feitas estas escolhas, elas não podem ser alteradas). Monstruosidade, dragão.</li> 
+    <li><strong>Ogro/Gigante:</strong> Seu tamanho muda para grande, você recebe proficiência em Atletismo (ou expertise caso já seja proficiente) e uma quantidade de PV extras iguais ao dobro de seu nível (mínimo 10 PV extras). Monstruosidade, gigante. </li>
+   <li><strong>Golem:</strong> Como construto, magias como Curar Ferimentos não afetam você. Você é imune a dano de veneno, ser envenenado, doenças e à exaustão. Você não precisa comer ou respirar enquanto transformado. Em vez de dormir, você entra em um estado inativo por 6 horas por dia. Você não sonha neste estado; você está totalmente ciente de seus arredores e percebe inimigos se aproximando e outros eventos normalmente. A magia Reparar o estabiliza como truque e pode ser conjurada em você como a magia Curar Ferimentos gastando os recursos necessários por círculo de magia. Por fim, você pode substituir o talento de sua Origem pelas características de outro Fábula (por exemplo, se tornar um golem gigante ou um golem dragão), além de receber o tipo de criatura desta fábula. Construto. </li>
+    <li><strong>Górgona:</strong> Com uma ação, você pode fazer com que um alvo em alcance de 9 metros faça uma salvaguarda de Constituição (DC igual  8 + bônus de proficiência + seu modificador de Constituição). Em um teste de resistência falho, a criatura começa a se transformar em pedra e fica **restringida**. A criatura restringida deve repetir o teste de resistência no final de seu próximo turno, ficando **petrificada** em caso de falha ou encerrando o efeito em caso de sucesso. A petrificação dura 1 minuto ou até que a criatura seja libertada pela magia Restauração Maior ou outra magia similar. A menos que seja surpreendida, uma criatura pode desviar o olhar para evitar o teste de resistência no início de seu turno. Se a criatura fizer isso, ela não poderá vê-lo até o início do próximo turno, quando poderá desviar o olhar novamente. Se a criatura olhar para você nesse meio tempo, ela deve fazer o teste imediatamente. Você pode usar esta habilidade apenas uma vez no mesmo alvo a cada dia. Monstuosidade, humanoide. </li>
+    <li><strong>Tritão:</strong> Você pode respirar de baixo d'água e recebe deslocamento de natação de 12m, qual aumenta aumenta +1,5m sempre que seu bônus de proficiência aumenta. Monstruosidade.</li>  
+    <li><strong>Undine:</strong> Você pode respirar de baixo d'água, recebe deslocamento de natação (9m) e o talento Magic Initiate (Shape Water, Create or Destroy Water e mais um truque relacionado a água). Elemental, feérico</li>  
+    
   </ul>
 </section>
 
@@ -425,27 +427,35 @@
     <li><strong>Idade:</strong> Não envelhece.</li>
     <li><strong>Tamanho:</strong> Médio.</li>
     <li><strong>Velocidade:</strong> 9 metros.</li>
-    <li><strong>Idiomas:</strong>  Você pode falar, ler e escrever três idiomas, sendo um deles preferencialmente um idioma antigo (egípcio antigo, chinês antigo, azteca, etc).</li>
+    <li><strong>Idiomas:</strong>  Você pode falar, ler e escrever três idiomas, sendo um deles preferencialmente um idioma antigo (latim, egípcio antigo, chinês antigo, quechuá, etc).</li>
     <li><strong>Visão no Escuro:</strong> 18 metros.</li>
-    <li><strong>Natureza Morta-Viva:</strong> Você não precisa respirar, é imune a dano necrótico e venenoso e à exaustão. Porém é vulnerável a dano ígneo e radiante, além de não se beneficiar de magias de cura (considerado dano radiante). Além disto, você não precisa fazer salvaguardas de morte quando chega a 0 PV, porém seu corpo é destruído se continuar sofrendo dano.</li>
-    <li><strong>Resistência:</strong> Você possui resistência a dano cortante, contundente e perfurante de fontes não mágicas. Armas banhadas em prata ignoram suas resistências a dano.</li>
+    <li><strong>Natureza Morta-Viva:</strong>  Você é imune a dano de veneno, ser envenenado, doenças e à exaustão. Você não precisa comer ou respirar Em vez de dormir, você deve descansar por 6 horas por dia num local escuro. Você é, porém, vulnerável a dano ígneo e radiante, além de não se beneficiar de magias de cura convencionais (causam dano radiante). Poções de cura específicas para mortos-vivos recuperam seus pontos de vida. Além disto, você não precisa fazer salvaguardas de morte quando chega a 0 PV, porém seu corpo é destruído se continuar sofrendo dano.</li>
   </ul>
   
 
   <h4>Vampirismo</h4>
     <p>
-      Múmias, zumbis e outros tipos de mortos-vivos possuem apenas as características acima. Porém, caso você deseje ser um vampiro, recebe os seguintes tratos:
+      Além das caractérísticas básicas de morto-vivo, vampiros recebem os seguintes tratos:
     </p>  
   <ul>
     <li><strong>Mordida: </strong>Você pode drenar sangue e energia vital de uma criatura disposta, ou de uma que esteja agarrada, incapacitada ou restringida por você. Faça um teste de agarrar utilizando Força (Atletismo) contra o alvo. Caso tenha sucesso, pode usar sua ação bônus para fazer um ataque com sua mordida. Se acertar, você causa 1d4 de dano perfurante + uma quantidade de dano necrótico igual ao seu bônus de proficiência. Você recupera pontos de vida equivalentes ao dano causado. Você não pode recuperar pontos de vida de alvos que não possuem sangue (como construtos ou espectros).</li>
     <li><strong>Sede de Sangue:</strong> Ficar sem beber pelo menos um gole de sangue por dia causa efeitos de fome (um vampiro pode ficar sem beber sangue por um número de dias igual a 3 + seu modificador de Constituição - mínimo 1 dia. Ao final de cada dia que ultrapassar esse limite, o vampiro sofrerá automaticamente um nível de exaustão. Um dia normal de alimentação zera a contagem de dias sem comida.</li>
       <li><strong>Sono Diurno:</strong> Enquanto estiver de dia, você precisa passar oito horas no subterrâneo ou num lugar escuro (como num caixão). Você fica inconsciente e indefeso enquanto isso, em estado de torpor. Se fizer isso, recupera PV e PM (ou espaços de magia) por descanso. Caso contrário, sofre os efeitos de fome.</li>
     <li><strong>Sensibilidade à Luz:</strong> Você sofre uma quantidade de dano radiante igual o dobro de seu bônus de proficiência ao iniciar seu turno sob a luz solar (já contabilizada a sua vulnerabilidade). Enquanto estiver sob a luz solar, também tem desvantagem em jogadas de ataque e testes de perícia.</li>
+    <li><strong>Resistência:</strong> Você possui resistência a dano cortante, contundente e perfurante de fontes não mágicas. Armas banhadas em prata ignoram suas resistências a dano.</li>
     <li><strong>Velocidade Vampírica:</strong> Sua velocidade básica de caminhada é de 9 metros, porém aumenta +1,5m sempre que seu bônus de proficiência aumenta. Sua velocidade de escalada é de 9 metros
   </ul>
 </section>
 
-
+  <h4>Mumificação</h4>
+    <p>
+      Além das caractérísticas básicas de morto-vivo, múmias recebem os seguintes tratos:
+    </p>  
+  <ul>
+    <li><strong>Resistência:</strong> Você possui resistência a dano cortante, contundente e perfurante de fontes não mágicas. Armas banhadas em prata ignoram suas resistências a dano.</li>
+    <li><strong>Lentidão dos Antigos:</strong> Sua velocidade básica de caminhada é de 7,5 metros.</li>
+  </ul>
+</section>
   </div>
 
 </body>
