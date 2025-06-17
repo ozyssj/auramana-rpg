@@ -453,7 +453,7 @@
     </p>  
   <ul>
     <li><strong>Resistência:</strong> Você possui resistência a dano cortante, contundente e perfurante de fontes não mágicas. Armas banhadas em prata ignoram suas resistências a dano.</li>
-    <li><strong>Lentidão dos Antigos:</strong> Sua velocidade básica de caminhada é de 7,5 metros.</li>
+    <li><strong>Lento:</strong> Sua velocidade básica de caminhada é de 6 metros.</li>
   </ul>
 </section>
   </div>
