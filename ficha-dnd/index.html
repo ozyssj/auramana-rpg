@@ -1078,8 +1078,8 @@
         <input type="number" id="int" min="-5" max="10">
       </div>
       <div class="campo">
-        <label for="sen">SEN</label>
-        <input type="number" id="sen" min="-5" max="10">
+        <label for="sab">SEN</label>
+        <input type="number" id="sab" min="-5" max="10">
       </div>
       <div class="campo">
         <label for="car">CAR</label>
@@ -1117,39 +1117,16 @@
       </div>
     </div>
 
-            <div class="defesa">
-                <div class="linha">
-                    <div class="campo">
-                        <label>Defesa</label>
-                        <select class="atributo-pericia">
-                            <option value="des">DES</option>
-                            <option value="for">FOR</option>
-                            <option value="con">CON</option>
-                            <option value="int">INT</option>
-                            <option value="sen">SEN</option>
-                            <option value="car">CAR</option>
-                        </select>
-                        <select class="treinamento-pericia">
-                            <option value="0">Destreinado</option>
-                            <option value="1">Treinado</option>
-                            <option value="2">Especialista</option>
-                        </select>
-                        <input type="number" class="bonus-pericia" placeholder="Bônus de Defesa">
-                        <input type="number" class="valor-defesa" readonly>
-                    </div>
-                </div>
-            </div>
-
-
   <div class="linha">
-    <div class="campo">
+  <div class="campo">
+      <label for="armadura">Armadura: </label>
+      <input type="text" id="armadura" placeholder="Leve ou Pesada">
+  </div>
+
+   <div class="campo">
       <label for="armadura">Defesa</label>
       <input type="number" id="defesa" placeholder=10>
     </div>
-    <div class="campo">
-      <label for="armadura">RD e Resistências</label>
-      <input type="text" id="rd" placeholder="Ex: RD a Fogo 5">
-    </div>    
   </div>
 
     <div class="linha">
@@ -1169,6 +1146,11 @@
     </div>
     </div>
 
+    <div class="campo">
+      <label for="origem">Proficiências</label>
+      <input type="text" id="proficiencia" placeholder="Ex: Armas marciais, ferramentas de alquimista.">
+    </div>
+
 <div class="campo">
   <label for="ataques">Ataques</label>
   <textarea id="ataques" rows="6">
@@ -1186,38 +1168,35 @@
 <script>
   const pericias = [
     { nome: "Acrobacia", atributo: "des" },
-    { nome: "Adestramento", atributo: "car" },
+    { nome: "Arcanismo", atributo: "car" },
     { nome: "Atletismo", atributo: "for" },
     { nome: "Atuação", atributo: "car" },
-    { nome: "Cavalgar", atributo: "des" },
-    { nome: "Conh Alquimia", atributo: "int" },
-    { nome: "Conh Arcano", atributo: "int" },
-    { nome: "Conh Histórico", atributo: "int" },
-    { nome: "Conh Médico", atributo: "int" },
-    { nome: "Conh Natureza", atributo: "int" },
-    { nome: "Conh Nobreza", atributo: "int" },
-    { nome: "Conh Religião", atributo: "int" },
-    { nome: "Diplomacia", atributo: "car" },
     { nome: "Enganação", atributo: "car" },
-    { nome: "Estratégia", atributo: "int" },
-    { nome: "Fortitude", atributo: "con" },
     { nome: "Furtividade", atributo: "des" },
+    { nome: "História", atributo: "int" },
     { nome: "Iniciativa", atributo: "des" },
     { nome: "Intimidação", atributo: "car" },
-    { nome: "Intuição", atributo: "sen" },
+    { nome: "Intuição", atributo: "sab" },
     { nome: "Investigação", atributo: "int" },
-    { nome: "Jogatina", atributo: "car" },
     { nome: "Ladinagem", atributo: "des" },
-    { nome: "Luta", atributo: "for" },
+    { nome: "Lidar Com Animais", atributo: "car" },
+    { nome: "Medicina", atributo: "sab" },
+    { nome: "Natureza", atributo: "int" },
+    { nome: "Persuasão", atributo: "car" },
+    { nome: "Percepção", atributo: "sab" },
+    { nome: "Religião", atributo: "int" },
+    { nome: "Sobrevivência", atributo: "sab" },
+    { nome: "Salva Força", atributo: "for" },
+    { nome: "Salva Destreza", atributo: "des" },
+    { nome: "Salva Constituição", atributo: "con" },
+    { nome: "Salva Inteligência", atributo: "int" },
+    { nome: "Salva Sabedoria", atributo: "sen" },
+    { nome: "Salva Carisma", atributo: "car" },
+    { nome: "Cavalgar", atributo: "des" },
+    { nome: "Estratégia", atributo: "int" },
     { nome: "Ofício", atributo: "int" },
-    { nome: "Raciocínio", atributo: "int" },
-    { nome: "Percepção", atributo: "sen" },
-    { nome: "Pilotagem", atributo: "des" },
-    { nome: "Pontaria", atributo: "des" },
-    { nome: "Raciocínio", atributo: "int" },
-    { nome: "Reflexos", atributo: "des" },
-    { nome: "Sobrevivência", atributo: "sen" },
-    { nome: "Vontade", atributo: "car" }
+    { nome: "Pilotagem", atributo: "des" }
+
   ];
 
   // Opções de atributos
@@ -1226,7 +1205,7 @@
     { value: "for", text: "FOR" },
     { value: "con", text: "CON" },
     { value: "int", text: "INT" },
-    { value: "sen", text: "SEN" },
+    { value: "sab", text: "SEN" },
     { value: "car", text: "CAR" }
   ];
 
@@ -1299,7 +1278,6 @@
 </textarea>
 </div>
 
-
 <div class="botoes">
   <button onclick="salvarFicha()">Salvar no Navegador</button>
   <button onclick="baixarFicha()">Exportar Ficha</button>
@@ -1310,9 +1288,6 @@
 </div>
 
   </div>
-
-
-
 
 <script>
 function atualizarPericias() {
