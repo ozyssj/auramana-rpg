@@ -226,7 +226,7 @@
         <input type="number" id="int" min="-5" max="10">
       </div>
       <div class="campo">
-        <label for="sab">SEN</label>
+        <label for="sab">SAB</label>
         <input type="number" id="sab" min="-5" max="10">
       </div>
       <div class="campo">
@@ -337,7 +337,7 @@
     { nome: "Salva Destreza", atributo: "des" },
     { nome: "Salva Constituição", atributo: "con" },
     { nome: "Salva Inteligência", atributo: "int" },
-    { nome: "Salva Sabedoria", atributo: "sen" },
+    { nome: "Salva Sabedoria", atributo: "sab" },
     { nome: "Salva Carisma", atributo: "car" },
     { nome: "Iniciativa", atributo: "des" },
     { nome: "Cavalgar", atributo: "des" },
@@ -353,7 +353,7 @@
     { value: "for", text: "FOR" },
     { value: "con", text: "CON" },
     { value: "int", text: "INT" },
-    { value: "sab", text: "SEN" },
+    { value: "sab", text: "SAB" },
     { value: "car", text: "CAR" }
   ];
 
@@ -445,7 +445,7 @@ function atualizarPericias() {
     des: parseInt(document.getElementById('des').value) || 0,
     con: parseInt(document.getElementById('con').value) || 0,
     int: parseInt(document.getElementById('int').value) || 0,
-    sen: parseInt(document.getElementById('sen').value) || 0,
+    sab: parseInt(document.getElementById('sab').value) || 0,
     car: parseInt(document.getElementById('car').value) || 0
   };
 
@@ -468,7 +468,7 @@ function atualizarPericias() {
   });    
 }
 
-['nivel', 'for', 'des', 'con', 'int', 'sen', 'car'].forEach(id => {
+['nivel', 'for', 'des', 'con', 'int', 'sab', 'car'].forEach(id => {
   document.getElementById(id).addEventListener('input', atualizarPericias);
 });
 
