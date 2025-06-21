@@ -381,9 +381,7 @@
         { nome: "Religião", atributo: "int" },
         { nome: "Sobrevivência", atributo: "sab" },
         { nome: "Cavalgar", atributo: "des" },
-        { nome: "Estratégia", atributo: "int" },
         { nome: "Ferramenta", atributo: "int" },
-        { nome: "Ofício", atributo: "int" },
         { nome: "Pilotagem", atributo: "des" }
 
       ];
@@ -441,15 +439,15 @@
 
 
     <div class="campo">
-      <label for="poderes">Poderes</label>
+      <label for="poderes">Habilidades e Talentos</label>
       <textarea id="poderes" rows="22">
  -> Raça: 
  -> Origem: 
- -> ND1: 
- -> ND2: 
- -> ND3: 
- -> ND4: 
- -> ND5: 
+ -> NV1: 
+ -> NV2: 
+ -> NV3: 
+ -> NV4: 
+ -> NV5: 
 </textarea>
     </div>
 
