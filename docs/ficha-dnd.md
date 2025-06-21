@@ -430,7 +430,7 @@
 
     <div class="campo">
       <label for="inventario">Inventário</label>
-      <textarea id="inventario" rows="6">
+      <textarea id="inventario" rows="12">
  -> Moedas: 
  -> 
  -> 
@@ -440,7 +440,7 @@
 
     <div class="campo">
       <label for="poderes">Habilidades e Talentos</label>
-      <textarea id="poderes" rows="22">
+      <textarea id="poderes" rows="12">
  -> Raça: 
  -> Origem: 
  -> NV1: 
@@ -453,7 +453,7 @@
 
     <div class="campo">
       <label for="magias">Magias</label>
-      <textarea id="magias" rows="20">
+      <textarea id="magias" rows="12">
  -> 1° Círculo: 
  - 
  -
