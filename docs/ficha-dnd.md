@@ -234,6 +234,10 @@
       </select>
     </div>
 
+    <div class="campo">
+      <label for="raca">Subclasse</label>
+      <input type="text" id="subclasse" placeholder="Ex: Assassino">
+    </div>
 
 
     <div class="campo">
