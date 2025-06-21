@@ -194,15 +194,21 @@
 
         <div class="campo">
             <label for="classe">Classe</label>
-            <select id="classe" onchange="filtrarArquetipos()">
+            <select id="classe" onchange="calcularAtributos()">
                 <option value="">-- Selecione a Classe --</option>
-                <option value="Arcanista">Arcanista</option>
-                <option value="Batedor">Batedor</option>
-                <option value="Elementalista">Elementalista</option>
-                <option value="Guerreiro">Guerreiro</option>
-                <option value="Inspirador">Inspirador</option>
-                <option value="Inventor">Inventor</option>
-                <option value="Sacerdote">Sacerdote</option>
+                <option value="ARTI">Artifice</option>
+                <option value="BARB">Bárbaro</option>
+                <option value="BARD">Bardo</option>
+                <option value="BRUX">Bruxo</option>
+                <option value="CLER">Clérigo</option>
+                <option value="DRUI">Druida</option>
+                <option value="FEIT">Feiticeiro</option>
+                <option value="GUAR">Guardião</option>
+                <option value="GUER">Guerreiro</option>
+                <option value="LADI">Ladino</option>
+                <option value="MAGO">Mago</option>
+                <option value="MONG">Monge</option>
+                <option value="PALA">Paladino</option>
             </select>
         </div>
 
@@ -572,52 +578,75 @@ function limparFicha() {
 }
 
 
-
-
-
                 // Constantes com os valores base por classe
                 const BASES_PV = {
-                    'Arcanista': 3,
-                    'Batedor': 4,
-                    'Elementalista': 4,
-                    'Guerreiro': 5,
-                    'Inspirador': 4,
-                    'Inventor': 4,
-                    'Sacerdote': 4
+                    'ARTI': 5,
+                    'BARB': 7,
+                    'BARD': 5,
+                    'BRUX': 5,
+                    'CLER': 5,
+                    'DRUI': 5,
+                    'FEIT': 4,
+                    'GUAR': 6,
+                    'GUER': 6,
+                    'LADI': 5,
+                    'MAGO': 4,
+                    'MONG': 5,
+                    'PALA': 6,
                 };
 
                 const BASES_PM = {
-                    'Arcanista': 6,
-                    'Batedor': 4,
-                    'Elementalista': 4,
-                    'Guerreiro': 4,
-                    'Inspirador': 4,
-                    'Inventor': 4,
-                    'Sacerdote': 5
+                    'ARTI': 5,
+                    'BARB': 1,
+                    'BARD': 5,
+                    'BRUX': 3,
+                    'CLER': 5,
+                    'DRUI': 5,
+                    'FEIT': 5,
+                    'GUAR': 4,
+                    'GUER': 3,
+                    'LADI': 3,
+                    'MAGO': 5,
+                    'MONG': 4,
+                    'PALA': 4,
                 };
 
-                // Função unificada para cálculos
-                function calcularAtributos() {
-                    const constituicao = parseInt(document.getElementById('con').value) || 0;
-                    const nivel = parseInt(document.getElementById('nivel').value) || 1;
-                    const classe = document.getElementById('classe').value;
-                    const pvExtra = parseInt(document.getElementById('pvExtra').value) || 0;
-                    const pmExtra = parseInt(document.getElementById('pmExtra').value) || 0;
 
-                    // Cálculo de PV
-                    const basePV = BASES_PV[classe] || 4;
-                    const pvMax = (basePV + constituicao) * nivel + pvExtra;
-                    document.getElementById('pvMax').value = pvMax;
+function calcularAtributos() {
+    const constituicao = parseInt(document.getElementById('con').value) || 0;
+    const nivel = parseInt(document.getElementById('nivel').value) || 1;
+    const classe = document.getElementById('classe').value;
 
-                    // Cálculo de PM
-                    const basePM = BASES_PM[classe] || 4;
-                    const pmMax = basePM * nivel + pmExtra;
-                    document.getElementById('pmMax').value = pmMax;
+    // Cálculo de PV
+    if (classe && BASES_PV[classe]) {
+        const basePV = BASES_PV[classe];
+        const pvInicial = (2 * basePV)- 2;
+        const pvInicialExtra = pvInicial - basePV;
+        const pvMax = ((basePV + constituicao) * nivel) + pvInicialExtra;
+        document.getElementById('pvMax').value = pvMax;
+        
+        // Ajustar PV atual se necessário
+        const pvAtual = parseInt(document.getElementById('pvAtual').value) || 0;
+        if (pvAtual > pvMax || isNaN(pvAtual)) {
+            document.getElementById('pvAtual').value = pvMax;
+        }
+    }
 
-                    // Ajustar valores atuais
-                    ajustarValorAtual('pvAtual', pvMax);
-                    ajustarValorAtual('pmAtual', pmMax);
-                }
+    // Cálculo de PM
+    if (classe && BASES_PM[classe]) {
+        const basePM = BASES_PM[classe];
+        const pmMax = (basePM * nivel);
+        document.getElementById('pmMax').value = pmMax;
+        
+        // Ajustar PM atual se necessário
+        const pmAtual = parseInt(document.getElementById('pmAtual').value) || 0;
+        if (pmAtual > pmMax || isNaN(pmAtual)) {
+            document.getElementById('pmAtual').value = pmMax;
+        }
+    }
+}
+
+
 
                 // Função auxiliar para ajustar valores atuais
                 function ajustarValorAtual(idElemento, valorMax) {
@@ -630,7 +659,7 @@ function limparFicha() {
                 // Configuração de eventos unificada
                 function configurarEventos() {
                     // Eventos que disparam o cálculo
-                    ['con', 'nivel', 'classe', 'pvExtra', 'pmExtra'].forEach(id => {
+                    ['con', 'nivel', 'classe'].forEach(id => {
                         document.getElementById(id).addEventListener('input', calcularAtributos);
                     });
 
@@ -646,25 +675,24 @@ function limparFicha() {
 
                 // Inicialização completa
                 window.addEventListener('DOMContentLoaded', () => {
-                    // Carregar valores salvos
-                    if (localStorage.getItem('ficha-pvExtra')) {
-                        document.getElementById('pvExtra').value = localStorage.getItem('ficha-pvExtra');
-                    }
-                    if (localStorage.getItem('ficha-pmExtra')) {
-                        document.getElementById('pmExtra').value = localStorage.getItem('ficha-pmExtra');
-                    }
-
                     // Configurar eventos e calcular valores iniciais
                     configurarEventos();
                     calcularAtributos();
                 });
 
-
-
-
-
-
-
+window.addEventListener('DOMContentLoaded', () => {
+    // Carregar valores salvos
+    const campos = document.querySelectorAll('input, select, textarea');
+    campos.forEach(el => {
+        const val = localStorage.getItem('ficha-' + el.id);
+        if (val) el.value = val;
+    });
+    
+    // Configurar eventos e calcular valores iniciais
+    configurarEventos();
+    calcularAtributos();
+    atualizarPericias();
+});
 
 window.onload = () => {
   const campos = document.querySelectorAll('input, select, textarea');
@@ -672,7 +700,9 @@ window.onload = () => {
     const val = localStorage.getItem('ficha-' + el.id);
     if (val) el.value = val;
   });
-  atualizarPericias();
+    configurarEventos();
+    calcularAtributos();
+    atualizarPericias();
 };
 
 </script>
