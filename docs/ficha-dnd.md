@@ -192,10 +192,20 @@
     </div>
     
 
-    <div class="campo">
-          <label for="raca">Classe</label>
-         <input type="text" id="classe" placeholder="Ex: Guerreiro">
-    </div>
+        <div class="campo">
+            <label for="classe">Classe</label>
+            <select id="classe" onchange="filtrarArquetipos()">
+                <option value="">-- Selecione a Classe --</option>
+                <option value="Arcanista">Arcanista</option>
+                <option value="Batedor">Batedor</option>
+                <option value="Elementalista">Elementalista</option>
+                <option value="Guerreiro">Guerreiro</option>
+                <option value="Inspirador">Inspirador</option>
+                <option value="Inventor">Inventor</option>
+                <option value="Sacerdote">Sacerdote</option>
+            </select>
+        </div>
+
 
 
     <div class="campo">
@@ -478,6 +488,22 @@ document.addEventListener('change', e => {
   }
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function salvarFicha() {
   const campos = document.querySelectorAll('input, select, textarea');
   campos.forEach(el => localStorage.setItem('ficha-' + el.id, el.value));
@@ -544,6 +570,100 @@ function limparFicha() {
     alert("Todos os dados foram apagados da ficha.");
   }
 }
+
+
+
+
+
+                // Constantes com os valores base por classe
+                const BASES_PV = {
+                    'Arcanista': 3,
+                    'Batedor': 4,
+                    'Elementalista': 4,
+                    'Guerreiro': 5,
+                    'Inspirador': 4,
+                    'Inventor': 4,
+                    'Sacerdote': 4
+                };
+
+                const BASES_PM = {
+                    'Arcanista': 6,
+                    'Batedor': 4,
+                    'Elementalista': 4,
+                    'Guerreiro': 4,
+                    'Inspirador': 4,
+                    'Inventor': 4,
+                    'Sacerdote': 5
+                };
+
+                // Função unificada para cálculos
+                function calcularAtributos() {
+                    const constituicao = parseInt(document.getElementById('con').value) || 0;
+                    const nivel = parseInt(document.getElementById('nivel').value) || 1;
+                    const classe = document.getElementById('classe').value;
+                    const pvExtra = parseInt(document.getElementById('pvExtra').value) || 0;
+                    const pmExtra = parseInt(document.getElementById('pmExtra').value) || 0;
+
+                    // Cálculo de PV
+                    const basePV = BASES_PV[classe] || 4;
+                    const pvMax = (basePV + constituicao) * nivel + pvExtra;
+                    document.getElementById('pvMax').value = pvMax;
+
+                    // Cálculo de PM
+                    const basePM = BASES_PM[classe] || 4;
+                    const pmMax = basePM * nivel + pmExtra;
+                    document.getElementById('pmMax').value = pmMax;
+
+                    // Ajustar valores atuais
+                    ajustarValorAtual('pvAtual', pvMax);
+                    ajustarValorAtual('pmAtual', pmMax);
+                }
+
+                // Função auxiliar para ajustar valores atuais
+                function ajustarValorAtual(idElemento, valorMax) {
+                    const elemento = document.getElementById(idElemento);
+                    if (!elemento.value || parseInt(elemento.value) > valorMax) {
+                        elemento.value = valorMax;
+                    }
+                }
+
+                // Configuração de eventos unificada
+                function configurarEventos() {
+                    // Eventos que disparam o cálculo
+                    ['con', 'nivel', 'classe', 'pvExtra', 'pmExtra'].forEach(id => {
+                        document.getElementById(id).addEventListener('input', calcularAtributos);
+                    });
+
+                    // Validar valores atuais
+                    document.getElementById('pvAtual').addEventListener('change', function () {
+                        ajustarValorAtual('pvAtual', document.getElementById('pvMax').value);
+                    });
+
+                    document.getElementById('pmAtual').addEventListener('change', function () {
+                        ajustarValorAtual('pmAtual', document.getElementById('pmMax').value);
+                    });
+                }
+
+                // Inicialização completa
+                window.addEventListener('DOMContentLoaded', () => {
+                    // Carregar valores salvos
+                    if (localStorage.getItem('ficha-pvExtra')) {
+                        document.getElementById('pvExtra').value = localStorage.getItem('ficha-pvExtra');
+                    }
+                    if (localStorage.getItem('ficha-pmExtra')) {
+                        document.getElementById('pmExtra').value = localStorage.getItem('ficha-pmExtra');
+                    }
+
+                    // Configurar eventos e calcular valores iniciais
+                    configurarEventos();
+                    calcularAtributos();
+                });
+
+
+
+
+
+
 
 
 window.onload = () => {
