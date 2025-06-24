@@ -124,7 +124,7 @@
         <tr><th>Livro</th><th>Itens Permitidos</th></tr>
       </thead>
       <tbody>
-        <tr><td>Livro do Jogador (2024)</td><td>Integral (exceto raças)</td></tr>
+        <tr><td>Livro do Jogador (2024)</td><td>Integral</td></tr>
         <tr><td>Livro dos Monstros</td><td>Integral</td></tr>
         <tr><td>Modern Handbook 5E</td><td>Integral (one-shots e campanhas modernas)</td></tr>
         <tr><td>Livro do Mestre</td><td>Clérigo (Morte), Paladino (Quebrador de Juramento)</td></tr>
@@ -329,7 +329,7 @@
 
 
 <div class="wide">
-  <h2>RAÇAS</h2>
+  <h2>RAÇAS (cenários modernos / dark fantasy) </h2>
 </div>
 
 <section class="raca">
@@ -353,17 +353,15 @@
   <h3>Nefelim</h3>
   <hr>
   <p>
-    Encarnações de anjos e demônios. Você geralmente possui uma forma humana e esconde características demoníacas ou angelicais (cascos, cauda, chifres, múltiplos olhos, etc). Você pode esconder ou mostrar essas características com uma ação livre. 
-    um par de asas brotam de suas costas.
-  </p>  
+    Encarnações de anjos e demônios. Você geralmente possui uma forma humana e esconde características demoníacas ou angelicais (cascos, cauda, chifres, múltiplos olhos, etc). Você pode esconder ou mostrar essas características com uma ação livre.  </p>  
   <ul>
     <li><strong>Idade:</strong> Igual à humana.</li>
     <li><strong>Tamanho:</strong> Médio.</li>
     <li><strong>Velocidade:</strong> 9 metros.</li>
     <li><strong>Idiomas:</strong> Você pode falar, ler e escrever três idiomas, sendo um deles preferencialmente um idioma antigo (latim, sumério, azteca, etc).</li>
     <li><strong>Visão no Escuro:</strong> 18 metros.</li>
-    <li><strong>Asas: </strong> Com uma ação bônus, você pode mudar para uma forma demônica/angelical. Você adquire uma série de características estéticas (cascos, cauda, chifres, múltiplos olhos, etc) e um par de asas brotam de suas costas. Você recebe deslocamento de vôo, em metros, igual a 3 vezes seu bônus de proficiência.</li>
-    <li><strong>Resistência Elemental:</strong> Você recebe resistência a dano ígneo. Além disto, escolha entre dano radiante ou necrótico. Você recebe resistência ao dano escolhido e vulnerabilidade ao outro.</li>
+    <li><strong>Asas: </strong> Com uma ação bônus, um par de asas brotam de suas costas. Você recebe deslocamento de vôo, em metros, igual a 3 vezes seu bônus de proficiência.</li>
+    <li><strong>Resistência Elemental:</strong> Você possui resistência a dano ígneo. Além disto, escolha entre dano radiante ou necrótico. Você possui resistência ao dano escolhido e vulnerabilidade ao outro.</li>
   </ul>
 </section>
 
@@ -413,13 +411,13 @@
     <li><strong>Visão no Escuro:</strong> 18 metros.</li>
     <li><strong>Armas Naturais:</strong> Com uma ação livre, você pode entrar ou sair de uma forma híbrida entre a forma humana e animal. Neste estado, seus ataques desarmados causam 1d6 de dano. O tipo de dano e atributo utilizado nas rolagens estão relacionados ao ataque principal de sua forma animal. Seus ataques desarmados são considerados mágico.</li>
     <li><strong>Forma Animal:</strong> Escolha um animal de CR 1 ou menor (lobo atroz, leão, tigre, hiena gigante, urso pardo, etc). Uma vez feita a escolha, ela não pode ser alterada. Com uma ação bônus, você pode pode ficar nna forma escolhida uma quantidade horas iguais ao seu bônus de proficiência. As regras de transformação são similares à Forma Selvagem do Druida.</li>
-    <li><strong>Sensibilidade à Prata:</strong> Armas banhadas em prata ignoram suas resistências que você possua e os PV temporários de sua Forma Animal.</li>
+    <li><strong>Sensibilidade à Prata:</strong> Armas banhadas em prata ignoram as resistências a dano  que você possua e os PV temporários de sua Forma Animal.</li>
   </ul>
 </section>
 
 
 <section class="raca">
-  <h3>Morto Vivo</h3>
+  <h3>Morto-Vivo</h3>
   <hr>
   <p>
     Vampiros, múmias, zumbis e espectros são exemplos de criaturas que morreram, porém ainda vagam entre o mundo dos vivos.
