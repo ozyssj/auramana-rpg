@@ -374,9 +374,9 @@
     <li><strong>Idade:</strong> Variável.</li>
     <li><strong>Tamanho:</strong> Médio (na forma humana).</li>
     <li><strong>Velocidade:</strong> 9 metros (na forma humana).</li>
-    <li><strong>Idiomas:</strong> Você pode falar, ler e escrever dois idiomas, sendo um deles relacionados à sua origem primordial ou feérica (irlandês, coreano, grego, chinês, iorubá, árabe, etc).</li>
+    <li><strong>Idiomas:</strong> Você pode falar, ler e escrever dois idiomas, sendo um deles relacionados à sua origem monstruosa ou feérica (irlandês, coreano, grego, chinês, iorubá, árabe, etc).</li>
     <li><strong>Visão no Escuro:</strong> 18 metros.</li>    
-    <li><strong>Forma Fabulae:</strong> Você possui uma aparência humana e uma aparência feérica ou de monstro. Escolha uma das formas abaixo. Uma vez feita a escolha, ela não pode ser alterada. Você pode usar uma ação bônus para se transformar e receber características de sua forma não humana. Formas não humanoides, o equipamento mundano some enquanto transformado.</li>
+    <li><strong>Forma Fabulae:</strong> Você possui uma aparência humana e uma aparência feérica ou de monstro. Escolha uma das formas abaixo. Uma vez feita a escolha, ela não pode ser alterada. Você pode usar uma ação bônus para se transformar e receber características de sua forma não humana. Em formas não humanoides, o equipamento mundano some enquanto transformado similar a transformação do druida.</li>
   </ul>
   <h4>Forma Fabulae</h4>
   <ul>
