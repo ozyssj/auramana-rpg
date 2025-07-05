@@ -410,7 +410,7 @@
     <li><strong>Visão no Escuro:</strong> 18 metros.</li>
     <li><strong>Armas Naturais:</strong> Com uma ação livre, você pode entrar ou sair de uma forma híbrida entre humano e animal. Neste estado, seus ataques desarmados causam 1d6 de dano. O tipo de dano e atributo utilizado nas rolagens estão relacionados ao ataque principal de sua forma animal. Seus ataques desarmados, enquanto transformado, são considerados mágicos.</li>
     <li><strong>Forma Animal:</strong> Escolha um animal de CR 1 ou menor (lobo atroz, leão, tigre, hiena gigante, urso pardo, etc). Uma vez feita a escolha, ela não pode ser alterada. Com uma ação bônus, você pode pode ficar na forma escolhida uma quantidade horas iguais ao seu bônus de proficiência. Veja as demais regras da Forma Animal abaixo.</li>
-    <li><strong>Sensibilidade à Prata:</strong> Armas banhadas em prata ignoram as resistências a dano que você possua.</li>
+    <li><strong>Resistência Física:</strong> Você possui resistência a dano cortante, contundente e perfurante de fontes não mágicas. Armas banhadas em prata ignoram suas resistências raciais a dano.</li>
   </ul>
 </section>
 
