@@ -150,7 +150,7 @@
     <p>
       Você pode utilizar a calculadora do 
       <a href="https://chicken-dinner.com/5e/5e-point-buy.html" target="_blank">Chicken Dinner</a>, 
-      porém sem selecionar a raça.
+      utilizando a Custom Race.
     </p>
     <p>
       Alternativamente, você pode utilizar o método de rolagem: role 4d6 e some os três maiores resultados. Faça isso seis vezes.<br>
