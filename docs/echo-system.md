@@ -560,6 +560,7 @@
                 <span class="species-tag">Cambion</span>
                 <span class="species-tag">Dhampyr</span>
                 <span class="species-tag">Dracid</span>
+                <span class="species-tag">Dwarf</span>
                 <span class="species-tag">Elf</span>
                 <span class="species-tag">Felis</span>
                 <span class="species-tag">Halfling</span>
@@ -590,12 +591,14 @@
             <h4>Advanced Classes</h4>
             <div class="tag-container">
                 <span class="class-tag advanced">Arcane Attendant</span>
+                <span class="class-tag advanced">Arctic Warrior</span>
                 <span class="class-tag advanced">Hemomancer</span>
                 <span class="class-tag advanced">Mind Weaver</span>
                 <span class="class-tag advanced">Mirror Mage</span>
                 <span class="class-tag advanced">Null Summoner</span>
                 <span class="class-tag advanced">Pugilist</span>
                 <span class="class-tag advanced">Shade Sorcerer</span>
+                <span class="class-tag advanced">Silk Warrior</span>
                 <span class="class-tag advanced">Woodland Ranger</span>
             </div>
         </div>
