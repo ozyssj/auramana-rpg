@@ -287,7 +287,7 @@
         <h3>Example Failure:</h3>
         
         <div class="example">
-            <p><strong>Ex3:</strong> With the item from the safe in his possession, Fayir now needs to escape. The alarm goes off and he needs to lose the guards. Upon leaving the building, he gets into a carriage and begins his escape. He needs to perform a Piloting test DIF 60% to escape. He has DEX 25 and Piloting 35.</p>
+            <p><strong>Ex3:</strong> With the item from the safe in his possession, Fayir now needs to escape. The alarm goes off and he needs to lose the guards. Upon leaving the building, he gets into a carriage and begins his escape. He needs to perform a Piloting test of DIF 60% to escape. He has DEX 25 and Piloting 35.</p>
             <p>The pirate rolls <strong>1d100 + 60</strong> and gets <strong>63</strong>. It would be enough to escape, but he rolled a <strong>3</strong> on the d100 - an <span class="failure">automatic failure</span>.</p>
         </div>        
         
