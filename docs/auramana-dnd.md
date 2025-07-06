@@ -381,7 +381,7 @@
   <h4>Forma Fabulae</h4>
   <ul>
     <li><strong>Anão/Gnomo:</strong> Seu tamanho muda para pequeno e você recebe deslocamento de Escavação (3m) e acesso a um poder de origem entre Crafter, Tough e Tavern Brawler (uma vez feita esta escolha, ela não pode ser alterada). Humanoide, Feérico.</li>
-    <li><strong>Capuz Vermelho:</strong> Seu tamanho muda para pequeno, você se torna proficiente em Ladinagem e Furtividade e rola com vantagem testes de Destreza com estas perícias. Humanoide, Feérico.</li>    
+    <li><strong>Capuz Vermelho:</strong> Seu tamanho muda para pequeno, você se torna proficiente em Acrobacia e Furtividade e rola com vantagem testes de Destreza com estas perícias. Humanoide, Feérico.</li>    
     <li><strong>Duende/Goblin:</strong> Seu tamanho muda para pequeno e você recebe deslocamento de Escalada (6m) e acesso a um poder de origem (uma vez feita esta escolha, ela não pode ser alterada). Humanoide, Feérico.</li>    
     <li><strong>Elfo:</strong> Escolha duas perícias entre Acrobacia, Arcanismo, Atuação, Furtividade, Conhecimento Histórico, Percepção, Persuasão e Sobrevivência. Você recebe proficiência nas perícias escolhidas e rola com vantagem os testes de atributo relacionados a elas. Humanoide, Feérico.</li>
     <li><strong>Fada:</strong> Seu tamanho muda para pequeno e um par de asas brotam de suas costas. Você recebe -2 em Força e deslocamento de Voo de 9m. Feérico</li>
