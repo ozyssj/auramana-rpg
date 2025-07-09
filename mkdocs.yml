@@ -11,25 +11,25 @@ theme:
 nav:
   - Início: indice.md
   - Auramana (T20):
-    - Raças: racas.md
+    - Raças: t20/racas.md
     - Classes:
-      - Arcanista: classes/arcanista.md
-      - Batedor: classes/batedor.md
-      - Elementalista: classes/elementalista.md
-      - Guerreiro: classes/guerreiro.md
-      - Inspirador: classes/inspirador.md
-      - Inventor: classes/inventor.md
-      - Sacerdote: classes/sacerdote.md
-    - Origens: origens.md
-    - Regras: regras.md
+      - Arcanista: t20/classes/arcanista.md
+      - Batedor: t20/lasses/batedor.md
+      - Elementalista: t20/classes/elementalista.md
+      - Guerreiro: t20/classes/guerreiro.md
+      - Inspirador: t20/classes/inspirador.md
+      - Inventor: t20/classes/inventor.md
+      - Sacerdote: t20/classes/sacerdote.md
+    - Origens: t20/origens.md
+    - Regras: t20/regras.md
   - Fichas:
-    - Ficha Auramana: ficha.md
-    - Ficha T20: ficha-t20.md
-    - Ficha D&D: ficha-dnd.md
+    - Ficha Auramana: fichas/ficha.md
+    - Ficha T20: fichas/ficha-t20.md
+    - Ficha D&D: fichas/ficha-dnd.md
   - Auramana (D&D - 2024): auramana-dnd.md
   - Echo System RPG:
-    - General Rules: echo-system.md
-    - Species: echo-system.md
-    - Classes: echo-system.md
-    - Roles: echo-system.md
+    - General Rules: echosystem/echo-system.md
+    - Species: echosystem/echo-system.md
+    - Classes: echosystem/echo-system.md
+    - Roles: echosystem/echo-system.md
    
