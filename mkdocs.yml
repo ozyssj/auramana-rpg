@@ -29,7 +29,7 @@ nav:
   - Auramana (D&D - 2024): auramana-dnd.md
   - Echo System RPG:
     - General Rules: echosystem/echo-system.md
-    - Species: echosystem/echo-system.md
-    - Classes: echosystem/echo-system.md
-    - Roles: echosystem/echo-system.md
+    - Species: echosystem/classes.md
+    - Classes: echosystem/species.md
+    - Roles: echosystem/roles.md
    
