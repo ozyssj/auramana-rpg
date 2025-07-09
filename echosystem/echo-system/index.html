@@ -1224,12 +1224,6 @@
             margin: 1rem 0;
         }
 
-        .species-tag, .class-tag, .role-tag {
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
 
         /* Responsive Adjustments */
         @media (max-width: 768px) {
@@ -1319,7 +1313,7 @@
         <h3>Example Success:</h3>
 
         <div class="example">
-            <p><strong>Ex1:</strong> Buccaneer Fayir wants to cross a narrow ramp to reach the roof of another building. This action requires an Acrobatics test of DIF 80%. He has DEX 20 and Acrobatics 25.</p>
+            <p><strong>Ex1:</strong> Buccaneer Fayir wants to cross a narrow ramp to reach the roof of another building. This action requires an Acrobatics roll of DIF 80%. He has DEX 20 and Acrobatics 25.</p>
             <p>He rolls <strong>1d100 + 45</strong> and gets <strong>89</strong>, a <span class="success">Success</span>.</p>
         </div>
 
@@ -1384,7 +1378,7 @@
             </div>
 
             <div class="attribute-card">
-                <h3 class="attribute-header">CONSTITUTION (CON)</h3>
+                <h3 class="attribute-header">ENDURANCE (END)</h3>
                 <p>Shows physical endurance and health, affecting hit points and resistance to poison or disease.</p>
                 <div class="associated-skills">
                     <strong>Associated skill:</strong> Fortitude.
@@ -1516,9 +1510,59 @@
             </div>
         </div>        
 
-        <h2>ABILITIES</h2>
+        <h2>OTHER FEATURES</h2>
+        <div class="abilities-grid">
+
+            <div class="ability-card">
+                <h4 class="ability-name">Hit Points (HP)</h4>
+                <div class="ability-description">
+                    <p>Quantification of a character's health.</p>
+                    <p>Formula: Constitution + (Level x HP per Class Level).</p>
+                </div>
+
+            </div>
+            <div class="ability-card">
+                <h4 class="ability-name">Mana Points (MP)</h4>
+                <div class="ability-description">
+                    <p>Quantification of a character's magic pool.</p>
+                    <p>Formula: Main mental attribute + (Level x MP per Class Level).</p>
+                </div>
+            </div>
+
+            <div class="ability-card">
+                <h4 class="ability-name">Defenses (DEF)</h4>
+                <div class="ability-description">
+                    <p> DIF% of skills used used as defense against attacks and other harmful effects.</p>
+                    <p>Formula: 50 + Atribute + Skill.</p>
+                    <p><strong>Main Defenses:</strong></p>
+                    <p><strong>RefDef:</strong> Reflex Defense. The main defense against physical attacks.</p>
+                    <p><strong>PerDef:</strong> Perception Defense, used mainly against stealth rolls.</p>
+                    <p><strong>WilDef:</strong> Will Defense, used mainly against Persuasion rolls and mind controll.</p>
+                    <p><strong>ForDef:</strong> Fortitude Defense, used against brute stress.</p>
+                    <p><strong>AthDef:</strong> Athletics Defense, used against brute force.</p>
+                    <p><strong>CogDef:</strong> Cognition Defense, used against mental stress.</p>
+                </div>
+            </div>
+
+            <div class="ability-card">
+                <h4 class="ability-name">Attacks (ATK)</h4>
+                <div class="ability-description">
+                    <p> DIF% of skills used for saving throws.</p>
+                    <p>Formula: 50 + Atribute + Skill.</p>
+                    <p><strong>Main Attacks:</strong></p>
+                    <p><strong>Meelee Attack:</strong> Meelee Attack DIF%: 50 + STRENGH + Fight.</p>
+                    <p><strong>Ranged Attack:</strong> Ranged Attack DIF%: 50 + DEXTERITY + Aim.</p>
+                    <p><strong>Magical Attack:</strong> Magical Attack DIF%: 50 + Spellcasting Attribute + Spellcasting Skill.</p>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <h2>FEATS</h2>
         <div class="rules-section intro">
-            <p>Abilities are powers characters gain through their species and class as they level up.</p>
+            <p>Feats are powers characters gain through their species and class as they level up.</p>
         </div>
 
         <div class="abilities-grid">
@@ -1568,11 +1612,6 @@
             </div>
         </div>
 
-        <h2>OTHER RULES</h2>
-        <div class="rules-section">
-            <!-- Additional content can go here -->
-        </div>
-
         <h2>CHARACTER CREATION</h2>
         <div class="rules-section intro">
             <p>To create a character, follow these steps:</p>
@@ -1587,85 +1626,6 @@
         <h3>ATTRIBUTE DISTRIBUTION</h3>
         <div class="rules-section">
             <p>You receive <strong>35 points</strong> to allocate among your six attributes. You may reduce an attribute by up to <strong>-5</strong> to gain extra points. The maximum attribute value cannot exceed <strong>15</strong>.</p>
-        </div>
-
-        <h3>SPECIES</h3>
-        <div class="rules-section">
-            <h4>Species Abilities</h4>
-            <p>Each species grants abilities at:</p>
-            <ul class="level-list">
-                <li>Level 1</li>
-                <li>Level 7</li>
-                <li>Every 10 levels thereafter (17, 27, 37, etc.)</li>
-            </ul>
-
-            <h4>Species List</h4>
-            <div class="tag-container">
-                <span class="species-tag">Arachnoid</span>
-                <span class="species-tag">Cambion</span>
-                <span class="species-tag">Dhampyr</span>
-                <span class="species-tag">Dracid</span>
-                <span class="species-tag">Dwarf</span>
-                <span class="species-tag">Elf</span>
-                <span class="species-tag">Felis</span>
-                <span class="species-tag">Halfling</span>
-                <span class="species-tag">Nagah</span>
-                <span class="species-tag">Nereid</span>
-                <span class="species-tag">Orc</span>
-            </div>
-        </div>
-
-        <h3>CLASSES</h3>
-        <div class="rules-section">
-            <h4>Class Features</h4>
-            <ul class="feature-list">
-                <li><strong>Hit Points:</strong> Each class grants additional HP when leveling up</li>
-                <li><strong>Mana Points:</strong> Each class grants additional MP when leveling up</li>
-                <li><strong>Class Abilities:</strong> Granted at level 1, level 5, and every 5 levels thereafter (10, 15, 20, etc.)</li>
-            </ul>
-
-            <h4>Basic Classes</h4>
-            <div class="tag-container">
-                <span class="class-tag basic">Cleric</span>
-                <span class="class-tag basic">Ranger</span>
-                <span class="class-tag basic">Psion</span>
-                <span class="class-tag basic">Summoner</span>
-                <span class="class-tag basic">Wizard</span>
-            </div>
-
-            <h4>Advanced Classes</h4>
-            <div class="tag-container">
-                <span class="class-tag advanced">Alchemic Healer</span>
-                <span class="class-tag advanced">Arcane Attendant</span>
-                <span class="class-tag advanced">Arctic Warrior</span>
-                <span class="class-tag advanced">Court Inquisitor</span>                
-                <span class="class-tag advanced">Hemomancer</span>
-                <span class="class-tag advanced">Ice Paladin</span>
-                <span class="class-tag advanced">Mind Weaver</span>
-                <span class="class-tag advanced">Mirror Mage</span>
-                <span class="class-tag advanced">Null Summoner</span>
-                <span class="class-tag advanced">Pugilist</span>
-                <span class="class-tag advanced">Shade Sorcerer</span>
-                <span class="class-tag advanced">Silk Warrior</span>
-                <span class="class-tag advanced">Woodland Ranger</span>
-            </div>
-        </div>
-
-        <h3>ROLES</h3>
-        <div class="rules-section">
-            <h4>Role Abilities</h4>
-            <p>Each role grants abilities at:</p>
-            <ul class="level-list">
-                <li>Level 1</li>
-                <li>Level 10</li>
-                <li>Every 10 levels thereafter (20, 30, 40, etc.)</li>
-            </ul>
-
-            <h4>Role List</h4>
-            <div class="tag-container">
-                <span class="role-tag">Explorer</span>
-                <span class="role-tag">Homunculus</span>
-            </div>
         </div>
 
 
