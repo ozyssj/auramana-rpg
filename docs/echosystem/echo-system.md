@@ -333,7 +333,7 @@
             </div>
 
             <div class="attribute-card">
-                <h3 class="attribute-header">ENDURANCE (END)</h3>
+                <h3 class="attribute-header">CONSTITUTION (CON)</h3>
                 <p>Shows physical endurance and health, affecting hit points and resistance to poison or disease.</p>
                 <div class="associated-skills">
                     <strong>Associated skill:</strong> Fortitude.
