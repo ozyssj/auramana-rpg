@@ -1096,13 +1096,13 @@
             color: #95a5a6;
         }
 
+
         .dice-decoration {
             position: absolute;
             opacity: 0.1;
             font-size: clamp(5rem, 15vw, 10rem);
             z-index: 1;
-        }
-
+        }        
         .d20 {
             top: 20%;
             left: 10%;
@@ -1217,13 +1217,50 @@
                 font-size: 1.5rem;
             }
         }
+
+        .skills-table th{
+            color: #1a5276;
+            border: 1px solid #ddd;
+        }
+        .skills-table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+        }
+
+        .skills-table tbody tr {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .skills-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        .skills-table tbody tr:last-of-type {
+            border-bottom: 2px solid #1a5276;
+        }
+
+        .primary-attr {
+            font-weight: bold;
+        }
+
+        .secondary-attr {
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .skills-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>        
     </style>
 </head>
 <body>
     <!-- Cover Page -->
     <div class="cover-page">
-        <div class="decoration d20">⚀</div>
-        <div class="decoration d6">⚀</div>
+        <div class="dice-decoration d6">⚀</div>
+        <div class="dice-decoration d20">⚂  </div>
         <div class="cover-container">
             <h1 class="title">ECHO SYSTEM</h1>
             <h3 class="subtitle2">RPG</h3>
@@ -1480,6 +1517,177 @@
             </div>
         </div>
 
+    <h1>Sistema de Perícias</h1>
+
+    <table class="skills-table">
+        <thead>
+            <tr>
+                <th>Perícia</th>
+                <th>Atributo Primário</th>
+                <th>Atributo Secundário</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Acrobacia</td>
+                <td class="primary-attr">Destreza</td>
+                <td class="secondary-attr">-</td>
+                <td>Equilíbrio e movimentos complexos</td>
+            </tr>
+            <tr>
+                <td>Adestramento</td>
+                <td class="primary-attr">Carisma</td>
+                <td class="secondary-attr">Sensos</td>
+                <td>Interação com animais</td>
+            </tr>
+            <tr>
+                <td>Arcanismo</td>
+                <td class="primary-attr">Inteligência</td>
+                <td class="secondary-attr">-</td>
+                <td>Conhecimento mágico arcano</td>
+            </tr>
+            <tr>
+                <td>Atletismo</td>
+                <td class="primary-attr">Força</td>
+                <td class="secondary-attr">-</td>
+                <td>Atividades físicas brutas</td>
+            </tr>
+            <tr>
+                <td>Atuação</td>
+                <td class="primary-attr">Carisma</td>
+                <td class="secondary-attr">-</td>
+                <td>Artes performáticas</td>
+            </tr>
+            <tr>
+                <td>Conjuração</td>
+                <td class="primary-attr">Inteligência/Carisma/Sensos</td>
+                <td class="secondary-attr">-</td>
+                <td>Precisão em ataques mágicos (varia por classe)</td>
+            </tr>
+            <tr>
+                <td>Enganação</td>
+                <td class="primary-attr">Carisma</td>
+                <td class="secondary-attr">Inteligência</td>
+                <td>Mentiras e disfarces</td>
+            </tr>
+            <tr>
+                <td>Fortitude</td>
+                <td class="primary-attr">Constituição</td>
+                <td class="secondary-attr">-</td>
+                <td>Resistência física e vigor</td>
+            </tr>
+            <tr>
+                <td>Furtividade</td>
+                <td class="primary-attr">Destreza</td>
+                <td class="secondary-attr">-</td>
+                <td>Movimento silencioso e ocultação</td>
+            </tr>
+            <tr>
+                <td>História</td>
+                <td class="primary-attr">Inteligência</td>
+                <td class="secondary-attr">-</td>
+                <td>Conhecimento histórico</td>
+            </tr>
+            <tr>
+                <td>Intimidação</td>
+                <td class="primary-attr">Carisma</td>
+                <td class="secondary-attr">Força</td>
+                <td>Pode usar Força em situações físicas</td>
+            </tr>
+            <tr>
+                <td>Iniciativa</td>
+                <td class="primary-attr">Destreza</td>
+                <td class="secondary-attr">Sensos</td>
+                <td>Tempo de reação em combate</td>
+            </tr>
+            <tr>
+                <td>Intuição</td>
+                <td class="primary-attr">Sensos</td>
+                <td class="secondary-attr">-</td>
+                <td>Percepção de intenções e motivações</td>
+            </tr>
+            <tr>
+                <td>Investigação</td>
+                <td class="primary-attr">Inteligência</td>
+                <td class="secondary-attr">-</td>
+                <td>Busca ativa por pistas e detalhes</td>
+            </tr>
+            <tr>
+                <td>Ladinagem</td>
+                <td class="primary-attr">Destreza</td>
+                <td class="secondary-attr">Inteligência</td>
+                <td>Fechaduras e armadilhas</td>
+            </tr>
+            <tr>
+                <td>Luta</td>
+                <td class="primary-attr">Força</td>
+                <td class="secondary-attr">Destreza</td>
+                <td>Ataques corpo a corpo (armas com acuidade podem usar Destreza)</td>
+            </tr>
+            <tr>
+                <td>Medicina</td>
+                <td class="primary-attr">Inteligência</td>
+                <td class="secondary-attr">Sensos</td>
+                <td>Cura e diagnóstico médico</td>
+            </tr>
+            <tr>
+                <td>Natureza</td>
+                <td class="primary-attr">Inteligência</td>
+                <td class="secondary-attr">Sensos</td>
+                <td>Conhecimento do mundo natural</td>
+            </tr>
+            <tr>
+                <td>Percepção</td>
+                <td class="primary-attr">Sensos</td>
+                <td class="secondary-attr">-</td>
+                <td>Observação passiva do ambiente</td>
+            </tr>
+            <tr>
+                <td>Persuasão</td>
+                <td class="primary-attr">Carisma</td>
+                <td class="secondary-attr">-</td>
+                <td>Diplomacia e negociação</td>
+            </tr>
+            <tr>
+                <td>Pontaria</td>
+                <td class="primary-attr">Destreza</td>
+                <td class="secondary-attr">-</td>
+                <td>Ataques com armas de alcance</td>
+            </tr>
+            <tr>
+                <td>Presença</td>
+                <td class="primary-attr">Carisma</td>
+                <td class="secondary-attr">-</td>
+                <td>Força de personalidade contra efeitos sobrenaturais</td>
+            </tr>
+            <tr>
+                <td>Raciocínio</td>
+                <td class="primary-attr">Inteligência</td>
+                <td class="secondary-attr">-</td>
+                <td>Lógica e resolução de quebra-cabeças</td>
+            </tr>
+            <tr>
+                <td>Reflexos</td>
+                <td class="primary-attr">Destreza</td>
+                <td class="secondary-attr">-</td>
+                <td>Esquivas rápidas e movimentos ágeis</td>
+            </tr>
+            <tr>
+                <td>Religião</td>
+                <td class="primary-attr">Inteligência</td>
+                <td class="secondary-attr">Sensos</td>
+                <td>Conhecimento divino e teológico</td>
+            </tr>
+            <tr>
+                <td>Sobrevivência</td>
+                <td class="primary-attr">Sensos</td>
+                <td class="secondary-attr">Inteligência</td>
+                <td>Orientação e rastreio na natureza</td>
+            </tr>
+        </tbody>
+    </table>
+
         <div class="rules-section formula">
             <h3>Passive Skill Value</h3>
             <p>The base value of a skill used as Difficulty Percentage (DIF) for abilities or Defense.</p>
@@ -1510,15 +1718,15 @@
             <div class="ability-card">
                 <h4 class="ability-name">Defenses (DEF)</h4>
                 <div class="ability-description">
-                    <p> DIF% of skills used used as defense against attacks and other harmful effects.</p>
+                    <p> DIF% of skills used as defense against attacks and other harmful effects.</p>
                     <p>Formula: 50 + Atribute + Skill.</p>
                     <p><strong>Main Defenses:</strong></p>
                     <p><strong>RefDef:</strong> Reflex Defense. The main defense against physical attacks.</p>
                     <p><strong>PerDef:</strong> Perception Defense, used mainly against stealth rolls.</p>
                     <p><strong>WilDef:</strong> Will Defense, used mainly against Persuasion rolls and mind controll.</p>
-                    <p><strong>ForDef:</strong> Fortitude Defense, used against brute stress.</p>
+                    <p><strong>ForDef:</strong> Fortitude Defense, used against physical stress.</p>
                     <p><strong>AthDef:</strong> Athletics Defense, used against brute force.</p>
-                    <p><strong>CogDef:</strong> Cognition Defense, used against mental stress.</p>
+                    <p><strong>CogDef:</strong> Cognition Defense, used against mental and intellectual stress.</p>
                 </div>
             </div>
 
