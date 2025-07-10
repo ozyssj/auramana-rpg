@@ -29,7 +29,9 @@ nav:
   - Auramana (D&D - 2024): auramana-dnd.md
   - Echo System RPG:
     - General Rules: echosystem/echo-system.md
-    - Skills and Feats: echosystem/feats.md
+    - Rolling Skills: echosystem/rolling-skills.md
+    - Spell Skills: echosystem/spell-skills.md
+    - Feat Skills: echosystem/feat-skills.md
     - Species: echosystem/classes.md
     - Classes: echosystem/species.md
     - Roles: echosystem/roles.md

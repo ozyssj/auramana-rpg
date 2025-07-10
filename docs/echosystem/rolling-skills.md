@@ -14,7 +14,7 @@
         <div class="dice-decoration d6">⚀</div>
         <div class="dice-decoration d20">⚂	</div>
         <div class="cover-container">
-            <h1 class="title">SKILLS AND FEATS</h1>
+            <h1 class="title">ROLLING SKILLS</h1>
         </div>
     </div>
 
@@ -24,7 +24,7 @@
         <div class="rules-section intro">
             <p>Rolling Skills represent the specific abilities a character has mastered through training and experience. While attributes (Strength, Dexterity, Intelligence, etc.) reflect natural talents, skills show what a character can actually do with those talents.</p>
             <p>For example, a character might have high Strength but struggle to swim in a strong current without Athletics training. Another character with less natural strength but Athletics skill could navigate the water more effectively.</p>
-            <p>Skill ranks range from I to IV, with each rank granting 1d20 to the attribute roll related to it.</p>
+            <p>Skill ranks range from I to V, with each rank granting +10 to the attribute roll related to it.</p>
         </div>
 
     <h1>Rolling Skills Table</h1>
@@ -261,126 +261,12 @@
             <div class="calculation-box">
                 <strong>Calculated as:</strong> 50 + related attribute + skill rank x 10
             </div>
+        
+            <h3>Rolling Skill Progression</h3>
+            <div class="rules-section intro">
+                <p>You can choose a rolling skill progression for the same skill once every 20 levels.</p>
+            </div        
         </div>        
-        
-        <h2>OTHER FEATURES</h2>
-        <div class="abilities-grid">
-
-            <div class="ability-card">
-                <h4 class="ability-name">Hit Points (HP)</h4>
-                <div class="ability-description">
-                    <p>Quantification of a character's health.</p>
-                    <p>Formula: Constitution + (Level x HP per Class Level).</p>
-                </div>
-
-            </div>
-            <div class="ability-card">
-                <h4 class="ability-name">Mana Points (MP)</h4>
-                <div class="ability-description">
-                    <p>Quantification of a character's magic pool.</p>
-                    <p>Formula: Main mental attribute + (Level x MP per Class Level).</p>
-                </div>
-            </div>
-
-            <div class="ability-card">
-                <h4 class="ability-name">Defenses (DEF)</h4>
-                <div class="ability-description">
-                    <p> DIF% of skills used as defense against attacks and other harmful effects.</p>
-                    <p>Formula: 50 + Atribute + skill rank x 10.</p>
-                    <p><strong>Main Defenses:</strong></p>
-                    <p><strong>RefDef:</strong> Reflex Defense. The main defense against physical attacks.</p>
-                    <p><strong>PerDef:</strong> Perception Defense, used mainly against stealth rolls.</p>
-                    <p><strong>WilDef:</strong> Will Defense, used mainly against Persuasion rolls and mind controll.</p>
-                    <p><strong>ForDef:</strong> Fortitude Defense, used against physical stress.</p>
-                    <p><strong>AthDef:</strong> Athletics Defense, used against brute force.</p>
-                    <p><strong>CogDef:</strong> Cognition Defense, used against mental and intellectual stress.</p>
-                </div>
-            </div>
-
-            <div class="ability-card">
-                <h4 class="ability-name">Attacks (ATK)</h4>
-                <div class="ability-description">
-                    <p> DIF% of skills used for saving throws.</p>
-                    <p>Formula: 50 + Atribute + Skill.</p>
-                    <p><strong>Main Attacks:</strong></p>
-                    <p><strong>Meelee Attack:</strong> Meelee Attack DIF%: 50 + STRENGH + Fight rank x 10.</p>
-                    <p><strong>Ranged Attack:</strong> Ranged Attack DIF%: 50 + DEXTERITY + Aim  rank x 10.</p>
-                    <p><strong>Magical Attack:</strong> Magical Attack DIF%: 50 + Spellcasting Attribute + Spellcasting rank x 10.</p>
-                </div>
-            </div>
-
-
-
-        </div>
-
-        <h2>OTHER SKILLS</h2>
-        <div class="rules-section intro">
-            <p>Feats are powers characters gain through their species and class as they level up.</p>
-        </div>
-
-        <div class="abilities-grid">
-            <div class="ability-card">
-                <h4 class="ability-name">Elemental Affinity I</h4>
-                <div class="ability-description">
-                    <p>Learn two 1st-tier spells from one of your elemental affinities.</p>
-                </div>
-            </div>
-
-            <div class="ability-card">
-                <h4 class="ability-name">Elemental Affinity II</h4>
-                <div class="ability-description">
-                    <p>Learn two 2nd-tier spells from one affinity or upgrade two known spells to 2nd-tier.</p>
-                </div>
-            </div>
-
-            <div class="ability-card">
-                <h4 class="ability-name">Light Blade Training</h4>
-                <div class="ability-description">
-                    <p>Use shortswords, rapiers, scimitars, and daggers in Fight tests.</p>
-                    <p>May substitute Dexterity for Strength on attack rolls.</p>
-                </div>
-            </div>
-
-            <div class="ability-card">
-                <h4 class="ability-name">Heavy Blade Training</h4>
-                <div class="ability-description">
-                    <p>Use longswords, bastard swords, and greatswords in Fight tests.</p>
-                </div>
-            </div>
-
-            <div class="ability-card">
-                <h4 class="ability-name">Attribute Progression</h4>
-                <div class="ability-description">
-                    <p>+5 to one attribute.</p>
-                    <p>Can only select this ability for the same attribute once every 25 levels.</p>
-                </div>
-            </div>
-
-            <div class="ability-card">
-                <h4 class="ability-name">Skill Progression</h4>
-                <div class="ability-description">
-                    <p>+5 to one skill.</p>
-                    <p>Can only select this ability for the same skill once every 20 levels.</p>
-                </div>
-            </div>
-        </div>
-        
-        <h2>CHARACTER CREATION</h2>
-        <div class="rules-section intro">
-            <p>To create a character, follow these steps:</p>
-            <ol class="creation-steps">
-                <li>Distribute attribute points</li>
-                <li>Choose a species</li>
-                <li>Choose a class</li>
-                <li>Choose a role</li>
-            </ol>
-        </div>
-
-        <h3>ATTRIBUTE DISTRIBUTION</h3>
-        <div class="rules-section">
-            <p>You receive <strong>35 points</strong> to allocate among your six attributes. You may reduce an attribute by up to <strong>-5</strong> to gain extra points. The maximum attribute value cannot exceed <strong>15</strong>.</p>
-        </div>
-        
         
     </div>
 </body>
