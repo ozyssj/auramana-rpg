@@ -342,7 +342,7 @@
                 <li><span class="skill">Perception</span></li>
                 <li><span class="skill">Cognition</span></li>
                 <li><span class="skill">Reflexes</span></li>
-                <li><span class="skill">Willpower</span></li>
+                <li><span class="skill">Presence</span></li>
             </ul>
         </div>
 
@@ -397,24 +397,36 @@
                 <h3 class="attribute-header">CHARISMA (CHA)</h3>
                 <p>Reflects presence, personal magnetism, personality strength, and leadership or persuasion abilities.</p>
                 <div class="associated-skills">
-                    <strong>Associated skills:</strong> Animal Handling, Performance, Spellcasting, Deception, Intimidation, Persuasion, and Willpower.
+                    <strong>Associated skills:</strong> Animal Handling, Performance, Spellcasting, Deception, Intimidation, Persuasion, and Presence.
                 </div>
             </div>
         </div>        
         
         
-        <h2>SKILLS</h2>
+        <h2>ROLLING SKILLS</h2>
         <div class="rules-section intro">
-            <p>Skills represent the specific abilities a character has mastered through training and experience. While attributes (Strength, Dexterity, Intelligence, etc.) reflect natural talents, skills show what a character can actually do with those talents.</p>
+            <p>Rolling Skills represent the specific abilities a character has mastered through training and experience. While attributes (Strength, Dexterity, Intelligence, etc.) reflect natural talents, skills show what a character can actually do with those talents.</p>
             <p>For example, a character might have high Strength but struggle to swim in a strong current without Athletics training. Another character with less natural strength but Athletics skill could navigate the water more effectively.</p>
             <p>Skill ranks range from I to IV, with each rank granting 1d20 to the attribute roll related to it.</p>
         </div>
 
-        <h3>SKILL LIST AND USES:</h3>
-        
-        <div class="skill-category">
-            <div class="skill-card">
-                <h4 class="skill-name">Acrobatics <span class="attribute">(DEX)</span></h4>
+    <h1>Rolling Skills Table</h1>
+    
+    <table class="skills-table">
+        <thead>
+            <tr>
+                <th>Skill</th>
+                <th>Primary Attribute</th>
+                <th>Secondary Attribute</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Acrobatics</td>
+                <td class="primary-attr">Dexterity</td>
+                <td class="secondary-attr">-</td>
+                <td>
                 <ul class="skill-uses">
                     <li>Balance checks</li>
                     <li>Standing up as bonus action (DIF 75%)</li>
@@ -424,10 +436,26 @@
                     <li>Riding</li>
                     <li>Can avoid grapples (vs grappler's Athletics DIF)</li>
                 </ul>
-            </div>
-
-            <div class="skill-card">
-                <h4 class="skill-name">Animal Handling <span class="attribute">(CHA)</span></h4>
+                </td>
+            </tr>
+            <tr>
+                <td>Aim</td>
+                <td class="primary-attr">Dexterity</td>
+                <td class="secondary-attr">Strength</td>
+                <td>
+                <ul class="skill-uses">
+                    <li>Used for ranged attacks</li>
+                    <li>Typically uses DEX, but thrown weapons can use STR</li>
+                    <li>Some spells allow using Spellcasting attribute</li>
+                    <li>No Aim bonus added for attacks with untrained weapons</li>
+                </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Animal Handling</td>
+                <td class="primary-attr">Charisma</td>
+                <td class="secondary-attr">Senses</td>
+                <td>
                 <ul class="skill-uses">
                     <li>Calm domestic animal (DIF 60%)</li>
                     <li>Command domestic animal (DIF 50%)</li>
@@ -436,26 +464,157 @@
                     <li>Calm/command monsters (DIF 85%, only for INT -10 or lower monsters)</li>
                     <li>DIF increases by +10 if target is hostile</li>
                 </ul>
-            </div>
-
-            <div class="skill-card">
-                <h4 class="skill-name">Arcana <span class="attribute">(INT)</span></h4>
+                </td>
+            </tr>
+            <tr>
+                <td>Arcana</td>
+                <td class="primary-attr">Intelligence</td>
+                <td class="secondary-attr">-</td>
+                <td> 
                 <ul class="skill-uses">
                     <li>Identify spells, magic items, or magical creatures (DIF 50 + creature level)</li>
                     <li>Operate arcane devices</li>
                 </ul>
-            </div>
-
-            <div class="skill-card">
-                <h4 class="skill-name">Athletics <span class="attribute">(STR)</span></h4>
+                </td>
+            </tr>
+            <tr>
+                <td>Athletics</td>
+                <td class="primary-attr">Strength</td>
+                <td class="secondary-attr">-</td>
+                <td>
                 <ul class="skill-uses">
                     <li>Running, climbing, swimming, jumping</li>
                     <li>Grappling</li>
                     <li>Can resist grapples (vs grappler's Athletics)</li>
                 </ul>
-            </div>
-
-            <div class="skill-card">
+                </td>
+            </tr>
+            <tr>
+                <td>Deception</td>
+                <td class="primary-attr">Charisma</td>
+                <td class="secondary-attr">Intelligence</td>
+                <td>Lies and disguises</td>
+            </tr>
+            <tr>
+                <td>Fight</td>
+                <td class="primary-attr">Strength</td>
+                <td class="secondary-attr">Dexterity</td>
+                <td>
+                <ul class="skill-uses">
+                    <li>Used for melee attacks</li>
+                    <li>Typically uses STR, but agile weapons can use DEX</li>
+                    <li>Some spells allow using Spellcasting attribute instead</li>
+                    <li>No Fight bonus added for attacks with untrained weapons</li>
+                </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Fortitude</td>
+                <td class="primary-attr">Constitution</td>
+                <td class="secondary-attr">-</td>
+                <td>Physical resistance and vigor</td>
+            </tr>
+            <tr>
+                <td>History</td>
+                <td class="primary-attr">Intelligence</td>
+                <td class="secondary-attr">-</td>
+                <td>Historical, political and geographical knowledge</td>
+            </tr>
+            <tr>
+                <td>Intimidation</td>
+                <td class="primary-attr">Charisma</td>
+                <td class="secondary-attr">Strength</td>
+                <td>Can roll Strength in physical situations</td>
+            </tr>
+            <tr>
+                <td>Initiative</td>
+                <td class="primary-attr">Dexterity</td>
+                <td class="secondary-attr">Senses</td>
+                <td>Reaction time in combat</td>
+            </tr>
+            <tr>
+                <td>Insight</td>
+                <td class="primary-attr">Senses</td>
+                <td class="secondary-attr">-</td>
+                <td>Empathy, perception of intentions and motivations</td>
+            </tr>
+            <tr>
+                <td>Investigation</td>
+                <td class="primary-attr">Intelligence</td>
+                <td class="secondary-attr">-</td>
+                <td>
+                <ul class="skill-uses">
+                    <li>Unlike Perception, Investigation requires active reasoning and cognition</li>
+                    <li>Researching, gathering information</li>
+                    <li>Some situations allow using CHA for Investigation when dealing with people</li>
+                </ul>
+                </td>
+            </tr>          
+            <tr>
+                <td>Medicine</td>
+                <td class="primary-attr">Intelligence</td>
+                <td class="secondary-attr">Senses</td>
+                <td>Medical diagnosis and healing</td>
+            </tr>
+            <tr>
+                <td>Nature</td>
+                <td class="primary-attr">Intelligence</td>
+                <td class="secondary-attr">Senses</td>
+                <td>Knowledge of the natural world</td>
+            </tr>
+            <tr>
+                <td>Percepction</td>
+                <td class="primary-attr">Senses</td>
+                <td class="secondary-attr">-</td>
+                <td>Observation of the environment and sensory qualities</td>
+            </tr>
+            <tr>
+                <td>Performance</td>
+                <td class="primary-attr">Charisma</td>
+                <td class="secondary-attr">-</td>
+                <td>Performing arts</td>
+            </tr>
+            <tr>
+                <td>Persuasion</td>
+                <td class="primary-attr">Charisma</td>
+                <td class="secondary-attr">-</td>
+                <td>Diplomacy and negotiation</td>
+            </tr>
+            <tr>
+                <td>Presence</td>
+                <td class="primary-attr">Charisma</td>
+                <td class="secondary-attr">-</td>
+                <td>Personality strength against the effects of control and manipulation</td>
+            </tr>
+            <tr>
+                <td>Reasoning</td>
+                <td class="primary-attr">Intelligence</td>
+                <td class="secondary-attr">-</td>
+                <td>Logic and problem-solving and resistance against mental effects</td>
+            </tr>
+            <tr>
+                <td>Reflexes</td>
+                <td class="primary-attr">Dexterity</td>
+                <td class="secondary-attr">-</td>
+                <td>Quick dodges and agile movements</td>
+            </tr>
+            <tr>
+                <td>Religion</td>
+                <td class="primary-attr">Intelligence</td>
+                <td class="secondary-attr">Senses</td>
+                <td>Divine, theological and ritualistic knowledge</td>
+            </tr>
+            <tr>
+                <td>Sleight of Hand</td>
+                <td class="primary-attr">Dexterity</td>
+                <td class="secondary-attr">Intelligence</td>
+                <td>Steal, pick locks, disable traps</td>
+            </tr>
+            <tr>
+                <td>Spellcasting</td>
+                <td class="primary-attr">Charisma, Intelligence, Senses</td>
+                <td class="secondary-attr">-</td>
+                <td>
                 <h4 class="skill-name">Spellcasting <span class="attribute">(CHA, INT, SEN)</span></h4>
                 <ul class="skill-uses">
                     <li>Used to cast spells</li>
@@ -463,205 +622,19 @@
                     <li>Determine spell resistance DCs (Passive Spellcasting)</li>
                     <li>Some abilities allow using physical attributes instead of mental ones for Spellcasting</li>
                 </ul>
-            </div>
-
-            <div class="skill-card">
-                <h4 class="skill-name">Investigation <span class="attribute">(INT)</span></h4>
-                <ul class="skill-uses">
-                    <li>Unlike Perception, Investigation requires active reasoning and cognition</li>
-                    <li>Researching, gathering information</li>
-                    <li>Some situations allow using CHA for Investigation when dealing with people</li>
-                </ul>
-            </div>
-
-            <div class="skill-card">
-                <h4 class="skill-name">Fight <span class="attribute">(STR)</span></h4>
-                <ul class="skill-uses">
-                    <li>Used for melee attacks</li>
-                    <li>Typically uses STR, but agile weapons can use DEX</li>
-                    <li>Some spells allow using Spellcasting attribute instead</li>
-                    <li>No Fight bonus added for attacks with untrained weapons</li>
-                </ul>
-            </div>
-
-            <div class="skill-card">
-                <h4 class="skill-name">Aim <span class="attribute">(DEX)</span></h4>
-                <ul class="skill-uses">
-                    <li>Used for ranged attacks</li>
-                    <li>Typically uses DEX, but thrown weapons can use STR</li>
-                    <li>Some spells allow using Spellcasting attribute</li>
-                    <li>No Aim bonus added for attacks with untrained weapons</li>
-                </ul>
-            </div>
-        </div>
-
-    <h1>Sistema de Perícias</h1>
-    
-    <table class="skills-table">
-        <thead>
-            <tr>
-                <th>Perícia</th>
-                <th>Atributo Primário</th>
-                <th>Atributo Secundário</th>
-                <th>Descrição</th>
+                </td>
             </tr>
-        </thead>
-        <tbody>
             <tr>
-                <td>Acrobacia</td>
-                <td class="primary-attr">Destreza</td>
+                <td>Stealth</td>
+                <td class="primary-attr">Dexterity</td>
                 <td class="secondary-attr">-</td>
-                <td>Equilíbrio e movimentos complexos</td>
+                <td>Silent movement and concealment</td>
             </tr>
             <tr>
-                <td>Adestramento</td>
-                <td class="primary-attr">Carisma</td>
-                <td class="secondary-attr">Sensos</td>
-                <td>Interação com animais</td>
-            </tr>
-            <tr>
-                <td>Arcanismo</td>
-                <td class="primary-attr">Inteligência</td>
-                <td class="secondary-attr">-</td>
-                <td>Conhecimento mágico arcano</td>
-            </tr>
-            <tr>
-                <td>Atletismo</td>
-                <td class="primary-attr">Força</td>
-                <td class="secondary-attr">-</td>
-                <td>Atividades físicas brutas</td>
-            </tr>
-            <tr>
-                <td>Atuação</td>
-                <td class="primary-attr">Carisma</td>
-                <td class="secondary-attr">-</td>
-                <td>Artes performáticas</td>
-            </tr>
-            <tr>
-                <td>Conjuração</td>
-                <td class="primary-attr">Inteligência/Carisma/Sensos</td>
-                <td class="secondary-attr">-</td>
-                <td>Precisão em ataques mágicos (varia por classe)</td>
-            </tr>
-            <tr>
-                <td>Enganação</td>
-                <td class="primary-attr">Carisma</td>
-                <td class="secondary-attr">Inteligência</td>
-                <td>Mentiras e disfarces</td>
-            </tr>
-            <tr>
-                <td>Fortitude</td>
-                <td class="primary-attr">Constituição</td>
-                <td class="secondary-attr">-</td>
-                <td>Resistência física e vigor</td>
-            </tr>
-            <tr>
-                <td>Furtividade</td>
-                <td class="primary-attr">Destreza</td>
-                <td class="secondary-attr">-</td>
-                <td>Movimento silencioso e ocultação</td>
-            </tr>
-            <tr>
-                <td>História</td>
-                <td class="primary-attr">Inteligência</td>
-                <td class="secondary-attr">-</td>
-                <td>Conhecimento histórico</td>
-            </tr>
-            <tr>
-                <td>Intimidação</td>
-                <td class="primary-attr">Carisma</td>
-                <td class="secondary-attr">Força</td>
-                <td>Pode usar Força em situações físicas</td>
-            </tr>
-            <tr>
-                <td>Iniciativa</td>
-                <td class="primary-attr">Destreza</td>
-                <td class="secondary-attr">Sensos</td>
-                <td>Tempo de reação em combate</td>
-            </tr>
-            <tr>
-                <td>Intuição</td>
-                <td class="primary-attr">Sensos</td>
-                <td class="secondary-attr">-</td>
-                <td>Percepção de intenções e motivações</td>
-            </tr>
-            <tr>
-                <td>Investigação</td>
-                <td class="primary-attr">Inteligência</td>
-                <td class="secondary-attr">-</td>
-                <td>Busca ativa por pistas e detalhes</td>
-            </tr>
-            <tr>
-                <td>Ladinagem</td>
-                <td class="primary-attr">Destreza</td>
-                <td class="secondary-attr">Inteligência</td>
-                <td>Fechaduras e armadilhas</td>
-            </tr>
-            <tr>
-                <td>Luta</td>
-                <td class="primary-attr">Força</td>
-                <td class="secondary-attr">Destreza</td>
-                <td>Ataques corpo a corpo (armas com acuidade podem usar Destreza)</td>
-            </tr>
-            <tr>
-                <td>Medicina</td>
-                <td class="primary-attr">Inteligência</td>
-                <td class="secondary-attr">Sensos</td>
-                <td>Cura e diagnóstico médico</td>
-            </tr>
-            <tr>
-                <td>Natureza</td>
-                <td class="primary-attr">Inteligência</td>
-                <td class="secondary-attr">Sensos</td>
-                <td>Conhecimento do mundo natural</td>
-            </tr>
-            <tr>
-                <td>Percepção</td>
-                <td class="primary-attr">Sensos</td>
-                <td class="secondary-attr">-</td>
-                <td>Observação passiva do ambiente</td>
-            </tr>
-            <tr>
-                <td>Persuasão</td>
-                <td class="primary-attr">Carisma</td>
-                <td class="secondary-attr">-</td>
-                <td>Diplomacia e negociação</td>
-            </tr>
-            <tr>
-                <td>Pontaria</td>
-                <td class="primary-attr">Destreza</td>
-                <td class="secondary-attr">-</td>
-                <td>Ataques com armas de alcance</td>
-            </tr>
-            <tr>
-                <td>Presença</td>
-                <td class="primary-attr">Carisma</td>
-                <td class="secondary-attr">-</td>
-                <td>Força de personalidade contra efeitos sobrenaturais</td>
-            </tr>
-            <tr>
-                <td>Raciocínio</td>
-                <td class="primary-attr">Inteligência</td>
-                <td class="secondary-attr">-</td>
-                <td>Lógica e resolução de quebra-cabeças</td>
-            </tr>
-            <tr>
-                <td>Reflexos</td>
-                <td class="primary-attr">Destreza</td>
-                <td class="secondary-attr">-</td>
-                <td>Esquivas rápidas e movimentos ágeis</td>
-            </tr>
-            <tr>
-                <td>Religião</td>
-                <td class="primary-attr">Inteligência</td>
-                <td class="secondary-attr">Sensos</td>
-                <td>Conhecimento divino e teológico</td>
-            </tr>
-            <tr>
-                <td>Sobrevivência</td>
-                <td class="primary-attr">Sensos</td>
-                <td class="secondary-attr">Inteligência</td>
-                <td>Orientação e rastreio na natureza</td>
+                <td>Survival</td>
+                <td class="primary-attr">Senses</td>
+                <td class="secondary-attr">Intelligence</td>
+                <td>Orientation and tracking in nature</td>
             </tr>
         </tbody>
     </table>
@@ -724,7 +697,7 @@
 
         </div>
 
-        <h2>FEATS</h2>
+        <h2>OTHER SKILLS</h2>
         <div class="rules-section intro">
             <p>Feats are powers characters gain through their species and class as they level up.</p>
         </div>
