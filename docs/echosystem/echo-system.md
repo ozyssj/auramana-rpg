@@ -610,12 +610,12 @@
                 <td class="secondary-attr">Intelligence</td>
                 <td>Steal, pick locks, disable traps</td>
             </tr>
+
             <tr>
                 <td>Spellcasting</td>
                 <td class="primary-attr">Charisma, Intelligence, Senses</td>
                 <td class="secondary-attr">-</td>
                 <td>
-                <h4 class="skill-name">Spellcasting <span class="attribute">(CHA, INT, SEN)</span></h4>
                 <ul class="skill-uses">
                     <li>Used to cast spells</li>
                     <li>Make magical attacks</li>
