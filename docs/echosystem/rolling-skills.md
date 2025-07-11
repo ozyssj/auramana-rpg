@@ -102,7 +102,7 @@
                 <ul class="skill-uses">
                     <li>Running, climbing, swimming, jumping</li>
                     <li>Grappling</li>
-                    <li>Can resist grapples (vs grappler's Athletics)</li>
+                    <li>Can avoid grapples (vs grappler's Athletics DIF)</li>
                 </ul>
                 </td>
             </tr>
@@ -153,7 +153,7 @@
                 <td>Insight</td>
                 <td class="primary-attr">Senses</td>
                 <td class="secondary-attr">-</td>
-                <td>Empathy, perception of intentions and motivations</td>
+                <td>Empathy, perception of intentions and motivations. Passive Insight (50 + SEN + Insight bonus) can be used against Deception rolls.</td>
             </tr>
             <tr>
                 <td>Investigation</td>
@@ -235,7 +235,7 @@
                 <ul class="skill-uses">
                     <li>Used to cast spells</li>
                     <li>Make magical attacks</li>
-                    <li>Determine spell resistance DCs (Passive Spellcasting)</li>
+                    <li>Determine spell resistance DIF (Passive Spellcasting)</li>
                     <li>Some abilities allow using physical attributes instead of mental ones for Spellcasting</li>
                 </ul>
                 </td>
@@ -259,7 +259,8 @@
             <h3>Passive Skill Value</h3>
             <p>The base value of a skill used as Difficulty Percentage (DIF) for abilities or Defense.</p>
             <div class="calculation-box">
-                <strong>Calculated as:</strong> 50 + related attribute + skill rank x 10
+                <strong>Calculated as:</strong> 50 + related attribute + skill bônus (10 per rank)
+                <em>Ex:</em> A wizard with INT 25 and Spellcasting III has Spellcasting DIF 105;
             </div>
         
             <h3>Rolling Skill Progression</h3>
