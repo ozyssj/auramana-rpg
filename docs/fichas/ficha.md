@@ -332,9 +332,15 @@
                     <div class="campo">
                         <label>Iniciativa</label>
                         <select class="pericia-iniciativa">
+                                  <option value="Percepção">Percepção</option>
                                   <option value="Reflexos">Reflexos</option>
-                                  <option value="Fortitude">Fortitude</option>
-                                  <option value="Vontade">Vontade</option>
+                                  <option value="Intuição">Intuição</option>
+                                  <option value="Furtividade">Furtividade</option>
+                                  <option value="Atletismo">Atletismo</option>
+                                  <option value="Enganação">Enganação</option>
+                                  <option value="Intimidação">Intimidação</option>
+                                  <option value="Sobrevivência">Sobrevivência</option>
+                                  <option value="Acrobacia">Acrobacia</option>
                         </select>
                         <input type="number" class="bonus-iniciativa" placeholder="Bônus de Iniciativa">
                        <input type="number" id="iniciativaFinal" readonly>            
@@ -346,7 +352,7 @@
                 <div class="campo">
                     <label for="ataques">Ataques</label>
                     <textarea id="ataques" rows="6">
-    -> Espada Longa: 
+ -> Espada Longa: 
  - d20+8+2
  - 1d8+4+3
                   </textarea>
