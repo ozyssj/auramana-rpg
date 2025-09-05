@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Ficha de Personagem - Auramana T20</title>
+    <title>Ficha de Personagem - Auramana Pathfinder</title>
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -207,24 +207,9 @@
 
         <div class="campo">
             <label for="classe">Classe</label>
-            <select id="classe" onchange="filtrarArquetipos()">
-                <option value="">-- Selecione a Classe --</option>
-                <option value="Arcanista">Arcanista</option>
-                <option value="Batedor">Batedor</option>
-                <option value="Elementalista">Elementalista</option>
-                <option value="Guerreiro">Guerreiro</option>
-                <option value="Inspirador">Inspirador</option>
-                <option value="Inventor">Inventor</option>
-                <option value="Sacerdote">Sacerdote</option>
-            </select>
+            <select id="classe"></select>
         </div>
 
-        <div class="campo">
-            <label for="arquetipo">Arquétipo</label>
-            <select id="arquetipo">
-                <option value="">-- Selecione o Arquétipo --</option>
-            </select>
-        </div>
 
         <div class="campo">
             <label for="origem">Origem</label>
@@ -254,8 +239,8 @@
                 <input type="number" id="int" min="-10" max="10">
             </div>
             <div class="campo">
-                <label for="sab">SAB</label>
-                <input type="number" id="sab" min="-10" max="10">
+                <label for="sen">SEN</label>
+                <input type="number" id="sen" min="-10" max="10">
             </div>
             <div class="campo">
                 <label for="car">CAR</label>
@@ -327,43 +312,46 @@
             </div>
         </div>
 
-        <div class="pericia">
-            <div class="defesa">
+ 
                 <div class="linha">
                     <div class="campo">
                         <label>Defesa</label>
-                        <select class="atributo-pericia">
-                            <option value="des">DES</option>
-                            <option value="for">FOR</option>
-                            <option value="con">CON</option>
-                            <option value="int">INT</option>
-                            <option value="sab">SAB</option>
-                            <option value="car">CAR</option>
+                        <select class="pericia-defesa">
+                                  <option value="Reflexos">Reflexos</option>
+                                  <option value="Fortitude">Fortitude</option>
+                                  <option value="Vontade">Vontade</option>
                         </select>
-                        <select class="treinamento-pericia">
-                            <option value="10">Destreinado em Reflexos
-                            </option>
-                            <option value="12">Iniciante</option>
-                            <option value="14">Veterano (ND7)</option>
-                            <option value="16">Mestre (ND13)</option>
-                        </select>
-                        <input type="number" class="bonus-pericia" placeholder="Bônus de Defesa">
-                        <input type="number" class="valor-pericia" readonly>
+                        <input type="number" class="aparo" placeholder="Bônus de Aparo">
+                        <input type="number" id="defesaFinal" readonly>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="linha">
-            <div class="campo">
+
+
+
+                <div class="linha">
+                    <div class="campo">
+                        <label>Iniciativa</label>
+                        <select class="pericia-iniciativa">
+                                  <option value="Reflexos">Reflexos</option>
+                                  <option value="Fortitude">Fortitude</option>
+                                  <option value="Vontade">Vontade</option>
+                        </select>
+                        <input type="number" class="bonus-iniciativa" placeholder="Bônus de Iniciativa">
+                       <input type="number" id="iniciativaFinal" readonly>            
+                    </div>
+                </div>
+
+      
 
                 <div class="campo">
                     <label for="ataques">Ataques</label>
                     <textarea id="ataques" rows="6">
- -> Espada Longa: 
+    -> Espada Longa: 
  - d20+8+2
  - 1d8+4+3
-</textarea>
+                  </textarea>
                 </div>
+
 
                 <h2>Perícias</h2>
 
@@ -373,38 +361,35 @@
                 <script>
                     const pericias = [
                         { nome: "Acrobacia", atributo: "des" },
+                        { nome: "Arcanismo", atributo: "int" },
                         { nome: "Adestramento", atributo: "car" },
                         { nome: "Atletismo", atributo: "for" },
                         { nome: "Atuação", atributo: "car" },
                         { nome: "Cavalgar", atributo: "des" },
-                        { nome: "Conhecimento", atributo: "int" },
-                        { nome: "Cura", atributo: "sab" },
-                        { nome: "Diplomacia", atributo: "car" },
+                        { nome: "Conhecimento em Alquimia", atributo: "int" },
+                        { nome: "Conhecimento em Guerra", atributo: "int" },
+                        { nome: "Conhecimento em Nobreza", atributo: "int" },
+                        { nome: "Conjuração", atributo: "int" },
                         { nome: "Enganação", atributo: "car" },
                         { nome: "Fortitude", atributo: "con" },
                         { nome: "Furtividade", atributo: "des" },
-                        { nome: "Guerra", atributo: "int" },
-                        { nome: "Iniciativa", atributo: "des" },
                         { nome: "Intimidação", atributo: "car" },
-                        { nome: "Intuição", atributo: "sab" },
+                        { nome: "Intuição", atributo: "sen" },
                         { nome: "Investigação", atributo: "int" },
-                        { nome: "Jogatina", atributo: "car" },
                         { nome: "Ladinagem", atributo: "des" },
                         { nome: "Luta", atributo: "for" },
-                        { nome: "Misticismo", atributo: "int" },
-                        { nome: "Nobreza", atributo: "int" },
-                        { nome: "Ofício Alquimia", atributo: "int" },
-                        { nome: "Ofício Artilheiro", atributo: "int" },
-                        { nome: "Ofício Engenhoqueiro", atributo: "int" },
-                        { nome: "Ofício Ferreiro", atributo: "int" },
-                        { nome: "Ofício", atributo: "int" },
-                        { nome: "Percepção", atributo: "sab" },
+                        { nome: "Medicina", atributo: "int" },
+                        { nome: "Natureza", atributo: "int" },
+                        { nome: "Ocultismo", atributo: "int" },
+                        { nome: "Percepção", atributo: "sen" },
+                        { nome: "Persuasão", atributo: "car" },
                         { nome: "Pilotagem", atributo: "des" },
                         { nome: "Pontaria", atributo: "des" },
                         { nome: "Reflexos", atributo: "des" },
-                        { nome: "Religião", atributo: "sab" },
-                        { nome: "Sobrevivência", atributo: "sab" },
-                        { nome: "Vontade", atributo: "sab" }
+                        { nome: "Religião", atributo: "int" },
+                        { nome: "Sobrevivência", atributo: "sen" },
+                        { nome: "Sociedade", atributo: "int" },
+                        { nome: "Vontade", atributo: "car" }
                     ];
 
                     // Opções de atributos
@@ -413,16 +398,17 @@
                         { value: "for", text: "FOR" },
                         { value: "con", text: "CON" },
                         { value: "int", text: "INT" },
-                        { value: "sab", text: "SAB" },
+                        { value: "sen", text: "SEN" },
                         { value: "car", text: "CAR" }
                     ];
 
                     // Opções de treinamento
                     const treinamentos = [
                         { value: "0", text: "Destreinado" },
-                        { value: "2", text: "Iniciante" },
-                        { value: "4", text: "Veterano (ND7)" },
-                        { value: "6", text: "Mestre (ND13)" }
+                        { value: "2", text: "Treinado" },
+                        { value: "4", text: "Especialista (ND7)" },
+                        { value: "6", text: "Mestre (ND13)" },
+                        { value: "8", text: "Lendário (ND18)" }
                     ];
 
                     // Função para gerar o HTML de uma perícia
@@ -511,7 +497,7 @@
                         des: parseInt(document.getElementById('des').value) || 0,
                         con: parseInt(document.getElementById('con').value) || 0,
                         int: parseInt(document.getElementById('int').value) || 0,
-                        sab: parseInt(document.getElementById('sab').value) || 0,
+                        sen: parseInt(document.getElementById('sen').value) || 0,
                         car: parseInt(document.getElementById('car').value) || 0
                     };
 
@@ -519,20 +505,79 @@
                         const atributo = div.querySelector('.atributo-pericia').value;
                         const treinamento = parseInt(div.querySelector('.treinamento-pericia').value);
                         const bonusAdicional = parseInt(div.querySelector('.bonus-pericia').value) || 0;
-                        const valor = Math.floor(nivel / 2) + atributos[atributo] + treinamento + bonusAdicional;
+                        const baseNivel = (treinamento === 0) ? Math.floor(nivel / 2) : Math.floor(nivel);
+                        const valor = baseNivel + atributos[atributo] + treinamento + bonusAdicional;
                         div.querySelector('.valor-pericia').value = valor;
                     });
                 }
 
-                ['nivel', 'for', 'des', 'con', 'int', 'sab', 'car'].forEach(id => {
+                ['nivel', 'for', 'des', 'con', 'int', 'sen', 'car'].forEach(id => {
                     document.getElementById(id).addEventListener('input', atualizarPericias);
                 });
 
                 document.addEventListener('change', e => {
-                    if (e.target.classList.contains('atributo-pericia') || e.target.classList.contains('treinamento-pericia') || e.target.classList.contains('bonus-pericia')) {
+                    if (e.target.classList.contains('atributo-pericia') || e.target.classList.contains('pericia-iniciativa') || e.target.classList.contains('pericia-defesa') || e.target.classList.contains('treinamento-pericia') || e.target.classList.contains('bonus-pericia'
+                    
+                    )) {
                         atualizarPericias();
+                        calcularDefesa();
+                        calcularIniciativa();
                     }
                 });
+                
+                document.querySelectorAll('.bonus-pericia').forEach(input => {
+                    input.addEventListener('input', atualizarPericias);
+                });
+                document.querySelector('.bonus-iniciativa').addEventListener('input', calcularIniciativa);
+                document.querySelector('.aparo').addEventListener('input', calcularDefesa);
+                document.querySelector('.pericia-defesa').addEventListener('change', calcularDefesa);
+                document.querySelector('.pericia-iniciativa').addEventListener('change', calcularDefesa);
+
+                function calcularDefesa() {
+                    const base = 10;
+
+                    // pega bônus extra de defesa (campo manual)
+                    const aparo = parseInt(document.querySelector('.aparo').value) || 0;
+
+                    // pega qual perícia foi escolhida
+                    const defesaTipo = document.querySelector('.pericia-defesa').value;
+
+                    // mapeia todas as perícias calculadas
+                    const periciasMap = {};
+                    document.querySelectorAll('.pericia').forEach(div => {
+                        const nome = div.querySelector("label").innerText.trim();
+                        const valor = parseInt(div.querySelector(".valor-pericia").value) || 0;
+                        periciasMap[nome] = valor;
+                    });
+
+                    // pega só a escolhida
+                    const valorPericia = periciasMap[defesaTipo] || 0;
+
+                    // soma tudo
+                    const defesaFinal = base + aparo + valorPericia;
+                    document.getElementById("defesaFinal").value = defesaFinal;
+                }
+
+
+                function calcularIniciativa() {
+
+                    const bonusIniciativa = parseInt(document.querySelector('.bonus-iniciativa').value) || 0;
+
+                    const periciaIniciativa = document.querySelector('.pericia-iniciativa').value;
+
+                    const periciasMap = {};
+                    document.querySelectorAll('.pericia').forEach(div => {
+                        const nome = div.querySelector("label").innerText.trim();
+                        const valor = parseInt(div.querySelector(".valor-pericia").value) || 0;
+                        periciasMap[nome] = valor;
+                    });
+
+                    const valorPericia = periciasMap[periciaIniciativa] || 0;
+
+                    const iniciativaFinal = bonusIniciativa + valorPericia;
+                    document.getElementById("iniciativaFinal").value = iniciativaFinal;
+                }
+
 
                 function salvarFicha() {
                     const campos = document.querySelectorAll('input, select, textarea');
@@ -600,17 +645,8 @@
                         alert("Todos os dados foram apagados da ficha.");
                     }
                 }
-
-
-                const arquetiposPorClasse = {
-                    Arcanista: ["Bruxo", "Feiticeiro", "Mago", "Necromante"],
-                    Batedor: ["Bucaneiro", "Caçador", "Duelista", "Investigador (Ladino)", "Ladino", "Ventanista"],
-                    Elementalista: ["Druida", "Místico", "Treinador"],
-                    Guerreiro: ["Bárbaro", "Cavaleiro", "Licantropo (Bárbaro)", "Lutador", "Samurai", "Soldado"],
-                    Inspirador: ["Bardo", "Nobre"],
-                    Inventor: ["Alquimista", "Artilheiro", "Ferreiro"],
-                    Sacerdote: ["Clérigo", "Frade", "Oráculo (Clérigo)", "Paladino", "Santo"]
-                };
+                
+                
 
                 const racas = [
                     "Humano", "Anão", "Elfo", "Extraplanar (Anjo, Demônio, Fada)", "Feral", "Gigante", "Goblinoide", "Golem", "Morto-Vivo", "Pequenino", "Troll"
@@ -624,42 +660,41 @@
                     selectRaca.innerHTML += `<option>${raca}</option>`;
                 });
 
-                function filtrarArquetipos() {
-                    const classe = document.getElementById("classe").value;
-                    const arquetipoSelect = document.getElementById("arquetipo");
 
-                    // Limpa os arquétipos atuais
-                    arquetipoSelect.innerHTML = '<option value="">-- Selecione o Arquétipo --</option>';
+                const classes = [
+                    "Bárbaro", "Bardo", "Bruxo", "Clérigo", "Combatente", "Druida", "Feiticeiro", "Inventor", 
+                    "Investigador", "Ladino", "Mago", "Místico", "Oráculo", "Paladino", "Patrulheiro"
+                ];
 
-                    if (arquetiposPorClasse[classe]) {
-                        arquetiposPorClasse[classe].forEach(arq => {
-                            const option = document.createElement("option");
-                            option.text = arq;
-                            option.value = arq;
-                            arquetipoSelect.add(option);
-                        });
-                    }
-                }
+                const selectClasse = document.getElementById('classe');
 
+                selectClasse.innerHTML = '<option value="">-- Selecione a Classe --</option>';
+
+                classes.forEach(classe => {
+                    selectClasse.innerHTML += `<option>${classe}</option>`;
+                });
+
+                
                 // Constantes com os valores base por classe
                 const BASES_PV = {
-                    'Arcanista': 3,
-                    'Batedor': 4,
-                    'Elementalista': 4,
-                    'Guerreiro': 5,
-                    'Inspirador': 4,
-                    'Inventor': 4,
-                    'Sacerdote': 4
+                    'Bárbaro': 12,
+                    'Bruxo': 6,
+                    'Combatente': 10,
+                    'Feiticeiro': 6,
+                    'Mago': 6,
+                    'Místico': 10,
+                    'Paladino': 10,
+                    'Patrulheiro': 10
                 };
 
                 const BASES_PM = {
-                    'Arcanista': 6,
-                    'Batedor': 4,
-                    'Elementalista': 4,
-                    'Guerreiro': 4,
-                    'Inspirador': 4,
-                    'Inventor': 4,
-                    'Sacerdote': 5
+                    'Bardo': 4,
+                    'Bruxo': 5,
+                    'Druida': 4,
+                    'Feiticeiro': 5,
+                    'Mago': 5,
+                    'Clérigo': 4,
+                    'Oráculo': 4
                 };
 
                 // Função unificada para cálculos
@@ -671,12 +706,12 @@
                     const pmExtra = parseInt(document.getElementById('pmExtra').value) || 0;
 
                     // Cálculo de PV
-                    const basePV = BASES_PV[classe] || 4;
+                    const basePV = BASES_PV[classe] || 8;
                     const pvMax = (basePV + constituicao) * nivel + pvExtra;
                     document.getElementById('pvMax').value = pvMax;
 
                     // Cálculo de PM
-                    const basePM = BASES_PM[classe] || 4;
+                    const basePM = BASES_PM[classe] || 2;
                     const pmMax = basePM * nivel + pmExtra;
                     document.getElementById('pmMax').value = pmMax;
 
@@ -732,6 +767,8 @@
                         if (val) el.value = val;
                     });
                     atualizarPericias();
+                    calcularDefesa();
+                    calcularIniciativa();
                 };
 
             </script>
