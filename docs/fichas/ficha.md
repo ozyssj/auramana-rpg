@@ -181,7 +181,7 @@
 
 <body>
     <div class="ficha-container">
-        <h1>Ficha Auramana T20</h1>
+        <h1>Ficha Auramana (PFE2)</h1>
 
         <div class="campo">
             <label for="nome">Nome</label>
@@ -298,7 +298,7 @@
         <div class="linha">
             <div class="campo">
                 <label for="deslocamento">Deslocamento </label>
-                <input type="number" id="deslocamento" min="0" max="60" placeholder=9>
+                <input type="number" id="deslocamento" min="0" max="60" placeholder=5 vk (7,5m)>
             </div>
             <div class="campo">
                 <label for="classe">Tamanho</label>
@@ -597,8 +597,15 @@
 
                     const a = document.createElement('a');
                     a.href = url;
-                    const nome = document.getElementById('nome').value;
-                    a.download = nome + '_ficha_t20.json';
+                    
+                    let nome = document.getElementById('nome').value.trim();
+                    
+                    if (!nome) nome = 'personagem';
+                    
+                    nome = nome.replace(/[\/\\:\*\?"<>\|]/g, '');
+                    
+                    a.download = nome + '_ficha_auramana_pfe2.json';
+
                     a.click();
 
                     URL.revokeObjectURL(url);
