@@ -372,9 +372,6 @@
                         { nome: "Atletismo", atributo: "for" },
                         { nome: "Atuação", atributo: "car" },
                         { nome: "Cavalgar", atributo: "des" },
-                        { nome: "Conhecimento em Alquimia", atributo: "int" },
-                        { nome: "Conhecimento em Guerra", atributo: "int" },
-                        { nome: "Conhecimento em Nobreza", atributo: "int" },
                         { nome: "Conjuração", atributo: "int" },
                         { nome: "Enganação", atributo: "car" },
                         { nome: "Fortitude", atributo: "con" },
@@ -395,7 +392,13 @@
                         { nome: "Religião", atributo: "int" },
                         { nome: "Sobrevivência", atributo: "sen" },
                         { nome: "Sociedade", atributo: "int" },
-                        { nome: "Vontade", atributo: "car" }
+                        { nome: "Vontade", atributo: "car" },
+                        { nome: "Conhecimento em Alquimia", atributo: "int" },
+                        { nome: "Conhecimento em Guerra", atributo: "int" },
+                        { nome: "Conhecimento em Nobreza", atributo: "int" },                        
+                        { nome: "Conhecimento", atributo: "int" },                        
+                        { nome: "Conhecimento", atributo: "int" },                        
+                        { nome: "Conhecimento", atributo: "int" }                        
                     ];
 
                     // Opções de atributos
