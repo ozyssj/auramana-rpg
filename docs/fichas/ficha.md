@@ -181,7 +181,7 @@
 
 <body>
     <div class="ficha-container">
-        <h1>Ficha Auramana (PFE2)</h1>
+        <h1>Ficha Auramana (PF2e)</h1>
 
         <div class="campo">
             <label for="nome">Nome</label>
@@ -659,7 +659,7 @@
                     
                     nome = nome.replace(/[\/\\:\*\?"<>\|]/g, '');
                     
-                    a.download = nome + '_ficha_auramana_pfe2.json';
+                    a.download = nome + '_ficha_auramana_pf2e.json';
 
                     a.click();
 
