@@ -649,7 +649,7 @@
                 
 
                 const racas = [
-                    "Humano", "Anão", "Elfo", "Extraplanar (Anjo, Demônio, Fada)", "Feral", "Gigante", "Goblinoide", "Golem", "Morto-Vivo", "Pequenino", "Troll"
+                    "Humano", "Anão", "Elfo", "Forâneo", "Feral", "Gigante", "Goblin", "Halfling", "Orc", "Troll"
                 ];
 
                 const selectRaca = document.getElementById('raca');
