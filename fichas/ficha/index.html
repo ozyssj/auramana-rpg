@@ -1546,20 +1546,31 @@
 
 
                 <div class="campo">
-                    <label for="poderes">Poderes</label>
+                    <label for="poderes">Talentos</label>
                     <textarea id="poderes" rows="22">
- -> Raça: 
  -> Origem: 
- -> ND1: 
- -> ND2: 
- -> ND3: 
- -> ND4: 
- -> ND5: 
+ -> NV1: 
+ -> NV2: 
+ -> NV3: 
+ -> NV4: 
+ -> NV5: 
 </textarea>
                 </div>
 
                 <div class="campo">
-                    <label for="magias">Magias</label>
+                    <label for="magias">MAGIAS</label>
+
+
+                <div class="linha">
+                    <div class="campo">
+                        <label>CD Conjuração</label>
+                        <input type="number" class="bonus-conjuracao" placeholder="Bônus na CD de Conjuração">
+                       <input type="number" id="conjuracaoFinal" readonly>            
+                    </div>
+                </div>
+
+
+
                     <textarea id="magias" rows="20">
  -> 1° Círculo: 
  - 
@@ -1610,9 +1621,18 @@
                     });
                 }
 
-                ['nivel', 'for', 'des', 'con', 'int', 'sen', 'car'].forEach(id => {
-                    document.getElementById(id).addEventListener('input', atualizarPericias);
-                });
+                const idsParaCalculo = ['nivel', 'for', 'des', 'con', 'int', 'sen', 'car'];
+                idsParaCalculo.forEach(id => {
+                  document.getElementById(id).addEventListener('input', () => {
+                  atualizarPericias();    
+                  calcularDefesa();  
+                  calcularIniciativa();
+                  calcularCDConjuracao();   
+
+                  });
+
+                });  
+
 
                 document.addEventListener('change', e => {
                     if (e.target.classList.contains('atributo-pericia') || e.target.classList.contains('pericia-iniciativa') || e.target.classList.contains('pericia-defesa') || e.target.classList.contains('treinamento-pericia') || e.target.classList.contains('bonus-pericia'
@@ -1621,16 +1641,21 @@
                         atualizarPericias();
                         calcularDefesa();
                         calcularIniciativa();
+                        calcularCDConjuracao();
                     }
                 });
 
                 document.querySelectorAll('.bonus-pericia').forEach(input => {
                     input.addEventListener('input', atualizarPericias);
                 });
+
+
                 document.querySelector('.bonus-iniciativa').addEventListener('input', calcularIniciativa);
+                document.querySelector('.bonus-conjuracao').addEventListener('input', calcularCDConjuracao);
                 document.querySelector('.aparo').addEventListener('input', calcularDefesa);
+
                 document.querySelector('.pericia-defesa').addEventListener('change', calcularDefesa);
-                document.querySelector('.pericia-iniciativa').addEventListener('change', calcularDefesa);
+                document.querySelector('.pericia-iniciativa').addEventListener('change', calcularIniciativa);
 
                 function calcularDefesa() {
                     const base = 10;
@@ -1678,11 +1703,41 @@
                 }
 
 
+
+                function calcularCDConjuracao() {
+
+                    const base = 10;
+
+                    const bonusConjuracao = parseInt(document.querySelector('.bonus-conjuracao').value) || 0;
+
+                    const periciasMap = {};
+                    document.querySelectorAll('.pericia').forEach(div => {
+                        const nome = div.querySelector("label").innerText.trim(); 
+                        const valor = parseInt(div.querySelector(".valor-pericia").value) || 0;
+                        periciasMap[nome] = valor;
+                    });
+
+                    let valorPericia = 0; 
+                    for (const key in periciasMap) {
+                      if (key.toLowerCase() === "conjuração".toLowerCase()) {
+                        valorPericia = periciasMap[key];
+                        break;
+
+                      }
+
+                    }
+
+                    const conjuracaoFinal = base + valorPericia + bonusConjuracao
+
+                    document.getElementById("conjuracaoFinal").value = conjuracaoFinal;
+                }
+
                 function salvarFicha() {
                     const campos = document.querySelectorAll('input, select, textarea');
                     campos.forEach(el => localStorage.setItem('ficha-' + el.id, el.value));
                     alert("Ficha salva nas memórias do grimório!");
                 }
+
 
                 function baixarFicha() {
                     const campos = document.querySelectorAll('input, select, textarea');
@@ -1875,6 +1930,7 @@
                     atualizarPericias();
                     calcularDefesa();
                     calcularIniciativa();
+                    calcularCDConjuracao();
                 };
 
             </script>
