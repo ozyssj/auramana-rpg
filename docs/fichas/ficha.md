@@ -90,6 +90,20 @@
             margin: 15px 0;
         }
 
+        .duplo {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .triplo {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 15px 0;
+        }
+        
         .linha {
             display: flex;
             gap: 15px;
@@ -188,18 +202,22 @@
             <input type="text" id="nome" placeholder="Ex: Lendor, o Errante">
         </div>
 
+    <div class="duplo">
         <div class="linha">
             <div class="campo">
                 <label for="nivel">Nível</label>
                 <input type="number" id="nivel" min="0" max="60">
             </div>
+        </div>
+        <div class="linha">
             <div class="campo">
                 <label for="xp">XP</label>
                 <input type="number" id="xp">
             </div>
         </div>
+    </div>
 
-
+    <div class="duplo">
         <div class="campo">
             <label for="raca">Raça</label>
             <select id="raca"></select>
@@ -209,8 +227,9 @@
             <label for="classe">Classe</label>
             <select id="classe"></select>
         </div>
+    </div>
 
-
+    <div class="duplo">
         <div class="campo">
             <label for="origem">Origem</label>
             <input type="text" id="origem" placeholder="Ex: Eremita">
@@ -220,6 +239,7 @@
             <label for="origem">Divindade</label>
             <input type="text" id="origem" placeholder="Ex: São Nikolai">
         </div>
+    </div>
 
         <div class="atributos">
             <div class="campo">
@@ -248,7 +268,7 @@
             </div>
         </div>
 
-        <div class="linha">
+    <div class="triplo">
             <div class="campo">
                 <label for="pvAtual">PV Atual</label>
                 <input type="number" id="pvAtual">
@@ -261,9 +281,9 @@
                 <label for="pvTemp">PV Temp</label>
                 <input type="number" id="pvTemp">
             </div>
-        </div>
+    </div>
 
-        <div class="linha">
+    <div class="triplo">
             <div class="campo">
                 <label for="pmAtual">PM Atual</label>
                 <input type="number" id="pmAtual">
@@ -276,9 +296,9 @@
                 <label for="pmTemp">PM Temp</label>
                 <input type="number" id="pmTemp">
             </div>
-        </div>
+    </div>
 
-        <div class="linha">
+    <div class="duplo">
             <div class="campo">
                 <label for="pvExtra">PV Extra (racial, poderes, etc)</label>
                 <input type="number" id="pvExtra" min="0" value="0">
@@ -288,18 +308,21 @@
                 <label for="pmExtra">PM Extra (conjuração, poderes, etc)</label>
                 <input type="number" id="pmExtra" min="0" value="0">
             </div>
-        </div>
+    </div>
+
+    <div class="triplo">
+        
+            <div class="campo">
+                <label for="deslocamento">Deslocamento </label>
+                <input type="text" id="deslocamento" min="0" max="60" placeholder="5 vk (7,5m)">
+            </div>
+        
 
         <div class="campo">
             <label for="armadura">Armadura </label>
             <input type="text" id="armadura" placeholder="RD e Penalidade">
         </div>
 
-        <div class="linha">
-            <div class="campo">
-                <label for="deslocamento">Deslocamento </label>
-                <input type="number" id="deslocamento" min="0" max="60" placeholder=5 vk (7,5m)>
-            </div>
             <div class="campo">
                 <label for="classe">Tamanho</label>
                 <select id="classe">
@@ -310,9 +333,11 @@
                     <option>Colossal</option>
                 </select>
             </div>
-        </div>
+        
+    </div>
 
- 
+        
+    <div class="duplo">
                 <div class="linha">
                     <div class="campo">
                         <label>Defesa</label>
@@ -325,9 +350,7 @@
                         <input type="number" id="defesaFinal" readonly>
                     </div>
                 </div>
-
-
-
+                
                 <div class="linha">
                     <div class="campo">
                         <label>Iniciativa</label>
@@ -346,7 +369,7 @@
                        <input type="number" id="iniciativaFinal" readonly>            
                     </div>
                 </div>
-
+    </div>
       
 
                 <div class="campo">
