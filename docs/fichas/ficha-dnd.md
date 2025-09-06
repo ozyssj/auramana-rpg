@@ -6,16 +6,17 @@
   <title>Ficha de Personagem - T20</title>
   <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --cor-primaria: #36475b;
-      --cor-secundaria: #2c1d3a;
-      --cor-fundo: #c8c8db;
-      --cor-texto: #281d3a;
-      --cor-destaque: #8e8cbb;
-    }
+        :root {
+            --cor-primaria: #5b4636;
+            --cor-secundaria: #3a2c1d;
+            --cor-fundo: #fdfaf3;
+            --cor-texto: #3a2c1d;
+            --cor-destaque: #bba88c;
+        }    
+        
 
     body {
-      background-color: #c3c3e8;
+      background-color: #e8dbc3;
       font-family: 'MedievalSharp', cursive;
       padding: 20px;
       margin: 0;
