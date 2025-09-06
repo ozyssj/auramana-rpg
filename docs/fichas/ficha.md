@@ -300,12 +300,12 @@
 
     <div class="duplo">
             <div class="campo">
-                <label for="pvExtra">PV Extra (racial, poderes, etc)</label>
+                <label for="pvExtra">PV Extra (racial, talentos, etc)</label>
                 <input type="number" id="pvExtra" min="0" value="0">
             </div>
 
             <div class="campo">
-                <label for="pmExtra">PM Extra (conjuração, poderes, etc)</label>
+                <label for="pmExtra">PM Extra (itens, talentos, etc)</label>
                 <input type="number" id="pmExtra" min="0" value="0">
             </div>
     </div>
@@ -481,8 +481,8 @@
 
 
                 <div class="campo">
-                    <label for="poderes">Talentos</label>
-                    <textarea id="poderes" rows="22">
+                    <label for="talentos">Talentos</label>
+                    <textarea id="talentos" rows="22">
  -> Origem: 
  -> NV1: 
  -> NV2: 
