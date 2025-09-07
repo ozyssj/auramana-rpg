@@ -364,6 +364,7 @@
                                   <option value="Intimidação">Intimidação</option>
                                   <option value="Sobrevivência">Sobrevivência</option>
                                   <option value="Acrobacia">Acrobacia</option>
+                                  <option value="Conh. B">Outro</option>
                         </select>
                         <input type="number" class="bonus-iniciativa" placeholder="Bônus de Iniciativa">
                        <input type="number" id="iniciativaFinal" readonly>            
