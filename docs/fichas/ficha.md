@@ -377,8 +377,8 @@
                     <label for="ataques">Ataques</label>
                     <textarea id="ataques" rows="6">
  -> Espada Longa: 
- - d20+8+2
- - 1d8+4+3
+- d20+8+2
+- 1d8+4+3
                   </textarea>
                 </div>
 
