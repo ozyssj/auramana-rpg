@@ -342,9 +342,9 @@
                     <div class="campo">
                         <label>Defesa</label>
                         <select class="pericia-defesa">
-                                  <option value="Reflexos">Reflexos</option>
-                                  <option value="Fortitude">Fortitude</option>
-                                  <option value="Vontade">Vontade</option>
+                                  <option value="Reflexos">Esquiva</option>
+                                  <option value="Fortitude">Vigor</option>
+                                  <option value="Vontade">Sanidade</option>
                         </select>
                         <input type="number" class="aparo" placeholder="Bônus de Aparo">
                         <input type="number" id="defesaFinal" readonly>
