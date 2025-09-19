@@ -759,7 +759,7 @@
 
                 const classes = [
                     "Bárbaro", "Bardo", "Bruxo", "Clérigo", "Combatente", "Druida", "Feiticeiro", "Inventor", 
-                    "Investigador", "Ladino", "Mago", "Místico", "Oráculo", "Paladino", "Patrulheiro", Especialista, Mágico, Lutador
+                    "Investigador", "Ladino", "Mago", "Místico", "Oráculo", "Paladino", "Patrulheiro", "Especialista", "Mágico","Lutador"
                 ];
 
                 const selectClasse = document.getElementById('classe');
