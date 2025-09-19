@@ -472,7 +472,7 @@
                 <div class="campo">
                     <label for="inventario">Inventário</label>
                     <textarea id="inventario" rows="6">
- -> Moedas: 
+ -> Sigreis: 
  -> 
  -> 
 </textarea>
@@ -506,13 +506,13 @@
                           
                     
                     <textarea id="magias" rows="20">
- -> 1° Círculo: 
+ -> 1° Círculo (Cargas: 6/6 )
  - 
  -
- -> 2° Círculo: 
+ -> 2° Círculo (Cargas: 0/3 )
  - 
  - 
- -> 3° Círculo: 
+ -> 3° Círculo (Cargas: 0/2 )
  - 
 </textarea>
                 </div>
