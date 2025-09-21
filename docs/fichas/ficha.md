@@ -472,7 +472,7 @@
                 <div class="campo">
                     <label for="inventario">Inventário</label>
                     <textarea id="inventario" rows="6">
- -> Sigreis: 
+ -> Sigreis: 30§ 
  -> 
  -> 
 </textarea>
