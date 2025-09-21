@@ -483,6 +483,7 @@
                     <label for="talentos">Talentos</label>
                     <textarea id="talentos" rows="22">
  -> Origem: 
+ -> Raça: Idiomas, Visão, etc
  -> NV1: 
  -> NV2: 
  -> NV3: 
