@@ -558,7 +558,6 @@
 
  <br/>                           
                         <label>Lista de Magias</label>
- <br/>                     
                     <textarea id="magias" rows="20">
  -> 1° Círculo (Cargas: 6/6 )
  - 
