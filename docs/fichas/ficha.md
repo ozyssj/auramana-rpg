@@ -383,7 +383,7 @@
                     </div>
                 </div>
 
-                <div class="triplo">
+                <div class="duplo">
 
                     <div class="campo">
                         <label for="deslocamento">Deslocamento </label>
