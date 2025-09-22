@@ -141,7 +141,7 @@
 
 
         .campo-pericia {
-            width: 35%;
+            width: 40%;
             margin-top: 0px;
             padding-right: 0px;
             margin-bottom: 0px;
@@ -168,7 +168,7 @@
 
         .pericias {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             padding-right: 0px;
             gap: 0px;
             width: 100%;
@@ -193,8 +193,8 @@
 
         .pericia input,
         .pericia select {
-            padding: 5px;
-            font-size: 0.85em;
+            padding: 0px;
+            font-size: 0.6em;
         }
 
         .defesa {
