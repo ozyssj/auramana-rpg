@@ -538,7 +538,7 @@
                     atributo: "des"
                 },
                 {
-                    nome: "Conh. Alquimia",
+                    nome: "Conh.Alquimia",
                     atributo: "int"
                 },
                 {
