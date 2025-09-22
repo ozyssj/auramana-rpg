@@ -154,7 +154,7 @@
         }
 
         .campo-pericia2 {
-            width: 25%;
+            width: 30%;
             text-align: center;
             padding-left: 0px;
             margin-top: 0px;
@@ -411,14 +411,14 @@
                 <div class="campo-pericia">
                     <label>Defesa</label>
                 </div>
-                <div class="campo">
+                <div class="campo-pericia2">
                     <select class="pericia-defesa">
                         <option value="Reflexos">Esquiva</option>
                         <option value="Fortitude">Vigor</option>
                         <option value="Vontade">Sanidade</option>
                     </select>
                 </div>
-                <div class="campo">
+                <div class="campo-pericia2">
                     <input type="number" class="aparo" placeholder="Bônus de Aparo">
                 </div>
                 <div class="campo-pericia3">
@@ -431,7 +431,7 @@
                 <div class="campo-pericia">
                     <label>Iniciativa</label>
                 </div>
-                <div class="campo">
+                <div class="campo-pericia2">
                     <select class="pericia-iniciativa">
                         <option value="Percepção">Percepção</option>
                         <option value="Reflexos">Reflexos</option>
@@ -445,7 +445,7 @@
                         <option value="Conh. C">Outro</option>
                     </select>
                 </div>
-                <div class="campo">
+                <div class="campo-pericia2">
                     <input type="number" class="bonus-iniciativa" placeholder="Bônus de Iniciativa">
                 </div>
                 <div class="campo-pericia3">
@@ -782,7 +782,7 @@
                 <div class="campo-pericia">
                     <label>CD Conjuração</label>
                 </div>
-                <div class="campo">
+                <div class="campo-pericia2">
                     <input type="number" class="bonus-conjuracao" placeholder="Bônus na CD de Conjuração">
                 </div>
                 <div class="campo-pericia3">
