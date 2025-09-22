@@ -168,7 +168,6 @@
 
         .campo-pericia3 {
             width: 15%;
-            text-align: center;
             padding-left: 0px;
             margin-top: 0px;
             margin-bottom: 10px;
