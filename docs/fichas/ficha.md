@@ -418,7 +418,7 @@
                     const pericias = [
                         { nome: "Fortitude", atributo: "con" },
                         { nome: "Reflexos", atributo: "des" },
-                        { nome: "Vontade", atributo: "car" }                       
+                        { nome: "Vontade", atributo: "car" },              
                         { nome: "Percepção", atributo: "sen" },
                         { nome: "Luta", atributo: "for" },
                         { nome: "Pontaria", atributo: "des" },
@@ -451,7 +451,7 @@
                         { nome: "Pilotagem", atributo: "des" },
                         { nome: "Religião", atributo: "int" },
                         { nome: "Sobrevivência", atributo: "sen" },
-                        { nome: "Sociedade", atributo: "int" },
+                        { nome: "Sociedade", atributo: "int" }
                     ];
 
                     // Opções de atributos
@@ -518,7 +518,7 @@
                     // Gerar todas as perícias
                     document.getElementById('pericias-container').innerHTML = pericias.map(criarPericia).join('');
                 </script>
-
+ <br/> 
                 <div class="campo">
                     <label for="inventario">Inventário</label>
                     <textarea id="inventario" rows="6">
