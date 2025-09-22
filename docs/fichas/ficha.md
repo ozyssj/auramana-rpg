@@ -146,7 +146,7 @@
 
 
         .campo-pericia {
-            width: 35%;
+            width: 40%;
             margin-top: 0px;
             text-align: right;
             padding-right: 10px;
@@ -447,7 +447,7 @@
 
                 <div class="campo">
                     <label for="ataques">Ataques</label>
-                    <textarea id="ataques" rows="6">
+                    <textarea id="ataques" rows="7">
 -> Espada Longa: d20+8+2 / 1d8+4+3
                   </textarea>
                 </div>
@@ -455,7 +455,7 @@
 
                 <div class="campo">
                     <label for="talentos">Talentos</label>
-                    <textarea id="talentos" rows="25">
+                    <textarea id="talentos" rows="22">
  -> Origem: 
  -> Raça: Idiomas, Visão, etc
  -> NV1: 
