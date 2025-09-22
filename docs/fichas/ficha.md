@@ -26,7 +26,7 @@
             background-color: var(--cor-fundo);
             border: 8px solid var(--cor-primaria);
             border-radius: 12px;
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
             padding: 20px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
