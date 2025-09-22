@@ -488,7 +488,7 @@
                 {
                     nome: "Percepção",
                     atributo: "sen"
-                },                
+                },
                 {
                     nome: "Reflexos",
                     atributo: "des"
@@ -496,7 +496,7 @@
                 {
                     nome: "Luta",
                     atributo: "for"
-                },                
+                },
                 {
                     nome: "Vontade",
                     atributo: "car"
@@ -726,14 +726,12 @@
 
 
 
-
-
-
-
-
-
         <div class="campo">
-            <label for="talentos">Talentos</label>
+
+            <div class="campo-atributo">
+                <label for="talentos">Talentos</label>
+            </div>
+
             <textarea id="talentos" rows="22">
  -> Origem: 
  -> Raça: Idiomas, Visão, etc
@@ -745,10 +743,14 @@
 </textarea>
         </div>
 
-        <br />
 
         <div class="campo">
-            <label for="inventario">Inventário</label>
+
+
+            <div class="campo-atributo">
+                <label for="inventario">Inventário</label>
+            </div>
+
             <textarea id="inventario" rows="15">
  -> Sigreis: 30§ 
  -> 
@@ -757,14 +759,14 @@
         </div>
 
 
-
-        <br />
-
         <div class="campo">
-            <label for="magias">MAGIAS</label>
+
+            <div class="campo-atributo">
+                <label for="magias">Magias</label>
+            </div>
 
 
-            <textarea id="magias" rows="17">
+            <textarea id="magias" rows="15">
  -> 1° Círculo (Cargas: 6/6 )
  - 
  -
@@ -780,7 +782,7 @@
                 <div class="campo-pericia">
                     <label>CD Conjuração</label>
                 </div>
-                <div class="campo-pericia3">
+                <div class="campo-pericia2">
                     <input type="number" class="bonus-conjuracao" placeholder="Bônus na CD de Conjuração">
                 </div>
                 <div class="campo-pericia3">
