@@ -168,7 +168,7 @@
 
         .pericias {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             padding-right: 0px;
             gap: 0px;
             width: 100%;
@@ -489,7 +489,7 @@
         </select>        
         </div> 
     
-        <div class="campo-pericia">
+        <div class="campo-pericia2">
             <label>Treinamento</label>
         <select class="treinamento-pericia">
           ${treinamentos.map(t =>
@@ -556,8 +556,9 @@
                     </div>                    
                 </div>
 
-                          
-                    
+ <br/>                           
+                        <label>Lista de Magias</label>
+ <br/>                     
                     <textarea id="magias" rows="20">
  -> 1° Círculo (Cargas: 6/6 )
  - 
