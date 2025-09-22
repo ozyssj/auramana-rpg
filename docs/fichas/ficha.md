@@ -141,7 +141,7 @@
 
 
         .campo-pericia {
-            width: 30%;
+            width: 35%;
             margin-top: 0px;
             padding-right: 0px;
             margin-bottom: 0px;
@@ -490,7 +490,7 @@
         </div> 
     
         <div class="campo-pericia2">
-            <label>Treinamento</label>
+            <label>Trein.</label>
         <select class="treinamento-pericia">
           ${treinamentos.map(t =>
                             `<option value="${t.value}">${t.text}</option>`
