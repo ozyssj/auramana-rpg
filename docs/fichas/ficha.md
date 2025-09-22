@@ -546,15 +546,15 @@
                             atributo: "des"
                         },
                         {
-                            nome: "Conh. em Alquimia",
+                            nome: "Conh. Alquimia",
                             atributo: "int"
                         },
                         {
-                            nome: "Conh. em Guerra",
+                            nome: "Conh. Guerra",
                             atributo: "int"
                         },
                         {
-                            nome: "Conh. em Nobreza",
+                            nome: "Conh. Nobreza",
                             atributo: "int"
                         },
                         {
