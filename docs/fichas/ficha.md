@@ -139,16 +139,44 @@
             box-shadow: 0 1px var(--cor-secundaria);
         }
 
+
+        .campo-pericia {
+            width: 30%;
+            margin-top: 0px;
+            padding-right: 0px;
+            margin-bottom: 0px;
+        }
+
+        .campo-pericia2 {
+            width: 10%;
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+        
+        
+        .linha-pericia {
+            display: flex;
+            flex: 1;
+            font-size: 0.6em;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin: 0px;
+        }
+
         .pericias {
             display: grid;
-            grid-template-columns: repeat(5, minmax(0, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            padding-right: 0px;
+            gap: 0px;
             width: 100%;
             overflow: hidden;
         }
 
         .pericia {
-            min-width: 0;
+            min-width: 10;
             break-inside: avoid;
             page-break-inside: avoid;
         }
@@ -156,7 +184,7 @@
 
         .pericia {
             font-size: 0.85em;
-            margin-bottom: 6px;
+            margin-bottom: 0px;
         }
 
         .pericia label {
@@ -180,8 +208,8 @@
 
         @media (max-width: 768px) {
 
-            .atributos,
-            .pericias {
+            .atributos
+             {
                 grid-template-columns: repeat(3, 1fr);
             }
 
@@ -447,21 +475,42 @@
                     // Função para gerar o HTML de uma perícia
                     function criarPericia(pericia) {
                         return `
-      <div class="pericia">
-        <label>${pericia.nome}</label>
+                        
+                        
+    <div class="linha-pericia">
+    
+        <div class="campo-pericia">
+            <label>${pericia.nome}</label>
         <select class="atributo-pericia">
           ${atributos.map(a =>
                             `<option value="${a.value}" ${a.value === pericia.atributo ? 'selected' : ''}>${a.text}</option>`
                         ).join('')}
-        </select>
+        </select>        
+        </div> 
+    
+        <div class="campo-pericia">
+            <label>Treinamento</label>
         <select class="treinamento-pericia">
           ${treinamentos.map(t =>
                             `<option value="${t.value}">${t.text}</option>`
                         ).join('')}
-        </select>
+        </select>        
+        </div>
+        
+        <div class="campo-pericia2">
+            <label>Bônus</label>
         <input type="number" class="bonus-pericia" placeholder="Bônus de Perícia">
-        <input type="number" class="valor-pericia" readonly>
-      </div>
+        </div>
+        
+        
+        <div class="campo-pericia2">
+            <label>=</label>
+        <input type="number" class="bonus-pericia" placeholder="Bônus de Perícia">
+        </div>
+
+
+    </div>
+
     `;
                     }
 
