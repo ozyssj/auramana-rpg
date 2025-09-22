@@ -148,7 +148,7 @@
         }
 
         .campo-pericia2 {
-            width: 15%;
+            width: 20%;
             text-align: center;
             margin-top: 0px;
             margin-bottom: 10px;
