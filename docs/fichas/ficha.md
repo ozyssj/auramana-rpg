@@ -163,14 +163,14 @@
 
 
         .campo-pericia3 {
-            width: 10%;
+            width: 15%;
             text-align: center;
             padding-left: 0px;
             margin-top: 0px;
             margin-bottom: 10px;
         }
 
-        .campo-pericia4{
+        .campo-pericia4 {
             width: 30%;
             text-align: center;
             padding-left: 0px;
