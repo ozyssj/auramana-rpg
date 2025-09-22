@@ -163,7 +163,7 @@
 
 
         .campo-pericia3 {
-            width: 15%;
+            width: 10%;
             text-align: center;
             padding-left: 0px;
             margin-top: 0px;
@@ -447,7 +447,7 @@
 
                 <div class="campo">
                     <label for="ataques">Ataques</label>
-                    <textarea id="ataques" rows="4">
+                    <textarea id="ataques" rows="6">
 -> Espada Longa: d20+8+2 / 1d8+4+3
                   </textarea>
                 </div>
@@ -455,7 +455,7 @@
 
                 <div class="campo">
                     <label for="talentos">Talentos</label>
-                    <textarea id="talentos" rows="17">
+                    <textarea id="talentos" rows="25">
  -> Origem: 
  -> Raça: Idiomas, Visão, etc
  -> NV1: 
@@ -467,32 +467,17 @@
                 </div>
 
                 <br />
-
+                
                 <div class="campo">
-                    <label for="magias">MAGIAS</label>
-
-                    <label>CD Conjuração</label>
-
-                    <div class="linha-pericia">
-                        <div class="campo-pericia">
-                            <input type="number" class="bonus-conjuracao" placeholder="Bônus na CD de Conjuração">
-                        </div>
-                        <div class="campo-pericia">
-                            <input type="number" id="conjuracaoFinal" readonly>
-                        </div>
-                    </div>
-
-                    <textarea id="magias" rows="17">
- -> 1° Círculo (Cargas: 6/6 )
- - 
- -
- -> 2° Círculo (Cargas: 0/3 )
- - 
- - 
- -> 3° Círculo (Cargas: 0/2 )
- - 
+                    <label for="inventario">Inventário</label>
+                    <textarea id="inventario" rows="15">
+ -> Sigreis: 30§ 
+ -> 
+ -> 
 </textarea>
                 </div>
+               
+                
 
             </div>
 
@@ -758,14 +743,30 @@
                 <br />
 
                 <div class="campo">
-                    <label for="inventario">Inventário e Anotações</label>
-                    <textarea id="inventario" rows="20">
- -> Sigreis: 30§ 
- -> 
- -> 
-</textarea>
-                </div>
+                    <label for="magias">MAGIAS</label>
 
+                    <label>CD Conjuração</label>
+
+                    <div class="linha-pericia">
+                        <div class="campo-pericia">
+                            <input type="number" class="bonus-conjuracao" placeholder="Bônus na CD de Conjuração">
+                        </div>
+                        <div class="campo-pericia">
+                            <input type="number" id="conjuracaoFinal" readonly>
+                        </div>
+                    </div>
+
+                    <textarea id="magias" rows="17">
+ -> 1° Círculo (Cargas: 6/6 )
+ - 
+ -
+ -> 2° Círculo (Cargas: 0/3 )
+ - 
+ - 
+ -> 3° Círculo (Cargas: 0/2 )
+ - 
+</textarea>
+                </div> 
 
 
 
