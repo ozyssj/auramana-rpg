@@ -176,7 +176,7 @@
         }
 
         .pericia {
-            min-width: 10;
+            min-width: 10px;
             break-inside: avoid;
             page-break-inside: avoid;
         }
@@ -265,7 +265,7 @@
 
         <div class="campo">
             <label for="origem">Divindade</label>
-            <input type="text" id="origem" placeholder="Ex: São Nikolai">
+            <input type="text" id="divindade" placeholder="Ex: São Nikolai">
         </div>
     </div>
 
@@ -342,7 +342,7 @@
         
             <div class="campo">
                 <label for="deslocamento">Deslocamento </label>
-                <input type="text" id="deslocamento" min="0" max="60" placeholder="5 vk (7,5m)">
+                <input type="text" id="deslocamento" placeholder="5 vk (7,5m)">
             </div>
         
 
@@ -598,7 +598,7 @@
                         car: parseInt(document.getElementById('car').value) || 0
                     };
 
-                    document.querySelectorAll('.pericia').forEach(div => {
+                    document.querySelectorAll('.linha-pericia').forEach(div => {
                         const atributo = div.querySelector('.atributo-pericia').value;
                         const treinamento = parseInt(div.querySelector('.treinamento-pericia').value);
                         const bonusAdicional = parseInt(div.querySelector('.bonus-pericia').value) || 0;
@@ -622,7 +622,7 @@
                  
 
                 document.addEventListener('change', e => {
-                    if (e.target.classList.contains('atributo-pericia') || e.target.classList.contains('pericia-iniciativa') || e.target.classList.contains('pericia-defesa') || e.target.classList.contains('treinamento-pericia') || e.target.classList.contains('bonus-pericia'
+                    if (e.target.classList.contains('atributo-pericia') || e.target.classList.contains('pericia-iniciativa') || e.target.classList.contains('linha-pericia') || e.target.classList.contains('campo-pericia') || e.target.classList.contains('campo-pericia2') || e.target.classList.contains('treinamento-pericia') || e.target.classList.contains('bonus-pericia'
                     
                     )) {
                         atualizarPericias();
