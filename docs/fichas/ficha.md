@@ -486,20 +486,20 @@
                     atributo: "con"
                 },
                 {
+                    nome: "Percepção",
+                    atributo: "sen"
+                },                
+                {
                     nome: "Reflexos",
                     atributo: "des"
                 },
                 {
-                    nome: "Vontade",
-                    atributo: "car"
-                },
-                {
-                    nome: "Percepção",
-                    atributo: "sen"
-                },
-                {
                     nome: "Luta",
                     atributo: "for"
+                },                
+                {
+                    nome: "Vontade",
+                    atributo: "car"
                 },
                 {
                     nome: "Pontaria",
