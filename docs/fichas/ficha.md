@@ -171,7 +171,7 @@
         }
 
         .campo-pericia4 {
-            width: 50%;
+            width: 70%;
             text-align: center;
             padding-left: 0px;
             margin-top: 0px;
@@ -226,8 +226,6 @@
             a font-size: 1.3em;
             margin: 10px 0;
         }
-
-
 
         .blocos-laterais {
 
