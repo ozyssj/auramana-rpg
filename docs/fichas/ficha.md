@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -697,7 +696,7 @@
         </select>
         </div> 
     
-        <div class="campo-pericia2">
+        <div class="campo-pericia">
         <select class="treinamento-pericia">
           ${treinamentos.map(t =>
                             `<option value="${t.value}">${t.text}</option>`
