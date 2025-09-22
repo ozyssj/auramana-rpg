@@ -782,7 +782,7 @@
                 <div class="campo-pericia">
                     <label>CD Conjuração</label>
                 </div>
-                <div class="campo-pericia2">
+                <div class="campo">
                     <input type="number" class="bonus-conjuracao" placeholder="Bônus na CD de Conjuração">
                 </div>
                 <div class="campo-pericia3">
