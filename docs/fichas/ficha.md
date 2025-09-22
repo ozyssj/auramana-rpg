@@ -160,7 +160,6 @@
         .campo-pericia2 {
             width: 25%;
             text-align: center;
-            padding-left: 0px;
             margin-top: 0px;
             margin-bottom: 10px;
         }
@@ -169,7 +168,6 @@
         .campo-pericia3 {
             width: 15%;
             text-align: center;
-            padding-left: 0px;
             margin-top: 0px;
             margin-bottom: 10px;
         }
@@ -177,14 +175,12 @@
         .campo-pericia4 {
             width: 50%;
             text-align: center;
-            padding-left: 0px;
             margin-top: 0px;
             margin-bottom: 10px;
         }
 
 
         .linha-pericia {
-            text-align: center;
             display: flex;
             flex: 1;
             font-size: 0.9em;
