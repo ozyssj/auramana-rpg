@@ -83,6 +83,10 @@
             box-shadow: inset 1px 1px 3px #ccc;
         }
 
+        input {
+            text-align: center;
+        }        
+
         textarea {
             min-height: 80px;
             resize: vertical;
