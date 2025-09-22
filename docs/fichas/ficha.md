@@ -162,6 +162,14 @@
         }
 
 
+        .campo-pericia3 {
+            width: 15%;
+            text-align: center;
+            padding-left: 0px;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+        
         .linha-pericia {
             display: flex;
             flex: 1;
@@ -205,8 +213,8 @@
             font-size: 0.9em;
         }
 
-        .defesa {a
-            font-size: 1.3em;
+        .defesa {
+            a font-size: 1.3em;
             margin: 10px 0;
         }
 
@@ -299,32 +307,32 @@
 
 
 
-                <div class="atributos">
-                    <div class="campo-atributo">
-                        <label for="for">FOR</label>
-                        <input type="number" id="for" min="-10" max="10">
-                    </div>
-                    <div class="campo-atributo">
-                        <label for="des">DES</label>
-                        <input type="number" id="des" min="-10" max="10">
-                    </div>
-                    <div class="campo-atributo">
-                        <label for="con">CON</label>
-                        <input type="number" id="con" min="-10" max="10">
-                    </div>
-                    <div class="campo-atributo">
-                        <label for="int">INT</label>
-                        <input type="number" id="int" min="-10" max="10">
-                    </div>
-                    <div class="campo-atributo">
-                        <label for="sen">SEN</label>
-                        <input type="number" id="sen" min="-10" max="10">
-                    </div>
-                    <div class="campo-atributo">
-                        <label for="car">CAR</label>
-                        <input type="number" id="car" min="-10" max="10">
-                    </div>
-                </div>
+        <div class="atributos">
+            <div class="campo-atributo">
+                <label for="for">FOR</label>
+                <input type="number" id="for" min="-10" max="10">
+            </div>
+            <div class="campo-atributo">
+                <label for="des">DES</label>
+                <input type="number" id="des" min="-10" max="10">
+            </div>
+            <div class="campo-atributo">
+                <label for="con">CON</label>
+                <input type="number" id="con" min="-10" max="10">
+            </div>
+            <div class="campo-atributo">
+                <label for="int">INT</label>
+                <input type="number" id="int" min="-10" max="10">
+            </div>
+            <div class="campo-atributo">
+                <label for="sen">SEN</label>
+                <input type="number" id="sen" min="-10" max="10">
+            </div>
+            <div class="campo-atributo">
+                <label for="car">CAR</label>
+                <input type="number" id="car" min="-10" max="10">
+            </div>
+        </div>
 
 
         <div class="blocos-laterais">
@@ -384,11 +392,6 @@
 
 
                     <div class="campo">
-                        <label for="armadura">Armadura </label>
-                        <input type="text" id="armadura" placeholder="RD e Penalidade">
-                    </div>
-
-                    <div class="campo">
                         <label for="classe">Tamanho</label>
                         <select id="classe">
                             <option>Médio</option>
@@ -400,6 +403,12 @@
                     </div>
 
                 </div>
+
+                <div class="campo">
+                    <label for="armadura">Armadura </label>
+                    <input type="text" id="armadura" placeholder="RD e Penalidade">
+                </div>
+
 
                 <div class="duplo">
                     <div class="linha">
@@ -446,7 +455,7 @@
 
                 <div class="campo">
                     <label for="talentos">Talentos</label>
-                    <textarea id="talentos" rows="18">
+                    <textarea id="talentos" rows="17">
  -> Origem: 
  -> Raça: Idiomas, Visão, etc
  -> NV1: 
@@ -456,8 +465,8 @@
  -> NV5: 
 </textarea>
                 </div>
-                
-<br/>
+
+                <br />
 
                 <div class="campo">
                     <label for="magias">MAGIAS</label>
@@ -473,7 +482,7 @@
                         </div>
                     </div>
 
-                    <textarea id="magias" rows="18">
+                    <textarea id="magias" rows="17">
  -> 1° Círculo (Cargas: 6/6 )
  - 
  -
@@ -731,7 +740,7 @@
         </div>
         
         
-        <div class="campo-pericia2">
+        <div class="campo-pericia3">
         <input type="number" class="valor-pericia" readonly>
       </div>
         </div>
@@ -746,7 +755,7 @@
                     document.getElementById('pericias-container').innerHTML = pericias.map(criarPericia).join('');
                 </script>
 
-<br/>
+                <br />
 
                 <div class="campo">
                     <label for="inventario">Inventário e Anotações</label>
