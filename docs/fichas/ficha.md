@@ -418,7 +418,7 @@
                         <option value="Vontade">Sanidade</option>
                     </select>
                 </div>
-                <div class="campo-pericia2">
+                <div class="campo">
                     <input type="number" class="aparo" placeholder="Bônus de Aparo">
                 </div>
                 <div class="campo-pericia3">
@@ -445,7 +445,7 @@
                         <option value="Conh. C">Outro</option>
                     </select>
                 </div>
-                <div class="campo-pericia2">
+                <div class="campo">
                     <input type="number" class="bonus-iniciativa" placeholder="Bônus de Iniciativa">
                 </div>
                 <div class="campo-pericia3">
