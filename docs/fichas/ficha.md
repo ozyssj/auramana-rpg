@@ -171,7 +171,7 @@
         }
 
         .campo-pericia4 {
-            width: 30%;
+            width: 50%;
             text-align: center;
             padding-left: 0px;
             margin-top: 0px;
@@ -430,7 +430,7 @@
                 <div class="campo-pericia4">
                     <input type="number" class="aparo" placeholder="Bônus de Aparo">
                 </div>
-                <div class="campo-pericia3">
+                <div class="campo-pericia2">
                     <input type="number" id="defesaFinal" readonly>
                 </div>
             </div>
@@ -457,7 +457,7 @@
                 <div class="campo-pericia4">
                     <input type="number" class="bonus-iniciativa" placeholder="Bônus de Iniciativa">
                 </div>
-                <div class="campo-pericia3">
+                <div class="campo-pericia2">
                     <input type="number" id="iniciativaFinal" readonly>
                 </div>
             </div>
