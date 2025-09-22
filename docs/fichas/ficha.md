@@ -90,7 +90,7 @@
 
         .atributos {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(6, 1fr);
             gap: 12px;
             margin: 15px 0;
         }
@@ -299,13 +299,6 @@
 
 
 
-
-        <div class="blocos-laterais">
-
-
-            <!-- Coluna da esquerda -->
-            <div class="campo-lateral">
-
                 <div class="atributos">
                     <div class="campo-atributo">
                         <label for="for">FOR</label>
@@ -332,6 +325,13 @@
                         <input type="number" id="car" min="-10" max="10">
                     </div>
                 </div>
+
+
+        <div class="blocos-laterais">
+
+
+            <!-- Coluna da esquerda -->
+            <div class="campo-lateral">
 
                 <div class="triplo">
                     <div class="campo">
