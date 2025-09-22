@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -169,7 +170,7 @@
             margin-top: 0px;
             margin-bottom: 10px;
         }
-        
+
         .linha-pericia {
             display: flex;
             flex: 1;
@@ -183,7 +184,7 @@
 
         .pericias {
             display: grid;
-            grid-template-columns: repeat(1, minmax(0, 1fr));
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             padding-right: 0px;
             gap: 0px;
             width: 100%;
@@ -218,9 +219,7 @@
             margin: 10px 0;
         }
 
-        .campo-lateral {
-            margin-right: 10px;
-        }
+
 
         .blocos-laterais {
 
@@ -335,367 +334,353 @@
         </div>
 
 
-        <div class="blocos-laterais">
 
+        <div class="triplo">
+            <div class="campo">
+                <label for="pvAtual">PV Atual</label>
+                <input type="number" id="pvAtual">
+            </div>
+            <div class="campo">
+                <label for="pvMax">PV Máx</label>
+                <input type="number" id="pvMax" readonly>
+            </div>
+            <div class="campo">
+                <label for="pvTemp">PV Temp</label>
+                <input type="number" id="pvTemp">
+            </div>
+        </div>
 
-            <!-- Coluna da esquerda -->
-            <div class="campo-lateral">
+        <div class="triplo">
+            <div class="campo">
+                <label for="pmAtual">PM Atual</label>
+                <input type="number" id="pmAtual">
+            </div>
+            <div class="campo">
+                <label for="pmMax">PM Máx</label>
+                <input type="number" id="pmMax" readonly>
+            </div>
+            <div class="campo">
+                <label for="pmTemp">PM Temp</label>
+                <input type="number" id="pmTemp">
+            </div>
+        </div>
 
-                <div class="triplo">
-                    <div class="campo">
-                        <label for="pvAtual">PV Atual</label>
-                        <input type="number" id="pvAtual">
-                    </div>
-                    <div class="campo">
-                        <label for="pvMax">PV Máx</label>
-                        <input type="number" id="pvMax" readonly>
-                    </div>
-                    <div class="campo">
-                        <label for="pvTemp">PV Temp</label>
-                        <input type="number" id="pvTemp">
-                    </div>
-                </div>
+        <div class="duplo">
+            <div class="campo">
+                <label for="pvExtra">PV Extra (racial, talentos, etc)</label>
+                <input type="number" id="pvExtra" min="0" value="0">
+            </div>
 
-                <div class="triplo">
-                    <div class="campo">
-                        <label for="pmAtual">PM Atual</label>
-                        <input type="number" id="pmAtual">
-                    </div>
-                    <div class="campo">
-                        <label for="pmMax">PM Máx</label>
-                        <input type="number" id="pmMax" readonly>
-                    </div>
-                    <div class="campo">
-                        <label for="pmTemp">PM Temp</label>
-                        <input type="number" id="pmTemp">
-                    </div>
-                </div>
+            <div class="campo">
+                <label for="pmExtra">PM Extra (itens, talentos, etc)</label>
+                <input type="number" id="pmExtra" min="0" value="0">
+            </div>
+        </div>
 
-                <div class="duplo">
-                    <div class="campo">
-                        <label for="pvExtra">PV Extra (racial, talentos, etc)</label>
-                        <input type="number" id="pvExtra" min="0" value="0">
-                    </div>
+        <div class="triplo">
 
-                    <div class="campo">
-                        <label for="pmExtra">PM Extra (itens, talentos, etc)</label>
-                        <input type="number" id="pmExtra" min="0" value="0">
-                    </div>
-                </div>
-
-                <div class="duplo">
-
-                    <div class="campo">
-                        <label for="deslocamento">Deslocamento </label>
-                        <input type="text" id="deslocamento" min="0" max="60" placeholder="5 vk (7,5m)">
-                    </div>
-
-
-                    <div class="campo">
-                        <label for="classe">Tamanho</label>
-                        <select id="classe">
-                            <option>Médio</option>
-                            <option>Minúsculo</option>
-                            <option>Pequeno</option>
-                            <option>Grande</option>
-                            <option>Colossal</option>
-                        </select>
-                    </div>
-
-                </div>
-
-                <div class="campo">
-                    <label for="armadura">Armadura </label>
-                    <input type="text" id="armadura" placeholder="RD e Penalidade">
-                </div>
-
-
-                <div class="duplo">
-                    <div class="linha">
-                        <div class="campo">
-                            <label>Defesa</label>
-                            <select class="pericia-defesa">
-                                <option value="Reflexos">Esquiva</option>
-                                <option value="Fortitude">Vigor</option>
-                                <option value="Vontade">Sanidade</option>
-                            </select>
-                            <input type="number" class="aparo" placeholder="Bônus de Aparo">
-                            <input type="number" id="defesaFinal" readonly>
-                        </div>
-                    </div>
-
-                    <div class="linha">
-                        <div class="campo">
-                            <label>Iniciativa</label>
-                            <select class="pericia-iniciativa">
-                                <option value="Percepção">Percepção</option>
-                                <option value="Reflexos">Reflexos</option>
-                                <option value="Intuição">Intuição</option>
-                                <option value="Furtividade">Furtividade</option>
-                                <option value="Atletismo">Atletismo</option>
-                                <option value="Enganação">Enganação</option>
-                                <option value="Intimidação">Intimidação</option>
-                                <option value="Sobrevivência">Sobrevivência</option>
-                                <option value="Acrobacia">Acrobacia</option>
-                                <option value="Conh. C">Outro</option>
-                            </select>
-                            <input type="number" class="bonus-iniciativa" placeholder="Bônus de Iniciativa">
-                            <input type="number" id="iniciativaFinal" readonly>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="campo">
-                    <label for="ataques">Ataques</label>
-                    <textarea id="ataques" rows="7">
--> Espada Longa: d20+8+2 / 1d8+4+3
-                  </textarea>
-                </div>
-
-
-                <div class="campo">
-                    <label for="talentos">Talentos</label>
-                    <textarea id="talentos" rows="22">
- -> Origem: 
- -> Raça: Idiomas, Visão, etc
- -> NV1: 
- -> NV2: 
- -> NV3: 
- -> NV4: 
- -> NV5: 
-</textarea>
-                </div>
-
-                <br />
-                
-                <div class="campo">
-                    <label for="inventario">Inventário</label>
-                    <textarea id="inventario" rows="15">
- -> Sigreis: 30§ 
- -> 
- -> 
-</textarea>
-                </div>
-               
-                
-
+            <div class="campo">
+                <label for="deslocamento">Deslocamento </label>
+                <input type="text" id="deslocamento" min="0" max="60" placeholder="5 vk (7,5m)">
             </div>
 
 
-            <!-- Coluna da direita -->
-            <div class="campo-lateral">
+            <div class="campo">
+                <label for="classe">Tamanho</label>
+                <select id="classe">
+                    <option>Médio</option>
+                    <option>Minúsculo</option>
+                    <option>Pequeno</option>
+                    <option>Grande</option>
+                    <option>Colossal</option>
+                </select>
+            </div>
 
-                <div>
-                    <div class="campo-atributo">
-                        <label for="pericias">Perícias</label>
-                    </div>
-                    <div class="pericias" id="pericias-container"></div>
+            <div class="campo">
+                <label for="armadura">Armadura </label>
+                <input type="text" id="armadura" placeholder="RD e Penalidade">
+            </div>
+
+
+        </div>
+
+
+
+        <div class="duplo">
+
+            <div class="linha-pericia">
+                <div class="campo-pericia">
+                    <label>Defesa</label>
                 </div>
-
-
-                <div class="pericias" id="pericias-container">
+                <div class="campo">
+                    <select class="pericia-defesa2">
+                        <option value="Reflexos">Esquiva</option>
+                        <option value="Fortitude">Vigor</option>
+                        <option value="Vontade">Sanidade</option>
+                    </select>
                 </div>
+                <div class="campo-pericia3">
+                    <input type="number" class="aparo" placeholder="Bônus de Aparo">
+                </div>
+                <div class="campo-pericia3">
+                    <input type="number" id="defesaFinal" readonly>
+                </div>
+            </div>
 
-                <script>
-                    const pericias = [{
-                            nome: "Fortitude",
-                            atributo: "con"
-                        },
-                        {
-                            nome: "Reflexos",
-                            atributo: "des"
-                        },
-                        {
-                            nome: "Vontade",
-                            atributo: "car"
-                        },
-                        {
-                            nome: "Percepção",
-                            atributo: "sen"
-                        },
-                        {
-                            nome: "Luta",
-                            atributo: "for"
-                        },
-                        {
-                            nome: "Pontaria",
-                            atributo: "des"
-                        },
-                        {
-                            nome: "Acrobacia",
-                            atributo: "des"
-                        },
-                        {
-                            nome: "Arcanismo",
-                            atributo: "int"
-                        },
-                        {
-                            nome: "Adestramento",
-                            atributo: "car"
-                        },
-                        {
-                            nome: "Atletismo",
-                            atributo: "for"
-                        },
-                        {
-                            nome: "Atuação",
-                            atributo: "car"
-                        },
-                        {
-                            nome: "Cavalgar",
-                            atributo: "des"
-                        },
-                        {
-                            nome: "Conh. Alquimia",
-                            atributo: "int"
-                        },
-                        {
-                            nome: "Conh. Guerra",
-                            atributo: "int"
-                        },
-                        {
-                            nome: "Conh. Nobreza",
-                            atributo: "int"
-                        },
-                        {
-                            nome: "Conh. A",
-                            atributo: "int"
-                        },
-                        {
-                            nome: "Conh. B",
-                            atributo: "int"
-                        },
-                        {
-                            nome: "Conh. C",
-                            atributo: "int"
-                        },
-                        {
-                            nome: "Conh. D",
-                            atributo: "int"
-                        },
-                        {
-                            nome: "Conjuração",
-                            atributo: "int"
-                        },
-                        {
-                            nome: "Enganação",
-                            atributo: "car"
-                        },
-                        {
-                            nome: "Fabricação",
-                            atributo: "int"
-                        },
-                        {
-                            nome: "Furtividade",
-                            atributo: "des"
-                        },
-                        {
-                            nome: "Intimidação",
-                            atributo: "car"
-                        },
-                        {
-                            nome: "Intuição",
-                            atributo: "sen"
-                        },
-                        {
-                            nome: "Investigação",
-                            atributo: "int"
-                        },
-                        {
-                            nome: "Jogatina",
-                            atributo: "car"
-                        },
-                        {
-                            nome: "Ladinagem",
-                            atributo: "des"
-                        },
-                        {
-                            nome: "Medicina",
-                            atributo: "int"
-                        },
-                        {
-                            nome: "Natureza",
-                            atributo: "int"
-                        },
-                        {
-                            nome: "Ocultismo",
-                            atributo: "int"
-                        },
-                        {
-                            nome: "Persuasão",
-                            atributo: "car"
-                        },
-                        {
-                            nome: "Pilotagem",
-                            atributo: "des"
-                        },
-                        {
-                            nome: "Religião",
-                            atributo: "int"
-                        },
-                        {
-                            nome: "Sobrevivência",
-                            atributo: "sen"
-                        },
-                        {
-                            nome: "Sociedade",
-                            atributo: "int"
-                        }
-                    ];
 
-                    // Opções de atributos
-                    const atributos = [{
-                            value: "des",
-                            text: "DES"
-                        },
-                        {
-                            value: "for",
-                            text: "FOR"
-                        },
-                        {
-                            value: "con",
-                            text: "CON"
-                        },
-                        {
-                            value: "int",
-                            text: "INT"
-                        },
-                        {
-                            value: "sen",
-                            text: "SEN"
-                        },
-                        {
-                            value: "car",
-                            text: "CAR"
-                        }
-                    ];
+            <div class="linha-pericia">
+                <div class="campo-pericia">
+                    <label>Iniciativa</label>
+                </div>
+                <div class="campo">
+                    <select class="pericia-iniciativa">
+                        <option value="Percepção">Percepção</option>
+                        <option value="Reflexos">Reflexos</option>
+                        <option value="Intuição">Intuição</option>
+                        <option value="Furtividade">Furtividade</option>
+                        <option value="Atletismo">Atletismo</option>
+                        <option value="Enganação">Enganação</option>
+                        <option value="Intimidação">Intimidação</option>
+                        <option value="Sobrevivência">Sobrevivência</option>
+                        <option value="Acrobacia">Acrobacia</option>
+                        <option value="Conh. C">Outro</option>
+                    </select>
+                </div>
+                <div class="campo-pericia2">
+                    <input type="number" class="bonus-iniciativa" placeholder="Bônus de Iniciativa">
+                </div>
+                <div class="campo-pericia2">
+                    <input type="number" id="iniciativaFinal" readonly>
+                </div>
+            </div>
 
-                    // Opções de treinamento
-                    const treinamentos = [{
-                            value: "0",
-                            text: "Destreinado"
-                        },
-                        {
-                            value: "2",
-                            text: "Treinado"
-                        },
-                        {
-                            value: "4",
-                            text: "Especialista (ND7)"
-                        },
-                        {
-                            value: "6",
-                            text: "Mestre (ND13)"
-                        },
-                        {
-                            value: "8",
-                            text: "Lendário (ND18)"
-                        }
-                    ];
+        </div>
 
-                    // Função para gerar o HTML de uma perícia
-                    function criarPericia(pericia) {
-                        return `
+        <div class="campo">
+            <label for="ataques">Ataques</label>
+            <textarea id="ataques" rows="7">
+-> Espada Longa: d20+8+2 / 1d8+4+3
+                  </textarea>
+        </div>
+
+
+
+
+
+
+
+
+        <div>
+            <div class="campo-atributo">
+                <label for="pericias">Perícias</label>
+            </div>
+            <div class="pericias" id="pericias-container"></div>
+        </div>
+
+
+        <div class="pericias" id="pericias-container">
+        </div>
+
+        <script>
+            const pericias = [{
+                    nome: "Fortitude",
+                    atributo: "con"
+                },
+                {
+                    nome: "Reflexos",
+                    atributo: "des"
+                },
+                {
+                    nome: "Vontade",
+                    atributo: "car"
+                },
+                {
+                    nome: "Percepção",
+                    atributo: "sen"
+                },
+                {
+                    nome: "Luta",
+                    atributo: "for"
+                },
+                {
+                    nome: "Pontaria",
+                    atributo: "des"
+                },
+                {
+                    nome: "Acrobacia",
+                    atributo: "des"
+                },
+                {
+                    nome: "Arcanismo",
+                    atributo: "int"
+                },
+                {
+                    nome: "Adestramento",
+                    atributo: "car"
+                },
+                {
+                    nome: "Atletismo",
+                    atributo: "for"
+                },
+                {
+                    nome: "Atuação",
+                    atributo: "car"
+                },
+                {
+                    nome: "Cavalgar",
+                    atributo: "des"
+                },
+                {
+                    nome: "Conh. Alquimia",
+                    atributo: "int"
+                },
+                {
+                    nome: "Conh. Guerra",
+                    atributo: "int"
+                },
+                {
+                    nome: "Conh. Nobreza",
+                    atributo: "int"
+                },
+                {
+                    nome: "Conh. A",
+                    atributo: "int"
+                },
+                {
+                    nome: "Conh. B",
+                    atributo: "int"
+                },
+                {
+                    nome: "Conh. C",
+                    atributo: "int"
+                },
+                {
+                    nome: "Conh. D",
+                    atributo: "int"
+                },
+                {
+                    nome: "Conjuração",
+                    atributo: "int"
+                },
+                {
+                    nome: "Enganação",
+                    atributo: "car"
+                },
+                {
+                    nome: "Fabricação",
+                    atributo: "int"
+                },
+                {
+                    nome: "Furtividade",
+                    atributo: "des"
+                },
+                {
+                    nome: "Intimidação",
+                    atributo: "car"
+                },
+                {
+                    nome: "Intuição",
+                    atributo: "sen"
+                },
+                {
+                    nome: "Investigação",
+                    atributo: "int"
+                },
+                {
+                    nome: "Jogatina",
+                    atributo: "car"
+                },
+                {
+                    nome: "Ladinagem",
+                    atributo: "des"
+                },
+                {
+                    nome: "Medicina",
+                    atributo: "int"
+                },
+                {
+                    nome: "Natureza",
+                    atributo: "int"
+                },
+                {
+                    nome: "Ocultismo",
+                    atributo: "int"
+                },
+                {
+                    nome: "Persuasão",
+                    atributo: "car"
+                },
+                {
+                    nome: "Pilotagem",
+                    atributo: "des"
+                },
+                {
+                    nome: "Religião",
+                    atributo: "int"
+                },
+                {
+                    nome: "Sobrevivência",
+                    atributo: "sen"
+                },
+                {
+                    nome: "Sociedade",
+                    atributo: "int"
+                }
+            ];
+
+            // Opções de atributos
+            const atributos = [{
+                    value: "des",
+                    text: "DES"
+                },
+                {
+                    value: "for",
+                    text: "FOR"
+                },
+                {
+                    value: "con",
+                    text: "CON"
+                },
+                {
+                    value: "int",
+                    text: "INT"
+                },
+                {
+                    value: "sen",
+                    text: "SEN"
+                },
+                {
+                    value: "car",
+                    text: "CAR"
+                }
+            ];
+
+            // Opções de treinamento
+            const treinamentos = [{
+                    value: "0",
+                    text: "Destreinado"
+                },
+                {
+                    value: "2",
+                    text: "Treinado"
+                },
+                {
+                    value: "4",
+                    text: "Especialista (ND7)"
+                },
+                {
+                    value: "6",
+                    text: "Mestre (ND13)"
+                },
+                {
+                    value: "8",
+                    text: "Lendário (ND18)"
+                }
+            ];
+
+            // Função para gerar o HTML de uma perícia
+            function criarPericia(pericia) {
+                return `
                         
       <div class="pericia">
     <div class="linha-pericia">
@@ -734,29 +719,53 @@
     </div>
 
     `;
-                    }
+            }
 
-                    // Gerar todas as perícias
-                    document.getElementById('pericias-container').innerHTML = pericias.map(criarPericia).join('');
-                </script>
+            // Gerar todas as perícias
+            document.getElementById('pericias-container').innerHTML = pericias.map(criarPericia).join('');
+        </script>
 
-                <br />
 
-                <div class="campo">
-                    <label for="magias">MAGIAS</label>
 
-                    <label>CD Conjuração</label>
 
-                    <div class="linha-pericia">
-                        <div class="campo-pericia">
-                            <input type="number" class="bonus-conjuracao" placeholder="Bônus na CD de Conjuração">
-                        </div>
-                        <div class="campo-pericia">
-                            <input type="number" id="conjuracaoFinal" readonly>
-                        </div>
-                    </div>
 
-                    <textarea id="magias" rows="17">
+
+
+
+
+        <div class="campo">
+            <label for="talentos">Talentos</label>
+            <textarea id="talentos" rows="22">
+ -> Origem: 
+ -> Raça: Idiomas, Visão, etc
+ -> NV1: 
+ -> NV2: 
+ -> NV3: 
+ -> NV4: 
+ -> NV5: 
+</textarea>
+        </div>
+
+        <br />
+
+        <div class="campo">
+            <label for="inventario">Inventário</label>
+            <textarea id="inventario" rows="15">
+ -> Sigreis: 30§ 
+ -> 
+ -> 
+</textarea>
+        </div>
+
+
+
+        <br />
+
+        <div class="campo">
+            <label for="magias">MAGIAS</label>
+
+
+            <textarea id="magias" rows="17">
  -> 1° Círculo (Cargas: 6/6 )
  - 
  -
@@ -766,16 +775,23 @@
  -> 3° Círculo (Cargas: 0/2 )
  - 
 </textarea>
-                </div> 
 
 
-
+            <div class="linha-pericia">
+                <div class="campo-pericia">
+                    <label>CD Conjuração</label>
+                </div>
+                <div class="campo-pericia3">
+                    <input type="number" class="bonus-conjuracao" placeholder="Bônus na CD de Conjuração">
+                </div>
+                <div class="campo-pericia3">
+                    <input type="number" id="conjuracaoFinal" readonly>
+                </div>
             </div>
 
-
-            <!-- fim dos blocos laterais -->
-
         </div>
+
+
 
         <div class="botoes">
             <button onclick="salvarFicha()">Salvar no Navegador</button>
