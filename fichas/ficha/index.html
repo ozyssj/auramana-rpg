@@ -1245,9 +1245,10 @@
 
 
         .campo-pericia {
-            width: 25%;
+            width: 30%;
             margin-top: 0px;
-            text-align: center;
+            text-align: right;
+            padding-right: 10px;
             margin-bottom: 0px;
         }
 
@@ -1263,7 +1264,7 @@
         .linha-pericia {
             display: flex;
             flex: 1;
-            font-size: 0.6em;
+            font-size: 0.9em;
             grid-template-columns: repeat(5, 1fr);
             gap: 0px;
             margin-top: 0px;
@@ -1288,18 +1289,19 @@
 
 
         .pericia {
-            font-size: 0.85em;
+            font-size: 0.9em;
             margin-bottom: 0px;
         }
 
         .pericia label {
-            font-size: 0.9em;
+            font-size: 1.0em;
         }
 
         .pericia input,
         .pericia select {
+            text-align: center;
             padding: 0px;
-            font-size: 0.6em;
+            font-size: 0.9em;
         }
 
         .defesa {
@@ -1308,7 +1310,7 @@
         }
 
         .campo-lateral {
-            margin-right: 20px;
+            margin-right: 30px;
         }
 
         .blocos-laterais {
@@ -1397,13 +1399,10 @@
 
 
 
-
-
         <div class="blocos-laterais">
+
+
             <!-- Coluna da esquerda -->
-
-
-
             <div class="campo-lateral">
 
                 <div class="atributos">
@@ -1432,7 +1431,6 @@
                         <input type="number" id="car" min="-10" max="10">
                     </div>
                 </div>
-
 
                 <div class="triplo">
                     <div class="campo">
@@ -1476,6 +1474,32 @@
                     </div>
                 </div>
 
+                <div class="triplo">
+
+                    <div class="campo">
+                        <label for="deslocamento">Deslocamento </label>
+                        <input type="text" id="deslocamento" min="0" max="60" placeholder="5 vk (7,5m)">
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="armadura">Armadura </label>
+                        <input type="text" id="armadura" placeholder="RD e Penalidade">
+                    </div>
+
+                    <div class="campo">
+                        <label for="classe">Tamanho</label>
+                        <select id="classe">
+                            <option>Médio</option>
+                            <option>Minúsculo</option>
+                            <option>Pequeno</option>
+                            <option>Grande</option>
+                            <option>Colossal</option>
+                        </select>
+                    </div>
+
+                </div>
+
                 <div class="duplo">
                     <div class="linha">
                         <div class="campo">
@@ -1511,55 +1535,17 @@
                     </div>
                 </div>
 
-                <div class="triplo">
-
-                    <div class="campo">
-                        <label for="deslocamento">Deslocamento </label>
-                        <input type="text" id="deslocamento" placeholder="5 vk (7,5m)">
-                    </div>
-
-
-                    <div class="campo">
-                        <label for="armadura">Armadura </label>
-                        <input type="text" id="armadura" placeholder="RD e Penalidade">
-                    </div>
-
-                    <div class="campo">
-                        <label for="classe">Tamanho</label>
-                        <select id="classe">
-                            <option>Médio</option>
-                            <option>Minúsculo</option>
-                            <option>Pequeno</option>
-                            <option>Grande</option>
-                            <option>Colossal</option>
-                        </select>
-                    </div>
-
-                </div>
-
-
                 <div class="campo">
                     <label for="ataques">Ataques</label>
-                    <textarea id="ataques" rows="6">
+                    <textarea id="ataques" rows="4">
 -> Espada Longa: d20+8+2 / 1d8+4+3
                   </textarea>
                 </div>
 
 
-
-                <div class="campo">
-                    <label for="inventario">Inventário</label>
-                    <textarea id="inventario" rows="10">
- -> Sigreis: 30§ 
- -> 
- -> 
-</textarea>
-                </div>
-
-
                 <div class="campo">
                     <label for="talentos">Talentos</label>
-                    <textarea id="talentos" rows="22">
+                    <textarea id="talentos" rows="10">
  -> Origem: 
  -> Raça: Idiomas, Visão, etc
  -> NV1: 
@@ -1570,7 +1556,8 @@
 </textarea>
                 </div>
 
-
+<br/>
+<br/>
 
                 <div class="campo">
                     <label for="magias">MAGIAS</label>
@@ -1598,22 +1585,20 @@
  -> 3° Círculo (Cargas: 0/2 )
  - 
 </textarea>
-
-                    <!-- Coluna da direita -->
-
-                    <div class="campo-lateral">
-
-
-                        <div>
-                            <div class="campo-atributo">
-                                <label for="pericias">Perícias</label>
-                            </div>
-                            <div class="pericias" id="pericias-container"></div>
-                        </div>
-                    </div>
                 </div>
 
+            </div>
 
+
+            <!-- Coluna da direita -->
+            <div class="campo-lateral">
+
+                <div>
+                    <div class="campo-atributo">
+                        <label for="pericias">Perícias</label>
+                    </div>
+                    <div class="pericias" id="pericias-container"></div>
+                </div>
 
 
                 <div class="pericias" id="pericias-container">
@@ -1820,20 +1805,19 @@
                     function criarPericia(pericia) {
                         return `
 
-
+      <div class="pericia">
     <div class="linha-pericia">
 
-       <div class="campo-pericia">
-            <label>${pericia.nome}</label>
+<div class="campo-pericia">
+        <label>${pericia.nome}</label>
         </div>
-
 
         <div class="campo-pericia2">
         <select class="atributo-pericia">
           ${atributos.map(a =>
                             `<option value="${a.value}" ${a.value === pericia.atributo ? 'selected' : ''}>${a.text}</option>`
                         ).join('')}
-        </select>        
+        </select>
         </div> 
 
         <div class="campo-pericia2">
@@ -1841,18 +1825,19 @@
           ${treinamentos.map(t =>
                             `<option value="${t.value}">${t.text}</option>`
                         ).join('')}
-        </select>        
+        </select>
         </div>
 
         <div class="campo-pericia2">
-        <input type="number" class="bonus-pericia" placeholder="Bônus de Perícia">
+        <input type="number" class="bonus-pericia" placeholder="Bônus">
         </div>
 
 
         <div class="campo-pericia2">
-            <input type="number" class="valor-pericia" readonly>
+        <input type="number" class="valor-pericia" readonly>
+      </div>
         </div>
-
+    </div>
 
     </div>
 
@@ -1862,361 +1847,383 @@
                     // Gerar todas as perícias
                     document.getElementById('pericias-container').innerHTML = pericias.map(criarPericia).join('');
                 </script>
-                <br />
 
-                <div class="botoes">
-                    <button onclick="salvarFicha()">Salvar no Navegador</button>
-                    <button onclick="baixarFicha()">Exportar Ficha</button>
-                    <input type="file" id="uploadFicha" accept=".json" onchange="carregarFicha()" style="display:none">
-                    <button onclick="document.getElementById('uploadFicha').click()">Importar
-                        Ficha</button>
-                    <button onclick="limparFicha()">Limpar Ficha</button>
 
+<br/>
+<br/>
+
+                <div class="campo">
+                    <label for="inventario">Inventário e Anotações</label>
+                    <textarea id="inventario" rows="26">
+ -> Sigreis: 30§ 
+ -> 
+ -> 
+</textarea>
                 </div>
+
+
+
 
             </div>
 
 
+            <!-- fim dos blocos laterais -->
+
+        </div>
+
+        <div class="botoes">
+            <button onclick="salvarFicha()">Salvar no Navegador</button>
+            <button onclick="baixarFicha()">Exportar Ficha</button>
+            <input type="file" id="uploadFicha" accept=".json" onchange="carregarFicha()" style="display:none">
+            <button onclick="document.getElementById('uploadFicha').click()">Importar
+                Ficha</button>
+            <button onclick="limparFicha()">Limpar Ficha</button>
+
+        </div>
+
+    </div>
 
 
-            <script>
-                function atualizarPericias() {
-                    const nivel = parseInt(document.getElementById('nivel').value) || 0;
-                    const atributos = {
-                        for: parseInt(document.getElementById('for').value) || 0,
-                        des: parseInt(document.getElementById('des').value) || 0,
-                        con: parseInt(document.getElementById('con').value) || 0,
-                        int: parseInt(document.getElementById('int').value) || 0,
-                        sen: parseInt(document.getElementById('sen').value) || 0,
-                        car: parseInt(document.getElementById('car').value) || 0
-                    };
 
-                    document.querySelectorAll('.linha-pericia').forEach(div => {
-                        const atributo = div.querySelector('.atributo-pericia').value;
-                        const treinamento = parseInt(div.querySelector('.treinamento-pericia').value);
-                        const bonusAdicional = parseInt(div.querySelector('.bonus-pericia').value) || 0;
-                        const baseNivel = (treinamento === 0) ? Math.floor(nivel / 2) : Math.floor(nivel);
-                        const valor = baseNivel + atributos[atributo] + treinamento + bonusAdicional;
-                        div.querySelector('.valor-pericia').value = valor;
-                    });
+
+    <script>
+        function atualizarPericias() {
+            const nivel = parseInt(document.getElementById('nivel').value) || 0;
+            const atributos = {
+                for: parseInt(document.getElementById('for').value) || 0,
+                des: parseInt(document.getElementById('des').value) || 0,
+                con: parseInt(document.getElementById('con').value) || 0,
+                int: parseInt(document.getElementById('int').value) || 0,
+                sen: parseInt(document.getElementById('sen').value) || 0,
+                car: parseInt(document.getElementById('car').value) || 0
+            };
+
+            document.querySelectorAll('.pericia').forEach(div => {
+                const atributo = div.querySelector('.atributo-pericia').value;
+                const treinamento = parseInt(div.querySelector('.treinamento-pericia').value);
+                const bonusAdicional = parseInt(div.querySelector('.bonus-pericia').value) || 0;
+                const baseNivel = (treinamento === 0) ? Math.floor(nivel / 2) : Math.floor(nivel);
+                const valor = baseNivel + atributos[atributo] + treinamento + bonusAdicional;
+                div.querySelector('.valor-pericia').value = valor;
+            });
+        }
+
+        const idsParaCalculo = ['nivel', 'for', 'des', 'con', 'int', 'sen', 'car'];
+        idsParaCalculo.forEach(id => {
+            document.getElementById(id).addEventListener('input', () => {
+                atualizarPericias();
+                calcularDefesa();
+                calcularIniciativa();
+                calcularCDConjuracao();
+
+            });
+
+        });
+
+
+        document.addEventListener('change', e => {
+            if (e.target.classList.contains('atributo-pericia') || e.target.classList.contains('pericia-iniciativa') || e.target.classList.contains('pericia-defesa') || e.target.classList.contains('treinamento-pericia') || e.target.classList.contains('bonus-pericia'
+
+                )) {
+                atualizarPericias();
+                calcularDefesa();
+                calcularIniciativa();
+                calcularCDConjuracao();
+            }
+        });
+
+        document.querySelectorAll('.bonus-pericia').forEach(input => {
+            input.addEventListener('input', atualizarPericias);
+        });
+
+
+        document.querySelector('.bonus-iniciativa').addEventListener('input', calcularIniciativa);
+        document.querySelector('.bonus-conjuracao').addEventListener('input', calcularCDConjuracao);
+        document.querySelector('.aparo').addEventListener('input', calcularDefesa);
+
+        document.querySelector('.pericia-defesa').addEventListener('change', calcularDefesa);
+        document.querySelector('.pericia-iniciativa').addEventListener('change', calcularIniciativa);
+
+        function calcularDefesa() {
+            const base = 10;
+
+            // pega bônus extra de defesa (campo manual)
+            const aparo = parseInt(document.querySelector('.aparo').value) || 0;
+
+            // pega qual perícia foi escolhida
+            const defesaTipo = document.querySelector('.pericia-defesa').value;
+
+            // mapeia todas as perícias calculadas
+            const periciasMap = {};
+            document.querySelectorAll('.pericia').forEach(div => {
+                const nome = div.querySelector("label").innerText.trim();
+                const valor = parseInt(div.querySelector(".valor-pericia").value) || 0;
+                periciasMap[nome] = valor;
+            });
+
+            // pega só a escolhida
+            const valorPericia = periciasMap[defesaTipo] || 0;
+
+            // soma tudo
+            const defesaFinal = base + aparo + valorPericia;
+            document.getElementById("defesaFinal").value = defesaFinal;
+        }
+
+
+        function calcularIniciativa() {
+
+            const bonusIniciativa = parseInt(document.querySelector('.bonus-iniciativa').value) || 0;
+
+            const periciaIniciativa = document.querySelector('.pericia-iniciativa').value;
+
+            const periciasMap = {};
+            document.querySelectorAll('.pericia').forEach(div => {
+                const nome = div.querySelector("label").innerText.trim();
+                const valor = parseInt(div.querySelector(".valor-pericia").value) || 0;
+                periciasMap[nome] = valor;
+            });
+
+            const valorPericia = periciasMap[periciaIniciativa] || 0;
+
+            const iniciativaFinal = bonusIniciativa + valorPericia;
+            document.getElementById("iniciativaFinal").value = iniciativaFinal;
+        }
+
+
+
+        function calcularCDConjuracao() {
+
+            const base = 10;
+
+            const bonusConjuracao = parseInt(document.querySelector('.bonus-conjuracao').value) || 0;
+
+            const periciasMap = {};
+            document.querySelectorAll('.pericia').forEach(div => {
+                const nome = div.querySelector("label").innerText.trim();
+                const valor = parseInt(div.querySelector(".valor-pericia").value) || 0;
+                periciasMap[nome] = valor;
+            });
+
+            let valorPericia = 0;
+            for (const key in periciasMap) {
+                if (key.toLowerCase() === "conjuração".toLowerCase()) {
+                    valorPericia = periciasMap[key];
+                    break;
+
                 }
 
-                const idsParaCalculo = ['nivel', 'for', 'des', 'con', 'int', 'sen', 'car'];
-                idsParaCalculo.forEach(id => {
-                    document.getElementById(id).addEventListener('input', () => {
-                        atualizarPericias();
-                        calcularDefesa();
-                        calcularIniciativa();
-                        calcularCDConjuracao();
+            }
 
-                    });
+            const conjuracaoFinal = base + valorPericia + bonusConjuracao
 
-                });
+            document.getElementById("conjuracaoFinal").value = conjuracaoFinal;
+        }
 
-
-                document.addEventListener('change', e => {
-                    if (e.target.classList.contains('atributo-pericia') || e.target.classList.contains('pericia-iniciativa') || e.target.classList.contains('linha-pericia') || e.target.classList.contains('campo-pericia') || e.target.classList.contains('campo-pericia2') || e.target.classList.contains('treinamento-pericia') || e.target.classList.contains('bonus-pericia'
-
-                        )) {
-                        atualizarPericias();
-                        calcularDefesa();
-                        calcularIniciativa();
-                        calcularCDConjuracao();
-                    }
-                });
-
-                document.querySelectorAll('.bonus-pericia').forEach(input => {
-                    input.addEventListener('input', atualizarPericias);
-                });
+        function salvarFicha() {
+            const campos = document.querySelectorAll('input, select, textarea');
+            campos.forEach(el => localStorage.setItem('ficha-' + el.id, el.value));
+            alert("Ficha salva nas memórias do grimório!");
+        }
 
 
-                document.querySelector('.bonus-iniciativa').addEventListener('input', calcularIniciativa);
-                document.querySelector('.bonus-conjuracao').addEventListener('input', calcularCDConjuracao);
-                document.querySelector('.aparo').addEventListener('input', calcularDefesa);
+        function baixarFicha() {
+            const campos = document.querySelectorAll('input, select, textarea');
+            const ficha = {};
+            campos.forEach(el => {
+                ficha[el.id] = (el.type === 'checkbox') ? el.checked : el.value;
+            });
 
-                document.querySelector('.pericia-defesa').addEventListener('change', calcularDefesa);
-                document.querySelector('.pericia-iniciativa').addEventListener('change', calcularIniciativa);
+            const blob = new Blob([JSON.stringify(ficha, null, 2)], {
+                type: 'application/json'
+            });
+            const url = URL.createObjectURL(blob);
 
-                function calcularDefesa() {
-                    const base = 10;
+            const a = document.createElement('a');
+            a.href = url;
 
-                    // pega bônus extra de defesa (campo manual)
-                    const aparo = parseInt(document.querySelector('.aparo').value) || 0;
+            let nome = document.getElementById('nome').value.trim();
 
-                    // pega qual perícia foi escolhida
-                    const defesaTipo = document.querySelector('.pericia-defesa').value;
+            if (!nome) nome = 'personagem';
 
-                    // mapeia todas as perícias calculadas
-                    const periciasMap = {};
-                    document.querySelectorAll('.pericia').forEach(div => {
-                        const nome = div.querySelector("label").innerText.trim();
-                        const valor = parseInt(div.querySelector(".valor-pericia").value) || 0;
-                        periciasMap[nome] = valor;
-                    });
+            nome = nome.replace(/[\/\\:\*\?"<>\|]/g, '');
 
-                    // pega só a escolhida
-                    const valorPericia = periciasMap[defesaTipo] || 0;
+            a.download = nome + '_ficha_auramana_pf2e.json';
 
-                    // soma tudo
-                    const defesaFinal = base + aparo + valorPericia;
-                    document.getElementById("defesaFinal").value = defesaFinal;
-                }
+            a.click();
 
+            URL.revokeObjectURL(url);
+        }
 
-                function calcularIniciativa() {
+        function carregarFicha() {
+            const input = document.getElementById('uploadFicha');
+            const file = input.files[0];
+            if (!file) return;
 
-                    const bonusIniciativa = parseInt(document.querySelector('.bonus-iniciativa').value) || 0;
-
-                    const periciaIniciativa = document.querySelector('.pericia-iniciativa').value;
-
-                    const periciasMap = {};
-                    document.querySelectorAll('.pericia').forEach(div => {
-                        const nome = div.querySelector("label").innerText.trim();
-                        const valor = parseInt(div.querySelector(".valor-pericia").value) || 0;
-                        periciasMap[nome] = valor;
-                    });
-
-                    const valorPericia = periciasMap[periciaIniciativa] || 0;
-
-                    const iniciativaFinal = bonusIniciativa + valorPericia;
-                    document.getElementById("iniciativaFinal").value = iniciativaFinal;
-                }
-
-
-
-                function calcularCDConjuracao() {
-
-                    const base = 10;
-
-                    const bonusConjuracao = parseInt(document.querySelector('.bonus-conjuracao').value) || 0;
-
-                    const periciasMap = {};
-                    document.querySelectorAll('.pericia').forEach(div => {
-                        const nome = div.querySelector("label").innerText.trim();
-                        const valor = parseInt(div.querySelector(".valor-pericia").value) || 0;
-                        periciasMap[nome] = valor;
-                    });
-
-                    let valorPericia = 0;
-                    for (const key in periciasMap) {
-                        if (key.toLowerCase() === "conjuração".toLowerCase()) {
-                            valorPericia = periciasMap[key];
-                            break;
-
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const data = JSON.parse(e.target.result);
+                Object.keys(data).forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) {
+                        if (el.type === 'checkbox') {
+                            el.checked = data[id];
+                        } else {
+                            el.value = data[id];
                         }
-
+                        localStorage.setItem('ficha-' + id, data[id]);
                     }
-
-                    const conjuracaoFinal = base + valorPericia + bonusConjuracao
-
-                    document.getElementById("conjuracaoFinal").value = conjuracaoFinal;
-                }
-
-                function salvarFicha() {
-                    const campos = document.querySelectorAll('input, select, textarea');
-                    campos.forEach(el => localStorage.setItem('ficha-' + el.id, el.value));
-                    alert("Ficha salva nas memórias do grimório!");
-                }
-
-
-                function baixarFicha() {
-                    const campos = document.querySelectorAll('input, select, textarea');
-                    const ficha = {};
-                    campos.forEach(el => {
-                        ficha[el.id] = (el.type === 'checkbox') ? el.checked : el.value;
-                    });
-
-                    const blob = new Blob([JSON.stringify(ficha, null, 2)], {
-                        type: 'application/json'
-                    });
-                    const url = URL.createObjectURL(blob);
-
-                    const a = document.createElement('a');
-                    a.href = url;
-
-                    let nome = document.getElementById('nome').value.trim();
-
-                    if (!nome) nome = 'personagem';
-
-                    nome = nome.replace(/[\/\\:\*\?"<>\|]/g, '');
-
-                    a.download = nome + '_ficha_auramana_pf2e.json';
-
-                    a.click();
-
-                    URL.revokeObjectURL(url);
-                }
-
-                function carregarFicha() {
-                    const input = document.getElementById('uploadFicha');
-                    const file = input.files[0];
-                    if (!file) return;
-
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        const data = JSON.parse(e.target.result);
-                        Object.keys(data).forEach(id => {
-                            const el = document.getElementById(id);
-                            if (el) {
-                                if (el.type === 'checkbox') {
-                                    el.checked = data[id];
-                                } else {
-                                    el.value = data[id];
-                                }
-                                localStorage.setItem('ficha-' + id, data[id]);
-                            }
-                        });
-                        alert("Ficha carregada com sucesso!");
-                    };
-                    reader.readAsText(file);
-                }
-
-                function limparFicha() {
-                    if (confirm("Tem certeza que deseja apagar todos os dados da ficha?")) {
-                        const campos = document.querySelectorAll('input, select, textarea');
-                        campos.forEach(el => {
-                            localStorage.removeItem('ficha-' + el.id);
-                            if (el.type === 'checkbox') {
-                                el.checked = false;
-                            } else if (el.tagName === 'SELECT') {
-                                el.selectedIndex = 0;
-                            } else {
-                                el.value = '';
-                            }
-                        });
-                        document.getElementById('output-json').value = '';
-                        alert("Todos os dados foram apagados da ficha.");
-                    }
-                }
-
-
-
-                const racas = [
-                    "Humano", "Anão", "Elfo", "Forâneo", "Feral", "Gigante", "Goblin",
-                    "Golem", "Halfling", "Orc", "Troll"
-                ];
-
-                const selectRaca = document.getElementById('raca');
-
-                selectRaca.innerHTML = '<option value="">-- Selecione a Raça --</option>';
-
-                racas.forEach(raca => {
-                    selectRaca.innerHTML += `<option>${raca}</option>`;
                 });
+                alert("Ficha carregada com sucesso!");
+            };
+            reader.readAsText(file);
+        }
 
-
-                const classes = [
-                    "Bárbaro", "Bardo", "Bruxo", "Clérigo", "Combatente", "Druida", "Especialista", "Feiticeiro", "Inventor",
-                    "Investigador", "Ladino", "Lutador", "Mágico", "Mago", "Místico", "Oráculo", "Paladino", "Patrulheiro"
-                ];
-
-                const selectClasse = document.getElementById('classe');
-
-                selectClasse.innerHTML = '<option value="">-- Selecione a Classe --</option>';
-
-                classes.forEach(classe => {
-                    selectClasse.innerHTML += `<option>${classe}</option>`;
+        function limparFicha() {
+            if (confirm("Tem certeza que deseja apagar todos os dados da ficha?")) {
+                const campos = document.querySelectorAll('input, select, textarea');
+                campos.forEach(el => {
+                    localStorage.removeItem('ficha-' + el.id);
+                    if (el.type === 'checkbox') {
+                        el.checked = false;
+                    } else if (el.tagName === 'SELECT') {
+                        el.selectedIndex = 0;
+                    } else {
+                        el.value = '';
+                    }
                 });
+                document.getElementById('output-json').value = '';
+                alert("Todos os dados foram apagados da ficha.");
+            }
+        }
 
 
-                // Constantes com os valores base por classe
-                const BASES_PV = {
-                    'Bárbaro': 12,
-                    'Bruxo': 6,
-                    'Combatente': 10,
-                    'Lutador': 10,
-                    'Feiticeiro': 6,
-                    'Mago': 6,
-                    'Místico': 10,
-                    'Paladino': 10,
-                    'Patrulheiro': 10
-                };
 
-                const BASES_PM = {
-                    'Bardo': 4,
-                    'Bruxo': 5,
-                    'Druida': 4,
-                    'Feiticeiro': 5,
-                    'Mago': 5,
-                    'Clérigo': 4,
-                    'Oráculo': 4
-                };
+        const racas = [
+            "Humano", "Anão", "Elfo", "Forâneo", "Feral", "Gigante", "Goblin",
+            "Golem", "Halfling", "Orc", "Troll"
+        ];
 
-                // Função unificada para cálculos
-                function calcularAtributos() {
-                    const constituicao = parseInt(document.getElementById('con').value) || 0;
-                    const nivel = parseInt(document.getElementById('nivel').value) || 1;
-                    const classe = document.getElementById('classe').value;
-                    const pvExtra = parseInt(document.getElementById('pvExtra').value) || 0;
-                    const pmExtra = parseInt(document.getElementById('pmExtra').value) || 0;
+        const selectRaca = document.getElementById('raca');
 
-                    // Cálculo de PV
-                    const basePV = BASES_PV[classe] || 8;
-                    const pvMax = (basePV + constituicao) * nivel + pvExtra;
-                    document.getElementById('pvMax').value = pvMax;
+        selectRaca.innerHTML = '<option value="">-- Selecione a Raça --</option>';
 
-                    // Cálculo de PM
-                    const basePM = BASES_PM[classe] || 2;
-                    const pmMax = basePM * nivel + pmExtra;
-                    document.getElementById('pmMax').value = pmMax;
+        racas.forEach(raca => {
+            selectRaca.innerHTML += `<option>${raca}</option>`;
+        });
 
-                    // Ajustar valores atuais
-                    ajustarValorAtual('pvAtual', pvMax);
-                    ajustarValorAtual('pmAtual', pmMax);
-                }
 
-                // Função auxiliar para ajustar valores atuais
-                function ajustarValorAtual(idElemento, valorMax) {
-                    const elemento = document.getElementById(idElemento);
-                    if (!elemento.value || parseInt(elemento.value) > valorMax) {
-                        elemento.value = valorMax;
-                    }
-                }
+        const classes = [
+            "Bárbaro", "Bardo", "Bruxo", "Clérigo", "Combatente", "Druida", "Especialista", "Feiticeiro", "Inventor",
+            "Investigador", "Ladino", "Lutador", "Mágico", "Mago", "Místico", "Oráculo", "Paladino", "Patrulheiro"
+        ];
 
-                // Configuração de eventos unificada
-                function configurarEventos() {
-                    // Eventos que disparam o cálculo
-                    ['con', 'nivel', 'classe', 'pvExtra', 'pmExtra'].forEach(id => {
-                        document.getElementById(id).addEventListener('input', calcularAtributos);
-                    });
+        const selectClasse = document.getElementById('classe');
 
-                    // Validar valores atuais
-                    document.getElementById('pvAtual').addEventListener('change', function() {
-                        ajustarValorAtual('pvAtual', document.getElementById('pvMax').value);
-                    });
+        selectClasse.innerHTML = '<option value="">-- Selecione a Classe --</option>';
 
-                    document.getElementById('pmAtual').addEventListener('change', function() {
-                        ajustarValorAtual('pmAtual', document.getElementById('pmMax').value);
-                    });
-                }
+        classes.forEach(classe => {
+            selectClasse.innerHTML += `<option>${classe}</option>`;
+        });
 
-                // Inicialização completa
-                window.addEventListener('DOMContentLoaded', () => {
-                    // Carregar valores salvos
-                    if (localStorage.getItem('ficha-pvExtra')) {
-                        document.getElementById('pvExtra').value = localStorage.getItem('ficha-pvExtra');
-                    }
-                    if (localStorage.getItem('ficha-pmExtra')) {
-                        document.getElementById('pmExtra').value = localStorage.getItem('ficha-pmExtra');
-                    }
 
-                    // Configurar eventos e calcular valores iniciais
-                    configurarEventos();
-                    calcularAtributos();
-                });
+        // Constantes com os valores base por classe
+        const BASES_PV = {
+            'Bárbaro': 12,
+            'Bruxo': 6,
+            'Combatente': 10,
+            'Lutador': 10,
+            'Feiticeiro': 6,
+            'Mago': 6,
+            'Místico': 10,
+            'Paladino': 10,
+            'Patrulheiro': 10
+        };
 
-                window.onload = () => {
-                    const campos = document.querySelectorAll('input, select, textarea');
-                    campos.forEach(el => {
-                        const val = localStorage.getItem('ficha-' + el.id);
-                        if (val) el.value = val;
-                    });
-                    atualizarPericias();
-                    calcularDefesa();
-                    calcularIniciativa();
-                    calcularCDConjuracao();
-                };
-            </script>
+        const BASES_PM = {
+            'Bardo': 4,
+            'Bruxo': 5,
+            'Druida': 4,
+            'Feiticeiro': 5,
+            'Mago': 5,
+            'Clérigo': 4,
+            'Oráculo': 4
+        };
+
+        // Função unificada para cálculos
+        function calcularAtributos() {
+            const constituicao = parseInt(document.getElementById('con').value) || 0;
+            const nivel = parseInt(document.getElementById('nivel').value) || 1;
+            const classe = document.getElementById('classe').value;
+            const pvExtra = parseInt(document.getElementById('pvExtra').value) || 0;
+            const pmExtra = parseInt(document.getElementById('pmExtra').value) || 0;
+
+            // Cálculo de PV
+            const basePV = BASES_PV[classe] || 8;
+            const pvMax = (basePV + constituicao) * nivel + pvExtra;
+            document.getElementById('pvMax').value = pvMax;
+
+            // Cálculo de PM
+            const basePM = BASES_PM[classe] || 2;
+            const pmMax = basePM * nivel + pmExtra;
+            document.getElementById('pmMax').value = pmMax;
+
+            // Ajustar valores atuais
+            ajustarValorAtual('pvAtual', pvMax);
+            ajustarValorAtual('pmAtual', pmMax);
+        }
+
+        // Função auxiliar para ajustar valores atuais
+        function ajustarValorAtual(idElemento, valorMax) {
+            const elemento = document.getElementById(idElemento);
+            if (!elemento.value || parseInt(elemento.value) > valorMax) {
+                elemento.value = valorMax;
+            }
+        }
+
+        // Configuração de eventos unificada
+        function configurarEventos() {
+            // Eventos que disparam o cálculo
+            ['con', 'nivel', 'classe', 'pvExtra', 'pmExtra'].forEach(id => {
+                document.getElementById(id).addEventListener('input', calcularAtributos);
+            });
+
+            // Validar valores atuais
+            document.getElementById('pvAtual').addEventListener('change', function() {
+                ajustarValorAtual('pvAtual', document.getElementById('pvMax').value);
+            });
+
+            document.getElementById('pmAtual').addEventListener('change', function() {
+                ajustarValorAtual('pmAtual', document.getElementById('pmMax').value);
+            });
+        }
+
+        // Inicialização completa
+        window.addEventListener('DOMContentLoaded', () => {
+            // Carregar valores salvos
+            if (localStorage.getItem('ficha-pvExtra')) {
+                document.getElementById('pvExtra').value = localStorage.getItem('ficha-pvExtra');
+            }
+            if (localStorage.getItem('ficha-pmExtra')) {
+                document.getElementById('pmExtra').value = localStorage.getItem('ficha-pmExtra');
+            }
+
+            // Configurar eventos e calcular valores iniciais
+            configurarEventos();
+            calcularAtributos();
+        });
+
+        window.onload = () => {
+            const campos = document.querySelectorAll('input, select, textarea');
+            campos.forEach(el => {
+                const val = localStorage.getItem('ficha-' + el.id);
+                if (val) el.value = val;
+            });
+            atualizarPericias();
+            calcularDefesa();
+            calcularIniciativa();
+            calcularCDConjuracao();
+        };
+    </script>
 </body>
 
 </html>
