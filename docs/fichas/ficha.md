@@ -154,7 +154,7 @@
         }
 
         .campo-pericia2 {
-            width: 20%;
+            width: 18%;
             text-align: center;
             padding-left: 0px;
             margin-top: 0px;
@@ -446,7 +446,7 @@
 
                 <div class="campo">
                     <label for="talentos">Talentos</label>
-                    <textarea id="talentos" rows="10">
+                    <textarea id="talentos" rows="18">
  -> Origem: 
  -> Raça: Idiomas, Visão, etc
  -> NV1: 
@@ -473,9 +473,7 @@
                         </div>
                     </div>
 
-                    <br />
-                    <label>Lista de Magias</label>
-                    <textarea id="magias" rows="20">
+                    <textarea id="magias" rows="18">
  -> 1° Círculo (Cargas: 6/6 )
  - 
  -
@@ -752,7 +750,7 @@
 
                 <div class="campo">
                     <label for="inventario">Inventário e Anotações</label>
-                    <textarea id="inventario" rows="24">
+                    <textarea id="inventario" rows="20">
  -> Sigreis: 30§ 
  -> 
  -> 
