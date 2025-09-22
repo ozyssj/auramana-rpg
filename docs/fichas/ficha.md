@@ -146,7 +146,7 @@
 
 
         .campo-pericia {
-            width: 30%;
+            width: 35%;
             margin-top: 0px;
             text-align: right;
             padding-right: 10px;
@@ -154,7 +154,7 @@
         }
 
         .campo-pericia2 {
-            width: 15%;
+            width: 20%;
             text-align: center;
             padding-left: 0px;
             margin-top: 0px;
@@ -205,13 +205,13 @@
             font-size: 0.9em;
         }
 
-        .defesa {
+        .defesa {a
             font-size: 1.3em;
             margin: 10px 0;
         }
 
         .campo-lateral {
-            margin-right: 30px;
+            margin-right: 10px;
         }
 
         .blocos-laterais {
@@ -457,7 +457,6 @@
 </textarea>
                 </div>
                 
-<br/>
 <br/>
 
                 <div class="campo">
@@ -749,13 +748,11 @@
                     document.getElementById('pericias-container').innerHTML = pericias.map(criarPericia).join('');
                 </script>
 
-
-<br/>
 <br/>
 
                 <div class="campo">
                     <label for="inventario">Inventário e Anotações</label>
-                    <textarea id="inventario" rows="26">
+                    <textarea id="inventario" rows="24">
  -> Sigreis: 30§ 
  -> 
  -> 
