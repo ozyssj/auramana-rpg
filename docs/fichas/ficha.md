@@ -141,7 +141,7 @@
 
 
         .campo-pericia {
-            width: 40%;
+            width: 35%;
             margin-top: 0px;
             padding-right: 0px;
             margin-bottom: 0px;
@@ -506,7 +506,7 @@
         
         <div class="campo-pericia2">
             <label>=</label>
-        <input type="number" class="bonus-pericia" placeholder="Bônus de Perícia">
+            <input type="number" class="valor-pericia" readonly>
         </div>
 
 
