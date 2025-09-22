@@ -141,7 +141,7 @@
 
 
         .campo-pericia {
-            width: 30%;
+            width: 35%;
             margin-top: 0px;
             padding-right: 0px;
             margin-bottom: 0px;
