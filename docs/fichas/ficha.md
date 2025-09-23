@@ -84,9 +84,9 @@
 
         input {
             width: 100%;
-            border-radius: 5px;
+            padding: 8px;
             box-shadow: inset 1px 1px 3px #ccc;
-            font-size: 0.9em;
+            font-size: 0.95em;
             text-align: center;
         }        
 
