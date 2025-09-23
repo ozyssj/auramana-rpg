@@ -182,6 +182,12 @@
             margin-bottom: 10px;
         }
 
+        .campo-pericia {
+            width: 30%;
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
 
         .linha-pericia {
             display: flex;
@@ -432,7 +438,7 @@
                 <div class="campo-pericia4">
                     <input type="number" class="aparo" placeholder="Bônus de Aparo">
                 </div>
-                <div class="campo-pericia4">
+                <div class="campo-pericia5">
                     <input type="number" id="defesaFinal" readonly>
                 </div>
             </div>
@@ -459,7 +465,7 @@
                 <div class="campo-pericia4">
                     <input type="number" class="bonus-iniciativa" placeholder="Bônus de Iniciativa">
                 </div>
-                <div class="campo-pericia4">
+                <div class="campo-pericia5">
                     <input type="number" id="iniciativaFinal" readonly>
                 </div>
             </div>
