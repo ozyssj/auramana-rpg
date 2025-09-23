@@ -74,6 +74,7 @@
             background-color: #fffaf0;
         }
 
+        input,
         select,
         textarea {
             width: 100%;
@@ -83,10 +84,6 @@
         }
 
         input {
-            width: 100%;
-            padding: 8px;
-            box-shadow: inset 1px 1px 3px #ccc;
-            font-size: 0.95em;
             text-align: center;
         }        
 
@@ -182,8 +179,8 @@
             margin-bottom: 10px;
         }
 
-        .campo-pericia {
-            width: 25%;
+        .campo-pericia5 {
+            width: 20%;
             text-align: center;
             margin-top: 0px;
             margin-bottom: 10px;
@@ -203,7 +200,6 @@
         .pericias {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            padding-right: 0px;
             gap: 0px;
             width: 100%;
             overflow: hidden;
