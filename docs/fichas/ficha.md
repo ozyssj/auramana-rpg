@@ -180,7 +180,7 @@
         }
 
         .campo-pericia5 {
-            width: 20%;
+            width: 30%;
             text-align: center;
             margin-top: 0px;
             margin-bottom: 10px;
