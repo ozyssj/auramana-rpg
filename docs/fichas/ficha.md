@@ -74,7 +74,6 @@
             background-color: #fffaf0;
         }
 
-        input,
         select,
         textarea {
             width: 100%;
