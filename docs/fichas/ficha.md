@@ -85,7 +85,7 @@
 
         input {
             text-align: center;
-        }        
+        }
 
         textarea {
             min-height: 80px;
@@ -300,7 +300,7 @@
 
             <div class="campo">
                 <label for="classe">Classe</label>
-                <select id="classe"></select>
+                <select id="classePersonagem"></select>
             </div>
         </div>
 
@@ -398,8 +398,8 @@
 
 
             <div class="campo">
-                <label for="classe">Tamanho</label>
-                <select id="classe">
+                <label for="tamanho">Tamanho</label>
+                <select id="tamanhoPersonagem">
                     <option>Médio</option>
                     <option>Minúsculo</option>
                     <option>Pequeno</option>
@@ -968,6 +968,24 @@
             campos.forEach(el => {
                 ficha[el.id] = (el.type === 'checkbox') ? el.checked : el.value;
             });
+
+            ficha.pericias = [];
+            document.querySelectorAll('.pericia').forEach(div => {
+                const nome = div.querySelector("label").innerText.trim();
+                const atributo = div.querySelector(".atributo-pericia").value;
+                const treinamento = div.querySelector(".treinamento-pericia").value;
+                const bonus = div.querySelector(".bonus-pericia").value;
+                const valor = div.querySelector(".valor-pericia").value;
+
+                ficha.pericias.push({
+                    nome,
+                    atributo,
+                    treinamento,
+                    bonus,
+                    valor
+                });
+            });
+
 
             const blob = new Blob([JSON.stringify(ficha, null, 2)], {
                 type: 'application/json'
