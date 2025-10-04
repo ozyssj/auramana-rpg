@@ -2170,12 +2170,12 @@
             "Investigador", "Ladino", "Lutador", "Mágico", "Mago", "Místico", "Oráculo", "Paladino", "Patrulheiro"
         ];
 
-        const selectClasse = document.getElementById('classe');
+        const selectClasse = document.getElementById('classePersonagem');
 
         selectClasse.innerHTML = '<option value="">-- Selecione a Classe --</option>';
 
-        classes.forEach(classe => {
-            selectClasse.innerHTML += `<option>${classe}</option>`;
+        classes.forEach(classePersonagem => {
+            selectClasse.innerHTML += `<option>${classePersonagem}</option>`;
         });
 
 
