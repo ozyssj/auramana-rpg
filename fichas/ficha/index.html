@@ -2060,14 +2060,18 @@
             alert("Ficha salva nas memórias do grimório!");
         }
 
-
         function baixarFicha() {
             const campos = document.querySelectorAll('input, select, textarea');
             const ficha = {};
+
+            // salva campos normais
             campos.forEach(el => {
-                ficha[el.id] = (el.type === 'checkbox') ? el.checked : el.value;
+                if (el.id) {
+                    ficha[el.id] = (el.type === 'checkbox') ? el.checked : el.value;
+                }
             });
 
+            // salva as perícias em array
             ficha.pericias = [];
             document.querySelectorAll('.pericia').forEach(div => {
                 const nome = div.querySelector("label").innerText.trim();
@@ -2085,27 +2089,23 @@
                 });
             });
 
-
+            // cria o arquivo JSON
             const blob = new Blob([JSON.stringify(ficha, null, 2)], {
                 type: 'application/json'
             });
             const url = URL.createObjectURL(blob);
-
             const a = document.createElement('a');
-            a.href = url;
 
             let nome = document.getElementById('nome').value.trim();
-
             if (!nome) nome = 'personagem';
-
             nome = nome.replace(/[\/\\:\*\?"<>\|]/g, '');
 
+            a.href = url;
             a.download = nome + '_ficha_auramana_pf2e.json';
-
             a.click();
-
             URL.revokeObjectURL(url);
         }
+
 
         function carregarFicha() {
             const input = document.getElementById('uploadFicha');
@@ -2115,7 +2115,9 @@
             const reader = new FileReader();
             reader.onload = function(e) {
                 const data = JSON.parse(e.target.result);
+
                 Object.keys(data).forEach(id => {
+                    if (id === "pericias") return;
                     const el = document.getElementById(id);
                     if (el) {
                         if (el.type === 'checkbox') {
@@ -2123,13 +2125,29 @@
                         } else {
                             el.value = data[id];
                         }
-                        localStorage.setItem('ficha-' + id, data[id]);
                     }
                 });
+
+                if (data.pericias) {
+                    data.pericias.forEach(periciaData => {
+                        const div = Array.from(document.querySelectorAll('.pericia'))
+                            .find(d => d.querySelector("label").innerText.trim() === periciaData.nome);
+
+                        if (div) {
+                            div.querySelector(".atributo-pericia").value = periciaData.atributo;
+                            div.querySelector(".treinamento-pericia").value = periciaData.treinamento;
+                            div.querySelector(".bonus-pericia").value = periciaData.bonus;
+                            div.querySelector(".valor-pericia").value = periciaData.valor;
+                        }
+                    });
+                }
+
                 alert("Ficha carregada com sucesso!");
+                atualizarPericias(); // recalcula depois de carregar
             };
             reader.readAsText(file);
         }
+
 
         function limparFicha() {
             if (confirm("Tem certeza que deseja apagar todos os dados da ficha?")) {
