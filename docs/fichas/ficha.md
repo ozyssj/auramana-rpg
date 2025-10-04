@@ -850,7 +850,7 @@
         }
 
         // eventos para recalcular
-        const idsParaCalculo = ['nivel', 'for', 'des', 'con', 'int', 'sen', 'car'];
+        const idsParaCalculo = ['nivel', 'for', 'des', 'con', 'int', 'sen', 'car','pvExtra', 'pmExtra'];
         idsParaCalculo.forEach(id => {
             const el = document.getElementById(id);
             if (el) el.addEventListener('input', () => {
@@ -870,6 +870,7 @@
                 calcularDefesa();
                 calcularIniciativa();
                 calcularCDConjuracao();
+                calcularAtributos();
             }
         });
 
