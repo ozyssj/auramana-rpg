@@ -1101,11 +1101,10 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Ficha de Personagem - Auramana Pathfinder</title>
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
     <style>
-        /* --- (mantive seu CSS) --- */
         :root {
             --cor-primaria: #36475b;
             --cor-secundaria: #54acc4;
@@ -1119,7 +1118,7 @@
             font-family: 'MedievalSharp', cursive;
             padding: 20px;
             margin: 0;
-            color: var(--cor-texto)
+            color: var(--cor-texto);
         }
 
         .ficha-container {
@@ -1129,39 +1128,39 @@
             max-width: 1000px;
             margin: auto;
             padding: 20px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, .2)
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         }
 
         h1,
         h2 {
             text-align: center;
             color: var(--cor-texto);
-            text-shadow: 1px 1px var(--cor-destaque)
+            text-shadow: 1px 1px var(--cor-destaque);
         }
 
         h1 {
             font-size: 2.2em;
-            margin-bottom: 20px
+            margin-bottom: 20px;
         }
 
         h2 {
             font-size: 1.5em;
-            margin: 15px 0
+            margin: 15px 0;
         }
 
         .campo {
-            margin-bottom: 12px
+            margin-bottom: 12px;
         }
 
         .campo-atributo {
             text-align: center;
-            margin-bottom: 10px
+            margin-bottom: 10px;
         }
 
         label {
             font-weight: bold;
             display: block;
-            margin-bottom: 3px
+            margin-bottom: 3px;
         }
 
         input,
@@ -1171,7 +1170,7 @@
             font-family: 'MedievalSharp', cursive;
             border: 2px solid var(--cor-primaria);
             border-radius: 5px;
-            background-color: #fffaf0
+            background-color: #fffaf0;
         }
 
         input,
@@ -1179,54 +1178,54 @@
         textarea {
             width: 100%;
             padding: 8px;
-            font-size: .95em;
-            box-shadow: inset 1px 1px 3px #ccc
+            font-size: 0.95em;
+            box-shadow: inset 1px 1px 3px #ccc;
         }
 
         input {
-            text-align: center
+            text-align: center;
         }
 
         textarea {
             min-height: 80px;
-            resize: vertical
+            resize: vertical;
         }
 
         .atributos {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             gap: 12px;
-            margin: 15px 0
+            margin: 15px 0;
         }
 
         .duplo {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 12px;
-            margin: 15px 0
+            margin: 15px 0;
         }
 
         .triplo {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 12px;
-            margin: 15px 0
+            margin: 15px 0;
         }
 
         .linha {
             display: flex;
-            gap: 15px
+            gap: 15px;
         }
 
         .linha>* {
-            flex: 1
+            flex: 1;
         }
 
         .botoes {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 10px;
-            margin-top: 20px
+            margin-top: 20px;
         }
 
         button {
@@ -1236,49 +1235,50 @@
             padding: 8px 15px;
             cursor: pointer;
             box-shadow: 0 3px var(--cor-secundaria);
-            transition: all .2s
+            transition: all 0.2s;
         }
 
         button:hover {
-            background-color: var(--cor-secundaria)
+            background-color: var(--cor-secundaria);
         }
 
         button:active {
             transform: translateY(2px);
-            box-shadow: 0 1px var(--cor-secundaria)
+            box-shadow: 0 1px var(--cor-secundaria);
         }
 
         .campo-pericia {
             width: 40%;
             text-align: right;
-            padding-right: 10px
+            padding-right: 10px;
         }
 
         .campo-pericia2 {
             width: 25%;
-            text-align: center
+            text-align: center;
         }
 
         .campo-pericia3 {
             width: 15%;
-            text-align: center
+            text-align: center;
         }
 
         .campo-pericia4 {
             width: 50%;
-            text-align: center
+            text-align: center;
         }
 
         .campo-pericia5 {
             width: 30%;
-            text-align: center
+            text-align: center;
         }
 
         .linha-pericia {
             display: flex;
             flex: 1;
-            font-size: .9em;
-            margin: 0
+            font-size: 0.9em;
+            gap: 0;
+            margin: 0;
         }
 
         .pericias {
@@ -1286,36 +1286,40 @@
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 0;
             width: 100%;
-            overflow: hidden
+            overflow: hidden;
         }
 
         .pericia {
             min-width: 10px;
             break-inside: avoid;
             page-break-inside: avoid;
-            font-size: .9em;
-            margin-bottom: 0
+            font-size: 0.9em;
+            margin-bottom: 0;
         }
 
         .pericia label {
-            font-size: 1.0em
+            font-size: 1.0em;
         }
 
         .pericia input,
         .pericia select {
             text-align: center;
-            padding: 0;
-            font-size: .9em
+            padding: 0px;
+            font-size: 0.9em;
+        }
+
+        #uploadFicha {
+            display: none;
         }
 
         @media (max-width:768px) {
             .atributos {
-                grid-template-columns: repeat(3, 1fr)
+                grid-template-columns: repeat(3, 1fr);
             }
 
             .linha {
                 flex-direction: column;
-                gap: 10px
+                gap: 10px;
             }
         }
     </style>
@@ -1463,7 +1467,9 @@
 
         <div class="duplo">
             <div class="linha-pericia">
-                <div class="campo-pericia"><label>Defesa</label></div>
+                <div class="campo-pericia">
+                    <label>Defesa</label>
+                </div>
                 <div class="campo-pericia4">
                     <select class="pericia-defesa">
                         <option value="Reflexos">Esquiva</option>
@@ -1471,12 +1477,18 @@
                         <option value="Vontade">Sanidade</option>
                     </select>
                 </div>
-                <div class="campo-pericia4"><input type="number" class="aparo" placeholder="Bônus de Aparo"></div>
-                <div class="campo-pericia5"><input type="number" id="defesaFinal" readonly></div>
+                <div class="campo-pericia4">
+                    <input type="number" class="aparo" placeholder="Bônus de Aparo">
+                </div>
+                <div class="campo-pericia5">
+                    <input type="number" id="defesaFinal" readonly>
+                </div>
             </div>
 
             <div class="linha-pericia">
-                <div class="campo-pericia"><label>Iniciativa</label></div>
+                <div class="campo-pericia">
+                    <label>Iniciativa</label>
+                </div>
                 <div class="campo-pericia4">
                     <select class="pericia-iniciativa">
                         <option value="Percepção">Percepção</option>
@@ -1491,8 +1503,12 @@
                         <option value="Conh. C">Outro</option>
                     </select>
                 </div>
-                <div class="campo-pericia4"><input type="number" class="bonus-iniciativa" placeholder="Bônus de Iniciativa"></div>
-                <div class="campo-pericia5"><input type="number" id="iniciativaFinal" readonly></div>
+                <div class="campo-pericia4">
+                    <input type="number" class="bonus-iniciativa" placeholder="Bônus de Iniciativa">
+                </div>
+                <div class="campo-pericia5">
+                    <input type="number" id="iniciativaFinal" readonly>
+                </div>
             </div>
         </div>
 
@@ -1502,35 +1518,50 @@
         </div>
 
         <div>
-            <div class="campo-atributo"><label for="pericias">Perícias</label></div>
+            <div class="campo-atributo">
+                <label for="pericias">Perícias</label>
+            </div>
             <div class="pericias" id="pericias-container"></div>
         </div>
 
         <div class="campo">
-            <div class="campo-atributo"><label for="talentos">Talentos</label></div>
-            <textarea id="talentos" rows="22"> -> Origem: 
+            <div class="campo-atributo">
+                <label for="talentos">Talentos</label>
+            </div>
+            <textarea id="talentos" rows="22">
+ -> Origem: 
  -> Raça: Idiomas, Visão, etc
  -> NV1: 
  -> NV2: 
  -> NV3: 
  -> NV4: 
  -> NV5: 
-</textarea>
+            </textarea>
         </div>
 
         <div class="campo">
-            <div class="campo-atributo"><label for="inventario">Inventário</label></div>
+            <div class="campo-atributo">
+                <label for="inventario">Inventário</label>
+            </div>
             <textarea id="inventario" rows="15"> -> Sigreis: 30§ </textarea>
         </div>
 
         <div class="campo">
-            <div class="campo-atributo"><label for="magias">Magias</label></div>
+            <div class="campo-atributo">
+                <label for="magias">Magias</label>
+            </div>
             <textarea id="magias" rows="15"> -> 1° Círculo (Cargas: 6/6 )</textarea>
 
             <div class="linha-pericia">
-                <div class="campo-pericia"><label>CD Conjuração</label></div>
-                <div class="campo-pericia4"><input type="number" class="bonus-conjuracao" placeholder="Bônus na CD de Conjuração"></div>
-                <div class="campo-pericia3"><input type="number" id="conjuracaoFinal" readonly></div>
+                <div class="campo-pericia">
+                    <label>CD Conjuração</label>
+                </div>
+                <div class="campo-pericia4">
+                    <input type="number" class="bonus-conjuracao" placeholder="Bônus na CD de Conjuração">
+                </div>
+                <div class="campo-pericia3">
+                    <input type="number" id="conjuracaoFinal" readonly>
+                </div>
             </div>
         </div>
 
@@ -1544,9 +1575,7 @@
     </div>
 
     <script>
-        /***********************
-         * dados das perícias
-         ************************/
+        // Dados
         const pericias = [{
                 nome: "Fortitude",
                 atributo: "con"
@@ -1741,50 +1770,66 @@
             }
         ];
 
-        function criarPericia(pericia, idx) {
+        // helper: seta um select tentando casar value ou text; se não achar, cria a option
+        function setSelectValue(select, value) {
+            if (!select) return;
+            const opt = Array.from(select.options).find(o => o.value == value || o.text == value);
+            if (opt) select.value = opt.value;
+            else {
+                const newOpt = document.createElement('option');
+                newOpt.value = value;
+                newOpt.text = value;
+                select.appendChild(newOpt);
+                select.value = value;
+            }
+        }
+
+        function criarPericia(pericia) {
             return `
-        <div class="pericia" data-nome="${pericia.nome}">
-          <div class="linha-pericia">
-            <div class="campo-pericia"><label>${pericia.nome}</label></div>
-            <div class="campo-pericia2">
-              <select class="atributo-pericia">
-                ${atributos.map(a => `<option value="${a.value}" ${a.value === pericia.atributo ? 'selected' : ''}>${a.text}</option>`).join('')}
-              </select>
-            </div>
-            <div class="campo-pericia2">
-              <select class="treinamento-pericia">
-                ${treinamentos.map(t => `<option value="${t.value}">${t.text}</option>`).join('')}
-              </select>
-            </div>
-            <div class="campo-pericia2">
-              <input type="number" class="bonus-pericia" placeholder="Bônus">
-            </div>
-            <div class="campo-pericia3">
-              <input type="number" class="valor-pericia" readonly>
-            </div>
+      <div class="pericia" data-nome="${pericia.nome}">
+        <div class="linha-pericia">
+          <div class="campo-pericia">
+            <label>${pericia.nome}</label>
+          </div>
+
+          <div class="campo-pericia2">
+            <select class="atributo-pericia">
+              ${atributos.map(a => `<option value="${a.value}" ${a.value === pericia.atributo ? 'selected' : ''}>${a.text}</option>`).join('')}
+            </select>
+          </div>
+
+          <div class="campo-pericia2">
+            <select class="treinamento-pericia">
+              ${treinamentos.map(t => `<option value="${t.value}">${t.text}</option>`).join('')}
+            </select>
+          </div>
+
+          <div class="campo-pericia2">
+            <input type="number" class="bonus-pericia" placeholder="Bônus">
+          </div>
+
+          <div class="campo-pericia3">
+            <input type="number" class="valor-pericia" readonly>
           </div>
         </div>
-      `;
+      </div>`;
         }
 
         // renderiza perícias
         document.getElementById('pericias-container').innerHTML = pericias.map(criarPericia).join('');
 
-        /***********************
-         * lógica e persistência
-         ************************/
         // popula raças e classes
         const racas = ["Humano", "Anão", "Elfo", "Forâneo", "Feral", "Gigante", "Goblin", "Golem", "Halfling", "Orc", "Troll"];
         const selectRaca = document.getElementById('raca');
         selectRaca.innerHTML = '<option value="">-- Selecione a Raça --</option>';
-        racas.forEach(r => selectRaca.innerHTML += `<option>${r}</option>`);
+        racas.forEach(raca => selectRaca.innerHTML += `<option>${raca}</option>`);
 
         const classes = ["Bárbaro", "Bardo", "Bruxo", "Clérigo", "Combatente", "Druida", "Especialista", "Feiticeiro", "Inventor", "Investigador", "Ladino", "Lutador", "Mágico", "Mago", "Místico", "Oráculo", "Paladino", "Patrulheiro"];
         const selectClasse = document.getElementById('classePersonagem');
         selectClasse.innerHTML = '<option value="">-- Selecione a Classe --</option>';
-        classes.forEach(c => selectClasse.innerHTML += `<option>${c}</option>`);
+        classes.forEach(classe => selectClasse.innerHTML += `<option>${classe}</option>`);
 
-        // bases
+        // Constantes com os valores base por classe
         const BASES_PV = {
             'Bárbaro': 12,
             'Bruxo': 6,
@@ -1808,13 +1853,15 @@
 
         function ajustarValorAtual(idElemento, valorMax) {
             const elemento = document.getElementById(idElemento);
-            if (!elemento.value || parseInt(elemento.value) > valorMax) elemento.value = valorMax;
+            if (!elemento.value || parseInt(elemento.value) > valorMax) {
+                elemento.value = valorMax;
+            }
         }
 
         function calcularAtributos() {
             const constituicao = parseInt(document.getElementById('con').value) || 0;
             const nivel = parseInt(document.getElementById('nivel').value) || 1;
-            const classe = document.getElementById('classePersonagem').value; // corrigido
+            const classe = document.getElementById('classePersonagem').value;
             const pvExtra = parseInt(document.getElementById('pvExtra').value) || 0;
             const pmExtra = parseInt(document.getElementById('pmExtra').value) || 0;
 
@@ -1852,37 +1899,6 @@
             });
         }
 
-        // eventos
-        const idsParaCalculo = ['nivel', 'for', 'des', 'con', 'int', 'sen', 'car'];
-        idsParaCalculo.forEach(id => {
-            const el = document.getElementById(id);
-            if (el) el.addEventListener('input', () => {
-                atualizarPericias();
-                calcularDefesa();
-                calcularIniciativa();
-                calcularCDConjuracao();
-            });
-        });
-
-        // eventos mais específicos (delegação)
-        document.addEventListener('change', e => {
-            const t = e.target;
-            if (!t) return;
-            if (t.classList && (t.classList.contains('atributo-pericia') || t.classList.contains('pericia-iniciativa') || t.classList.contains('pericia-defesa') || t.classList.contains('treinamento-pericia') || t.classList.contains('bonus-pericia'))) {
-                atualizarPericias();
-                calcularDefesa();
-                calcularIniciativa();
-                calcularCDConjuracao();
-            }
-        });
-
-        document.querySelectorAll('.bonus-pericia').forEach(inp => inp.addEventListener('input', atualizarPericias));
-        if (document.querySelector('.bonus-iniciativa')) document.querySelector('.bonus-iniciativa').addEventListener('input', calcularIniciativa);
-        if (document.querySelector('.bonus-conjuracao')) document.querySelector('.bonus-conjuracao').addEventListener('input', calcularCDConjuracao);
-        if (document.querySelector('.aparo')) document.querySelector('.aparo').addEventListener('input', calcularDefesa);
-        if (document.querySelector('.pericia-defesa')) document.querySelector('.pericia-defesa').addEventListener('change', calcularDefesa);
-        if (document.querySelector('.pericia-iniciativa')) document.querySelector('.pericia-iniciativa').addEventListener('change', calcularIniciativa);
-
         function calcularDefesa() {
             const base = 10;
             const aparo = parseInt(document.querySelector('.aparo').value) || 0;
@@ -1894,7 +1910,8 @@
                 periciasMap[nome] = valor;
             });
             const valorPericia = periciasMap[defesaTipo] || 0;
-            document.getElementById("defesaFinal").value = base + aparo + valorPericia;
+            const defesaFinal = base + aparo + valorPericia;
+            document.getElementById("defesaFinal").value = defesaFinal;
         }
 
         function calcularIniciativa() {
@@ -1907,7 +1924,8 @@
                 periciasMap[nome] = valor;
             });
             const valorPericia = periciasMap[periciaIniciativa] || 0;
-            document.getElementById("iniciativaFinal").value = bonusIniciativa + valorPericia;
+            const iniciativaFinal = bonusIniciativa + valorPericia;
+            document.getElementById("iniciativaFinal").value = iniciativaFinal;
         }
 
         function calcularCDConjuracao() {
@@ -1926,17 +1944,48 @@
                     break;
                 }
             }
-            document.getElementById("conjuracaoFinal").value = base + valorPericia + bonusConjuracao;
+            const conjuracaoFinal = base + valorPericia + bonusConjuracao;
+            document.getElementById("conjuracaoFinal").value = conjuracaoFinal;
         }
 
-        // salvar local (opcional)
+        // eventos para recalcular
+        const idsParaCalculo = ['nivel', 'for', 'des', 'con', 'int', 'sen', 'car'];
+        idsParaCalculo.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.addEventListener('input', () => {
+                atualizarPericias();
+                calcularDefesa();
+                calcularIniciativa();
+                calcularCDConjuracao();
+                calcularAtributos();
+            });
+        });
+
+        document.addEventListener('change', e => {
+            const t = e.target;
+            if (!t) return;
+            if (t.classList && (t.classList.contains('atributo-pericia') || t.classList.contains('pericia-iniciativa') || t.classList.contains('pericia-defesa') || t.classList.contains('treinamento-pericia') || t.classList.contains('bonus-pericia'))) {
+                atualizarPericias();
+                calcularDefesa();
+                calcularIniciativa();
+                calcularCDConjuracao();
+            }
+        });
+
+        document.querySelectorAll('.bonus-pericia').forEach(input => input.addEventListener('input', atualizarPericias));
+        if (document.querySelector('.bonus-iniciativa')) document.querySelector('.bonus-iniciativa').addEventListener('input', calcularIniciativa);
+        if (document.querySelector('.bonus-conjuracao')) document.querySelector('.bonus-conjuracao').addEventListener('input', calcularCDConjuracao);
+        if (document.querySelector('.aparo')) document.querySelector('.aparo').addEventListener('input', calcularDefesa);
+        if (document.querySelector('.pericia-defesa')) document.querySelector('.pericia-defesa').addEventListener('change', calcularDefesa);
+        if (document.querySelector('.pericia-iniciativa')) document.querySelector('.pericia-iniciativa').addEventListener('change', calcularIniciativa);
+
+        // persistência e import/export
         function salvarFicha() {
             const campos = document.querySelectorAll('input, select, textarea');
             campos.forEach(el => {
                 if (el.id) localStorage.setItem('ficha-' + el.id, el.value);
             });
 
-            // salva perícias
             const periciasData = [];
             document.querySelectorAll('.pericia').forEach(div => {
                 const nome = div.dataset.nome;
@@ -1956,28 +2005,20 @@
             alert("Ficha salva nas memórias do grimório!");
         }
 
-
-
         function baixarFicha() {
             const campos = document.querySelectorAll('input, select, textarea');
             const ficha = {};
-
-            // salva campos normais
             campos.forEach(el => {
-                if (el.id) {
-                    ficha[el.id] = (el.type === 'checkbox') ? el.checked : el.value;
-                }
+                if (el.id) ficha[el.id] = (el.type === 'checkbox') ? el.checked : el.value;
             });
 
-            // salva perícias
             ficha.pericias = [];
             document.querySelectorAll('.pericia').forEach(div => {
-                const nome = div.querySelector("label").innerText.trim();
-                const atributo = div.querySelector(".atributo-pericia").value;
-                const treinamento = div.querySelector(".treinamento-pericia").value;
-                const bonus = div.querySelector(".bonus-pericia").value;
-                const valor = div.querySelector(".valor-pericia").value;
-
+                const nome = div.dataset.nome;
+                const atributo = div.querySelector('.atributo-pericia').value;
+                const treinamento = div.querySelector('.treinamento-pericia').value;
+                const bonus = div.querySelector('.bonus-pericia').value;
+                const valor = div.querySelector('.valor-pericia').value;
                 ficha.pericias.push({
                     nome,
                     atributo,
@@ -1987,43 +2028,20 @@
                 });
             });
 
-            // salva iniciativa
-            ficha.iniciativa = [];
-            document.querySelectorAll('.iniciativa').forEach(div => {
-                const nome = div.querySelector("label").innerText.trim();
-                const atributo = div.querySelector(".atributo-iniciativa").value;
-                const treinamento = div.querySelector(".treinamento-iniciativa").value;
-                const bonus = div.querySelector(".bonus-iniciativa").value;
-                const valor = div.querySelector(".valor-iniciativa").value;
+            // defesa (tipo, aparo, final)
+            ficha.defesa = {
+                tipo: document.querySelector('.pericia-defesa') ? document.querySelector('.pericia-defesa').value : '',
+                aparo: document.querySelector('.aparo') ? document.querySelector('.aparo').value : '',
+                defesaFinal: document.getElementById('defesaFinal') ? document.getElementById('defesaFinal').value : ''
+            };
 
-                ficha.iniciativa.push({
-                    nome,
-                    atributo,
-                    treinamento,
-                    bonus,
-                    valor
-                });
-            });
+            // iniciativa (pericia, bonus, final)
+            ficha.iniciativa = {
+                pericia: document.querySelector('.pericia-iniciativa') ? document.querySelector('.pericia-iniciativa').value : '',
+                bonus: document.querySelector('.bonus-iniciativa') ? document.querySelector('.bonus-iniciativa').value : '',
+                iniciativaFinal: document.getElementById('iniciativaFinal') ? document.getElementById('iniciativaFinal').value : ''
+            };
 
-            // salva defesa
-            ficha.defesas = [];
-            document.querySelectorAll('.defesa').forEach(div => {
-                const nome = div.querySelector("label").innerText.trim();
-                const atributo = div.querySelector(".atributo-defesa").value;
-                const treinamento = div.querySelector(".treinamento-defesa").value;
-                const bonus = div.querySelector(".bonus-defesa").value;
-                const valor = div.querySelector(".valor-defesa").value;
-
-                ficha.defesas.push({
-                    nome,
-                    atributo,
-                    treinamento,
-                    bonus,
-                    valor
-                });
-            });
-
-            // cria o arquivo JSON
             const blob = new Blob([JSON.stringify(ficha, null, 2)], {
                 type: 'application/json'
             });
@@ -2040,7 +2058,6 @@
             URL.revokeObjectURL(url);
         }
 
-
         function carregarFicha() {
             const input = document.getElementById('uploadFicha');
             const file = input.files[0];
@@ -2048,68 +2065,62 @@
 
             const reader = new FileReader();
             reader.onload = function(e) {
-                const data = JSON.parse(e.target.result);
+                let data;
+                try {
+                    data = JSON.parse(e.target.result);
+                } catch (err) {
+                    alert('Arquivo JSON inválido.');
+                    return;
+                }
 
-                // Carregar campos simples
-                Object.keys(data).forEach(id => {
-                    if (["pericias", "iniciativa", "defesas"].includes(id)) return;
-                    const el = document.getElementById(id);
+                // campos simples
+                Object.keys(data).forEach(key => {
+                    if (key === 'pericias' || key === 'defesa' || key === 'iniciativa') return;
+                    const el = document.getElementById(key);
                     if (el) {
-                        if (el.type === 'checkbox') {
-                            el.checked = data[id];
-                        } else {
-                            el.value = data[id];
-                        }
+                        if (el.type === 'checkbox') el.checked = data[key];
+                        else el.value = data[key];
+                        if (el.id) localStorage.setItem('ficha-' + el.id, el.value);
                     }
                 });
 
-                // Carregar perícias
-                if (data.pericias) {
-                    data.pericias.forEach(periciaData => {
-                        const div = Array.from(document.querySelectorAll('.pericia'))
-                            .find(d => d.querySelector("label").innerText.trim() === periciaData.nome);
-
-                        if (div) {
-                            div.querySelector(".atributo-pericia").value = periciaData.atributo;
-                            div.querySelector(".treinamento-pericia").value = periciaData.treinamento;
-                            div.querySelector(".bonus-pericia").value = periciaData.bonus;
-                            div.querySelector(".valor-pericia").value = periciaData.valor;
-                        }
+                // perícias
+                if (Array.isArray(data.pericias)) {
+                    data.pericias.forEach(pd => {
+                        const div = Array.from(document.querySelectorAll('.pericia')).find(d => d.dataset.nome === pd.nome);
+                        if (!div) return;
+                        if (pd.atributo !== undefined && div.querySelector('.atributo-pericia')) setSelectValue(div.querySelector('.atributo-pericia'), pd.atributo);
+                        if (pd.treinamento !== undefined && div.querySelector('.treinamento-pericia')) setSelectValue(div.querySelector('.treinamento-pericia'), String(pd.treinamento));
+                        if (pd.bonus !== undefined && div.querySelector('.bonus-pericia')) div.querySelector('.bonus-pericia').value = pd.bonus;
+                        if (pd.valor !== undefined && div.querySelector('.valor-pericia')) div.querySelector('.valor-pericia').value = pd.valor;
                     });
+                    localStorage.setItem('ficha-pericias', JSON.stringify(data.pericias));
                 }
 
-                // Carregar iniciativa
+                // defesa
+                if (data.defesa) {
+                    const selDefesa = document.querySelector('.pericia-defesa');
+                    if (selDefesa && data.defesa.tipo !== undefined) setSelectValue(selDefesa, data.defesa.tipo);
+                    const aparo = document.querySelector('.aparo');
+                    if (aparo && data.defesa.aparo !== undefined) aparo.value = data.defesa.aparo;
+                    if (document.getElementById('defesaFinal') && data.defesa.defesaFinal !== undefined) document.getElementById('defesaFinal').value = data.defesa.defesaFinal;
+                }
+
+                // iniciativa
                 if (data.iniciativa) {
-                    data.iniciativa.forEach(initData => {
-                        const div = Array.from(document.querySelectorAll('.iniciativa'))
-                            .find(d => d.querySelector("label").innerText.trim() === initData.nome);
-
-                        if (div) {
-                            div.querySelector(".atributo-iniciativa").value = initData.atributo;
-                            div.querySelector(".treinamento-iniciativa").value = initData.treinamento;
-                            div.querySelector(".bonus-iniciativa").value = initData.bonus;
-                            div.querySelector(".valor-iniciativa").value = initData.valor;
-                        }
-                    });
+                    const selIni = document.querySelector('.pericia-iniciativa');
+                    if (selIni && data.iniciativa.pericia !== undefined) setSelectValue(selIni, data.iniciativa.pericia);
+                    const bonusIni = document.querySelector('.bonus-iniciativa');
+                    if (bonusIni && data.iniciativa.bonus !== undefined) bonusIni.value = data.iniciativa.bonus;
+                    if (document.getElementById('iniciativaFinal') && data.iniciativa.iniciativaFinal !== undefined) document.getElementById('iniciativaFinal').value = data.iniciativa.iniciativaFinal;
                 }
 
-                // Carregar defesas
-                if (data.defesas) {
-                    data.defesas.forEach(defData => {
-                        const div = Array.from(document.querySelectorAll('.defesa'))
-                            .find(d => d.querySelector("label").innerText.trim() === defData.nome);
-
-                        if (div) {
-                            div.querySelector(".atributo-defesa").value = defData.atributo;
-                            div.querySelector(".treinamento-defesa").value = defData.treinamento;
-                            div.querySelector(".bonus-defesa").value = defData.bonus;
-                            div.querySelector(".valor-defesa").value = defData.valor;
-                        }
-                    });
-                }
-
-                alert("Ficha carregada com sucesso!");
-                atualizarPericias(); // recalcula tudo
+                alert('Ficha carregada com sucesso!');
+                atualizarPericias();
+                calcularDefesa();
+                calcularIniciativa();
+                calcularCDConjuracao();
+                calcularAtributos();
             };
             reader.readAsText(file);
         }
@@ -2127,9 +2138,8 @@
             alert("Todos os dados foram apagados da ficha.");
         }
 
-        // restaura do localStorage ao abrir
+        // restaura do localStorage
         window.addEventListener('DOMContentLoaded', () => {
-            // campos
             const campos = document.querySelectorAll('input, select, textarea');
             campos.forEach(el => {
                 if (!el.id) return;
@@ -2137,12 +2147,11 @@
                 if (val !== null) el.value = val;
             });
 
-            // perícias
             const periciasSalvas = JSON.parse(localStorage.getItem('ficha-pericias') || '[]');
             periciasSalvas.forEach(pd => {
                 const div = Array.from(document.querySelectorAll('.pericia')).find(d => d.dataset.nome === pd.nome);
                 if (!div) return;
-                if (pd.atributo) div.querySelector('.atributo-pericia').value = pd.atributo;
+                if (pd.atributo) setSelectValue(div.querySelector('.atributo-pericia'), pd.atributo);
                 const trainSel = div.querySelector('.treinamento-pericia');
                 if (trainSel && pd.treinamento !== undefined) {
                     const hasValue = Array.from(trainSel.options).some(o => o.value == pd.treinamento);
@@ -2159,19 +2168,13 @@
             calcularAtributos();
         });
 
-        // para garantir recalculo caso window.onload seja usado
+        // garante recalculo após carregamento completo
         window.onload = () => {
-            // garante que valores salvos sejam aplicados (zeros também)
-            const campos = document.querySelectorAll('input, select, textarea');
-            campos.forEach(el => {
-                if (!el.id) return;
-                const val = localStorage.getItem('ficha-' + el.id);
-                if (val !== null) el.value = val;
-            });
             atualizarPericias();
             calcularDefesa();
             calcularIniciativa();
             calcularCDConjuracao();
+            calcularAtributos();
         };
     </script>
 </body>
