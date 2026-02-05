@@ -5,8 +5,8 @@ theme:
     - navigation.tabs
     - navigation.indexes
   palette:
-    primary: 'brown'
-    accent: 'deep orange'
+    primary: 'blue'
+    accent: 'light blue'
 
 nav:
   - Início: indice.md
@@ -38,7 +38,6 @@ nav:
     - Ficha D&D: fichas/ficha-dnd.md
     - Ficha T20: fichas/ficha-t20.md
     - Ficha Pathfinder 2ed: fichas/ficha-pf2.md
-  - Auramana (D&D - 2024): auramana-dnd.md
   - Echo System RPG:
     - General Rules: echosystem/echo-system.md
     - Rolling Skills: echosystem/rolling-skills.md
