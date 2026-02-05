@@ -15,7 +15,7 @@
         }
 
         body {
-            background-color: #e8dbc3;
+            background-color: #c3cee8;
             font-family: 'MedievalSharp', cursive;
             padding: 20px;
             margin: 0;
