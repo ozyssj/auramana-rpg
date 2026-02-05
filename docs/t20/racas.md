@@ -7,12 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
     <style>
         :root {
-            --cor-primaria: #5b4636;
-            --cor-secundaria: #3a2c1d;
+            --cor-primaria: #860d0d;
+            --cor-secundaria: #5f050b;
             --cor-fundo: #fdfaf3;
-            --cor-texto: #3a2c1d;
-            --cor-destaque: #bba88c;
-        }
+            --cor-texto: #b6202c;
+            --cor-destaque: #c99b9b;
+        } 
 
         body {
             background-color: #e8dbc3;

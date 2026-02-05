@@ -6,13 +6,13 @@
     <title>Arcanista</title>
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
     <style>
-    :root {
-      --cor-primaria: #860d0d;
-      --cor-secundaria: #5f050b;
-      --cor-fundo: #fdfaf3;
-      --cor-texto: #b6202c;
-      --cor-destaque: #c99b9b;
-    }
+        :root {
+            --cor-primaria: #36475b;
+            --cor-secundaria: #54acc4;
+            --cor-fundo: #b8d4e1;
+            --cor-texto: #281d3a;
+            --cor-destaque: #54acc4;
+        }
 
         body {
             background-color: #e8dbc3;

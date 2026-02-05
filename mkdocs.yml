@@ -5,17 +5,17 @@ theme:
     - navigation.tabs
     - navigation.indexes
   palette:
-    primary: 'blue'
-    accent: 'light blue'
+    primary: 'brown'
+    accent: 'blue'
 
 nav:
   - Início: indice.md
   - Auramana (D&D):
     - Raças: t20/racas.md
     - Classes:
-      - Arcanista: t20/classes/arcanista.md
-      - Batedor: t20/lasses/batedor.md
-      - Elementalista: t20/classes/elementalista.md
+      - Furioso: dnd/classes/furioso.md
+      - Sacerdoter: dnd/lasses/sacerdote.md
+      - Elementalista: dnd/classes/elementalista.md
       - Guerreiro: t20/classes/guerreiro.md
       - Inspirador: t20/classes/inspirador.md
       - Inventor: t20/classes/inventor.md
