@@ -7,11 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
     <style>
         :root {
-            --cor-primaria: #5b4636;
-            --cor-secundaria: #3a2c1d;
-            --cor-fundo: #fdfaf3;
-            --cor-texto: #3a2c1d;
-            --cor-destaque: #bba88c;
+            --cor-primaria: #36475b;
+            --cor-secundaria: #54acc4;
+            --cor-fundo: #b8d4e1;
+            --cor-texto: #281d3a;
+            --cor-destaque: #54acc4;
         }
 
         body {
